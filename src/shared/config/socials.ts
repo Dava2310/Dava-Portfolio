@@ -7,7 +7,9 @@ export const SOCIALS = {
     env["VITE_LINK_LINKEDIN"] ||
     "https://www.linkedin.com/in/daniel-vetencourt",
   email: `mailto:${env["VITE_CONTACT_EMAIL"] || "dvetencourt23@gmail.com"}`,
-  resume: env["VITE_LINK_RESUME"] || "#",
+  resume:
+    env["VITE_LINK_RESUME"] ||
+    "/resume/backend-developer-daniel-vetencourt.pdf",
 } as const;
 
 export const CONTACT_EMAIL =
