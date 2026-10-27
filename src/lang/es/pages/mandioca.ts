@@ -21,7 +21,7 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
     learned: "Lo que aprendí",
   },
   hero: {
-    shot: "Captura principal · panel de control",
+    alt: "Panel de control de Mandioca con la pantalla principal",
     caption: "el panel principal",
   },
   results: {
@@ -41,25 +41,25 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
   built: {
     title: "Lo que construí",
     web: {
-      shot: "Captura · plataforma web",
+      alt: "Página de inicio de la plataforma web de Mandioca",
       title: "Plataforma web",
       description:
         "Un frontend en Next.js y una API en NestJS con autenticación JWT y roles y permisos dinámicos.",
     },
     qr: {
-      shot: "Foto · etiqueta QR en una carga",
+      alt: "Tickets con código QR generados para cada carga",
       title: "Trazabilidad con QR",
       description:
         "Cada carga recibe un código QR dinámico, de modo que el producto se puede seguir de principio a fin: del campo a la entrega.",
     },
     bot: {
-      shot: "Captura · alertas de Telegram",
+      alt: "Bot de Telegram mostrando sus comandos disponibles",
       title: "Bot de Telegram",
       description:
         "Notificaciones en tiempo real para el equipo cada vez que una carga se registra, se pesa o se mueve.",
     },
     scale: {
-      shot: "Captura · app de la báscula",
+      alt: "App de escritorio de la báscula leyendo el peso de un camión",
       title: "App de la báscula",
       description:
         "Una app de escritorio en Python que lee la báscula por puerto serial y registra el peso de cada camión en el momento en que se mide.",
@@ -67,22 +67,23 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
   },
   architecture: {
     title: "Arquitectura",
-    lead: "Cómo encajan las piezas, directamente de mis diagramas UML: dónde corre cada cosa, el modelo de dominio y qué ocurre cuando se pesa un camión.",
+    lead: "Cómo encajan las piezas, directamente de mis diagramas UML: dónde corre cada cosa, cómo se comunican las aplicaciones y los servicios, y el modelo de datos del proceso de arrime de materia prima.",
     zoom: "clic para ampliar",
     deployment: {
-      shot: "UML · Diagrama de despliegue",
+      alt: "Diagrama UML de despliegue: un servidor AWS con Caddy, el frontend Next.js y el backend NestJS en EC2, junto a RDS con MySQL y un bucket S3, además del PC cliente con navegador y la app Python conectada a la báscula por USB serial, y la API de Telegram",
       name: "Despliegue",
       caption: "EC2, RDS, S3 y el PC de la báscula",
     },
-    domain: {
-      shot: "UML · Diagrama de clases",
-      name: "Modelo de dominio",
-      caption: "cargas, camiones, pesajes, usuarios y roles",
+    components: {
+      alt: "Diagrama UML de componentes: el frontend Next.js y el backend NestJS del sistema web detrás de un servidor HTTP Caddy, conectados a MySQL y S3 en AWS y a la API de Telegram, y la app de automatización en Python que se comunica con la báscula por puerto serial",
+      name: "Componentes",
+      caption: "las aplicaciones y servicios, y cómo se comunican entre sí",
     },
-    sequence: {
-      shot: "UML · Diagrama de secuencia",
-      name: "Pesar un camión",
-      caption: "báscula → app de escritorio → API → Telegram",
+    intake: {
+      alt: "Diagrama entidad-relación del proceso de arrime, con productores, choferes, camiones, operadores, planificación, fichas de pesada, boletos de pesada, análisis de calidad y tablas de auditoría",
+      name: "Arrime de materia prima",
+      caption:
+        "modelo de datos: productores, choferes, camiones, boletos de pesada y análisis de calidad",
     },
     stack: {
       title: "El stack, capa por capa",

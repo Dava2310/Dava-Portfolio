@@ -26,6 +26,10 @@
   strong {
     @apply text-ink;
   }
+
+  .mandioca-zoom {
+    @apply mt-1 block;
+  }
 }
 
 .mandioca-diagram-main {
@@ -49,19 +53,6 @@
 
   figure[data-tilt="left"] {
     rotate: -1deg;
-  }
-}
-
-.diagram-placeholder {
-  @apply box-border flex flex-col items-center justify-center rounded-sm border-[1.5px] border-dashed border-[#b9c4dd] bg-[#f6f8fc] text-accent-tint-ink;
-  aspect-ratio: 4 / 3;
-
-  &[data-size="lg"] {
-    @apply gap-2 text-sm;
-  }
-
-  &[data-size="sm"] {
-    @apply gap-1.5 text-[13px];
   }
 }
 

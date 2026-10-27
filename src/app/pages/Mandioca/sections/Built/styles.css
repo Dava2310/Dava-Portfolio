@@ -13,6 +13,15 @@
   }
 }
 
+/* Screenshots keep their own proportions (the QR ticket is portrait): never cropped. */
+.mandioca-built-media {
+  @apply flex aspect-[16/10] items-center justify-center overflow-hidden rounded bg-accent-tint;
+
+  img {
+    @apply block h-full w-full object-contain;
+  }
+}
+
 .mandioca-built-body {
   @apply flex flex-col gap-2.5 px-1.5;
 

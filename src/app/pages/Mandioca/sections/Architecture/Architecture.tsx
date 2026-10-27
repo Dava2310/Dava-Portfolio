@@ -1,5 +1,8 @@
 import { useTranslation } from "@/features/i18n";
-import { Icon } from "@/shared/ui/atoms/Icon";
+import components from "@/assets/mandioca-system/component-diagram.png";
+import intake from "@/assets/mandioca-system/datamodel-arrime.png";
+import deployment from "@/assets/mandioca-system/deployment-diagram.png";
+import { ZoomableImage } from "@/shared/ui/molecules/ZoomableImage";
 
 import { NumberedTitle } from "../../components/NumberedTitle";
 
@@ -14,22 +17,31 @@ const LAYERS = [
   "notifications",
 ] as const;
 
-type DiagramProps = {
-  label: string;
-  size?: "lg" | "sm";
-};
+const DIAGRAMS = {
+  deployment: { image: deployment, size: [542, 387] },
+  components: { image: components, size: [544, 395] },
+  intake: { image: intake, size: [727, 530] },
+} as const;
 
-function DiagramPlaceholder({ label, size = "sm" }: DiagramProps) {
-  return (
-    <span className="diagram-placeholder" data-size={size}>
-      <Icon name="diagram" size={size === "lg" ? 30 : 24} strokeWidth={1.5} />
-      <span>{label}</span>
-    </span>
-  );
-}
+type DiagramId = keyof typeof DIAGRAMS;
 
 export function Architecture() {
   const { t } = useTranslation();
+
+  const diagram = (id: DiagramId) => {
+    const { image, size } = DIAGRAMS[id];
+    const alt = t(`_pages:mandioca.architecture.${id}.alt`);
+    return (
+      <ZoomableImage
+        src={image}
+        alt={alt}
+        width={size[0]}
+        height={size[1]}
+        zoomLabel={`${t("_common:aria.zoomIn")}: ${alt}`}
+        closeLabel={t("_common:aria.close")}
+      />
+    );
+  };
 
   return (
     <section
@@ -47,10 +59,7 @@ export function Architecture() {
       </div>
       <div className="mandioca-diagrams">
         <figure className="mandioca-diagram-main">
-          <DiagramPlaceholder
-            size="lg"
-            label={t("_pages:mandioca.architecture.deployment.shot")}
-          />
+          {diagram("deployment")}
           <figcaption>
             <span>
               <strong>
@@ -65,21 +74,25 @@ export function Architecture() {
         </figure>
         <div className="mandioca-diagram-side">
           <figure data-tilt="right">
-            <DiagramPlaceholder
-              label={t("_pages:mandioca.architecture.domain.shot")}
-            />
+            {diagram("intake")}
             <figcaption>
-              <strong>{t("_pages:mandioca.architecture.domain.name")}</strong> —{" "}
-              {t("_pages:mandioca.architecture.domain.caption")}
+              <strong>{t("_pages:mandioca.architecture.intake.name")}</strong> —{" "}
+              {t("_pages:mandioca.architecture.intake.caption")}
+              <span className="mandioca-zoom">
+                {t("_pages:mandioca.architecture.zoom")}
+              </span>
             </figcaption>
           </figure>
           <figure data-tilt="left">
-            <DiagramPlaceholder
-              label={t("_pages:mandioca.architecture.sequence.shot")}
-            />
+            {diagram("components")}
             <figcaption>
-              <strong>{t("_pages:mandioca.architecture.sequence.name")}</strong>{" "}
-              — {t("_pages:mandioca.architecture.sequence.caption")}
+              <strong>
+                {t("_pages:mandioca.architecture.components.name")}
+              </strong>{" "}
+              — {t("_pages:mandioca.architecture.components.caption")}
+              <span className="mandioca-zoom">
+                {t("_pages:mandioca.architecture.zoom")}
+              </span>
             </figcaption>
           </figure>
         </div>

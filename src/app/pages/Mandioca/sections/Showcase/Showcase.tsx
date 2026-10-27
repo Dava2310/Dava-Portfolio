@@ -1,6 +1,6 @@
+import dashboard from "@/assets/mandioca-system/mandioca-dashboard.png";
 import { useTranslation } from "@/features/i18n";
 import { Tape } from "@/shared/ui/atoms/Tape";
-import { ImagePlaceholder } from "@/shared/ui/molecules/ImagePlaceholder";
 
 import "./styles.css";
 
@@ -25,10 +25,11 @@ export function Showcase() {
           width={120}
           height={30}
         />
-        <ImagePlaceholder
-          label={t("_pages:mandioca.hero.shot")}
-          ratio="16/9"
-          tone="tint"
+        <img
+          src={dashboard}
+          alt={t("_pages:mandioca.hero.alt")}
+          width={1920}
+          height={1080}
         />
         <figcaption>{t("_pages:mandioca.hero.caption")}</figcaption>
       </figure>

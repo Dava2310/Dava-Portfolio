@@ -19,7 +19,7 @@ export const mandioca = {
     learned: "What I learned",
   },
   hero: {
-    shot: "Hero screenshot · main dashboard",
+    alt: "Mandioca dashboard showing the main overview screen",
     caption: "the main dashboard",
   },
   results: {
@@ -39,25 +39,25 @@ export const mandioca = {
   built: {
     title: "What I built",
     web: {
-      shot: "Screenshot · web platform",
+      alt: "Landing page of the Mandioca web platform",
       title: "Web platform",
       description:
         "A Next.js frontend and a NestJS API with JWT authentication and dynamic roles and permissions.",
     },
     qr: {
-      shot: "Photo · QR label on a load",
+      alt: "QR code tickets generated for each load",
       title: "QR traceability",
       description:
         "Every load gets a dynamic QR code, so the product can be followed end to end — from the field to delivery.",
     },
     bot: {
-      shot: "Screenshot · Telegram alerts",
+      alt: "Telegram bot listing its available commands",
       title: "Telegram bot",
       description:
         "Real-time notifications for the team whenever a load is registered, weighed or moved.",
     },
     scale: {
-      shot: "Screenshot · weighbridge app",
+      alt: "Weighbridge desktop app reading a truck weight from the scale",
       title: "Weighbridge app",
       description:
         "A Python desktop app that reads the scale over serial and records each truck's weight the moment it's measured.",
@@ -65,22 +65,23 @@ export const mandioca = {
   },
   architecture: {
     title: "Architecture",
-    lead: "How the pieces fit together, straight from my UML diagrams: where everything runs, the domain model, and what happens when a truck is weighed.",
+    lead: "How the pieces fit together, straight from my UML diagrams: where everything runs, how the applications and services talk to each other, and the data model behind the raw-material intake process. (The diagrams are labelled in Spanish.)",
     zoom: "click to zoom",
     deployment: {
-      shot: "UML · Deployment diagram",
+      alt: "UML deployment diagram: an AWS server running Caddy, the Next.js frontend and the NestJS backend on EC2, next to RDS with MySQL and an S3 bucket, plus the client PC with a browser and the Python app connected to the scale over USB serial, and the Telegram API",
       name: "Deployment",
       caption: "EC2, RDS, S3 and the weighbridge PC",
     },
-    domain: {
-      shot: "UML · Class diagram",
-      name: "Domain model",
-      caption: "loads, trucks, weighings, users and roles",
+    components: {
+      alt: "UML component diagram: the Next.js frontend and NestJS backend of the web system behind a Caddy HTTP server, connected to MySQL and S3 on AWS and to the Telegram API, and the Python automation app that talks to the scale over serial",
+      name: "Components",
+      caption: "the applications and services, and how they talk to each other",
     },
-    sequence: {
-      shot: "UML · Sequence diagram",
-      name: "Weighing a truck",
-      caption: "scale → desktop app → API → Telegram",
+    intake: {
+      alt: "Entity-relationship diagram of the raw-material intake process, with producers, drivers, trucks, operators, planning, weigh records, weigh tickets, quality analyses and audit tables",
+      name: "Raw-material intake",
+      caption:
+        "data model: producers, drivers, trucks, weigh tickets and quality analysis",
     },
     stack: {
       title: "The stack, layer by layer",

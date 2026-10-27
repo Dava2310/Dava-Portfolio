@@ -3,8 +3,8 @@
 .mandioca-hero {
   @apply relative m-0 rounded-md bg-card px-3.5 pt-3.5 shadow-[0_1px_0_#e3d7c2,0_18px_40px_rgb(60_45_20/0.12)];
 
-  .image-placeholder {
-    @apply rounded text-[15px];
+  img {
+    @apply block aspect-video w-full rounded object-cover;
   }
 
   figcaption {
