@@ -1,0 +1,30 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.mandioca-hero {
+  @apply relative m-0 rounded-md bg-card px-3.5 pt-3.5 shadow-[0_1px_0_#e3d7c2,0_18px_40px_rgb(60_45_20/0.12)];
+
+  .image-placeholder {
+    @apply rounded text-[15px];
+  }
+
+  figcaption {
+    @apply px-0 pt-4 pb-[18px] text-center font-hand text-[26px] leading-none;
+  }
+}
+
+.mandioca-results {
+  @apply grid gap-6 pt-18 pb-24;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+
+  div {
+    @apply flex flex-col gap-2 border-t-2 border-rule pt-5;
+  }
+
+  p {
+    @apply m-0 text-base text-ink-soft;
+  }
+
+  .mandioca-results-value {
+    @apply font-display text-[64px] leading-none font-extrabold tracking-[-0.05em] text-accent;
+  }
+}

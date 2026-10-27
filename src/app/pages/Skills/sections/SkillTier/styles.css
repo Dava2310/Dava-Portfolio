@@ -1,0 +1,62 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.skill-tier {
+  @apply flex flex-col gap-7 pb-[88px];
+}
+
+.skill-tier-header {
+  @apply flex flex-wrap items-baseline gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 flex items-center gap-3.5 font-display text-[clamp(30px,3.4vw,42px)] leading-none font-extrabold tracking-[-0.035em];
+  }
+
+  h2 span {
+    @apply box-border size-[18px] rounded-full;
+  }
+
+  h2 span[data-level="daily"] {
+    @apply bg-accent;
+  }
+
+  h2 span[data-level="comfortable"] {
+    @apply border-4 border-accent;
+  }
+
+  > span {
+    @apply font-hand text-[26px] text-muted;
+  }
+}
+
+.skill-grid {
+  @apply grid gap-4;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+
+  article {
+    @apply flex flex-col gap-3 rounded-lg bg-card pt-[22px] pr-[22px] pb-5 pl-[22px] shadow-card;
+  }
+
+  h3 {
+    @apply m-0 font-display text-[22px] leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  p {
+    @apply m-0 text-xs font-bold tracking-[0.06em] text-muted uppercase;
+  }
+
+  ul {
+    @apply m-0 flex list-none flex-wrap gap-1.5 p-0;
+  }
+
+  a {
+    @apply inline-flex min-h-8 items-center rounded-full px-3 py-0.5 text-[13px] font-semibold text-accent no-underline;
+  }
+
+  article[data-tier="daily"] a {
+    @apply bg-accent-tint;
+  }
+
+  article[data-tier="comfortable"] a {
+    @apply border-[1.5px] border-[#c9d3e8];
+  }
+}

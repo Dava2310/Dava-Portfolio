@@ -1,0 +1,58 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.hero {
+  @apply flex flex-wrap items-center gap-x-16 gap-y-12 pt-12 pb-24;
+}
+
+.hero-copy {
+  @apply flex min-w-0 flex-[1_1_540px] flex-col gap-6;
+
+  h1 {
+    @apply m-0 font-display text-[clamp(48px,6.4vw,84px)] leading-[0.98] font-extrabold tracking-[-0.045em];
+  }
+}
+
+.hero-kicker {
+  @apply m-0 font-hand text-[32px] leading-none font-semibold text-accent;
+}
+
+.hero-highlight {
+  @apply relative inline-block;
+
+  svg {
+    @apply absolute bottom-[-12px] left-0 h-4 w-full text-accent;
+  }
+}
+
+.hero-lead {
+  @apply m-0 max-w-[560px] text-[19px] leading-[1.65] text-ink-soft;
+}
+
+.hero-actions {
+  @apply flex flex-wrap items-center gap-x-5 gap-y-3 pt-1;
+}
+
+.hero-cta {
+  @apply inline-flex items-center gap-2.5 rounded-[14px] bg-accent px-[22px] py-3.5 font-bold text-white no-underline;
+}
+
+.hero-cta:hover {
+  @apply bg-accent-strong text-white;
+}
+
+.hero-photos {
+  @apply relative min-w-[280px] flex-[0_1_440px] pt-4 pb-6;
+}
+
+.hero-photo-team {
+  @apply absolute top-0 right-0 w-[56%];
+}
+
+.hero-photo-me {
+  @apply mt-12 w-[76%];
+
+  img {
+    aspect-ratio: 3 / 4;
+    object-position: 50% 20%;
+  }
+}

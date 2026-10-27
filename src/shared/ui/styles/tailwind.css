@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Design tokens from the portfolio design: cream paper, ink text, one blue accent. */
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-paper: #f3ece0;
+  --color-card: #fffdf8;
+  --color-ink: #1f2533;
+  --color-ink-soft: #3c4252;
+  --color-muted: #575c6b;
+  --color-line: #d5c8b0;
+  --color-rule: #dccfb9;
+  --color-photo: #e6ddcc;
+  --color-photo-ink: #625a4a;
+  --color-accent: #2a4d9b;
+  --color-accent-strong: #1e3a78;
+  --color-accent-tint: #e3e9f5;
+  --color-accent-tint-ink: #3d4a6b;
+  --color-tape: rgb(222 205 170 / 0.82);
+
+  --font-display: "Bricolage Grotesque Variable", "Arial Black", sans-serif;
+  --font-body: "Figtree Variable", "Segoe UI", Arial, sans-serif;
+  --font-hand: "Caveat Variable", "Comic Sans MS", cursive;
+
+  --shadow-card: 0 1px 0 #e3d7c2, 0 10px 24px rgb(60 45 20 / 0.08);
+  --shadow-card-lg: 0 1px 0 #e3d7c2, 0 14px 34px rgb(60 45 20 / 0.1);
+  --shadow-photo: 0 10px 26px rgb(60 45 20 / 0.12);
+  --shadow-photo-lg: 0 18px 40px rgb(60 45 20 / 0.18);
+}

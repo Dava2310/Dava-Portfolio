@@ -1,0 +1,1 @@
+export { TeachingCta } from "./TeachingCta";

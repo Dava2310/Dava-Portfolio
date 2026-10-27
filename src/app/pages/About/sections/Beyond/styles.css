@@ -1,0 +1,10 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.beyond {
+  @apply flex flex-col gap-10 pb-[104px];
+}
+
+.beyond-grid {
+  @apply grid gap-x-8 gap-y-9 px-1.5 py-2;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}

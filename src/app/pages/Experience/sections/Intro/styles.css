@@ -1,0 +1,29 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.experience-intro {
+  @apply flex flex-wrap items-end justify-between gap-x-14 gap-y-7 pt-14 pb-18;
+}
+
+.experience-intro-copy {
+  @apply flex min-w-0 flex-[1_1_600px] flex-col gap-5;
+
+  h1 {
+    @apply m-0 font-display text-[clamp(46px,6vw,78px)] leading-[0.98] font-extrabold tracking-[-0.045em];
+  }
+}
+
+.experience-intro-kicker {
+  @apply m-0 font-hand text-[32px] leading-none font-semibold text-accent;
+}
+
+.experience-intro-lead {
+  @apply m-0 max-w-[620px] text-[19px] leading-[1.65] text-ink-soft;
+}
+
+.experience-intro-resume {
+  @apply inline-flex items-center gap-2.5 rounded-[14px] border-[1.5px] border-ink px-[22px] py-3.5 font-bold text-ink no-underline;
+}
+
+.experience-intro-resume:hover {
+  @apply text-accent;
+}

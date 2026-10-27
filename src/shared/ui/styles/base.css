@@ -1,0 +1,53 @@
+@reference "./tailwind.css";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-paper font-body text-[17px] leading-[1.6] text-ink;
+  }
+
+  a {
+    @apply text-accent;
+  }
+
+  a:hover {
+    @apply text-accent-strong;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p,
+  figcaption {
+    text-wrap: pretty;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #7a7466;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.timeline {
+  @apply m-0 flex list-none flex-col gap-14 p-0 pb-[104px];
+
+  > li {
+    @apply flex flex-wrap gap-x-12 gap-y-5;
+  }
+}
+
+.timeline-when {
+  @apply flex min-w-[200px] flex-[0_1_230px] flex-col gap-1.5 pt-2;
+}
+
+.timeline-now {
+  @apply self-start rounded-full bg-accent px-3 py-[3px] text-[13px] font-bold text-white;
+}
+
+.timeline-range {
+  @apply font-display text-[22px] leading-[1.2] font-extrabold tracking-[-0.02em];
+}
+
+.timeline-place {
+  @apply text-[15px] text-muted;
+}
+
+.timeline-job {
+  @apply relative flex min-w-0 flex-[1_1_560px] flex-col gap-4 rounded-lg bg-card p-[clamp(22px,3vw,34px)] shadow-card;
+}
+
+.timeline-heading {
+  @apply flex flex-col gap-1;
+
+  h2 {
+    @apply m-0 font-display text-[30px] leading-[1.1] font-extrabold tracking-[-0.03em];
+  }
+
+  p {
+    @apply m-0 text-[17px] font-semibold text-ink-soft;
+  }
+}
+
+.timeline-bullets {
+  @apply m-0 flex flex-col gap-2 pl-5 text-base text-ink-soft;
+}
+
+.timeline-photos {
+  @apply grid gap-3;
+  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+
+  .image-placeholder {
+    @apply rounded-sm text-xs;
+  }
+}
+
+.timeline-footer {
+  @apply flex flex-wrap items-center justify-between gap-3;
+}
+
+.timeline-link {
+  @apply inline-flex items-center gap-2 py-2.5 font-bold text-accent no-underline;
+}
+
+.timeline-link:hover {
+  @apply text-accent-strong;
+}

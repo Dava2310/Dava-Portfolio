@@ -1,0 +1,29 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.event-story {
+  @apply flex flex-wrap gap-x-16 gap-y-6 pb-[104px];
+}
+
+.event-story-title {
+  @apply min-w-0 flex-[1_1_280px];
+
+  h2 {
+    @apply m-0 font-display text-[clamp(32px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+}
+
+.event-story-body {
+  @apply flex min-w-0 flex-[2_1_560px] flex-col gap-7;
+
+  > div {
+    @apply flex flex-col gap-2;
+  }
+
+  h3 {
+    @apply m-0 text-xl font-bold;
+  }
+
+  p {
+    @apply m-0 text-lg leading-[1.7] text-ink-soft;
+  }
+}

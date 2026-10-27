@@ -1,0 +1,29 @@
+@reference "../../styles/tailwind.css";
+
+.section-header {
+  @apply flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2;
+}
+
+.section-header-main {
+  @apply flex flex-wrap items-baseline gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(34px,4vw,52px)] leading-none font-extrabold tracking-[-0.035em];
+  }
+
+  span {
+    @apply font-hand text-[26px];
+  }
+
+  span[data-tone="accent"] {
+    @apply text-accent;
+  }
+
+  span[data-tone="muted"] {
+    @apply text-muted;
+  }
+}
+
+.section-header-link {
+  @apply inline-flex items-center gap-2 py-3 font-bold text-accent no-underline;
+}

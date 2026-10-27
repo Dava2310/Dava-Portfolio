@@ -1,0 +1,17 @@
+@reference "../../styles/tailwind.css";
+
+.lang-switch {
+  @apply inline-flex items-center gap-1 rounded-full border-[1.5px] border-line p-0.5 text-[13px] font-bold;
+
+  a {
+    @apply inline-flex min-h-[32px] min-w-[40px] items-center justify-center rounded-full px-2 text-ink no-underline;
+  }
+
+  a[aria-current="true"] {
+    @apply bg-ink text-paper;
+  }
+
+  a:not([aria-current="true"]):hover {
+    @apply text-accent;
+  }
+}

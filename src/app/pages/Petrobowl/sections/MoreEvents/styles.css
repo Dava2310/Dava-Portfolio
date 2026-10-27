@@ -1,0 +1,34 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.more-events {
+  @apply grid gap-5 pb-20;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+
+  a {
+    @apply flex flex-col gap-1.5 rounded-[10px] px-[26px] py-6 no-underline;
+  }
+
+  span {
+    @apply inline-flex items-center gap-2 text-sm font-bold;
+  }
+
+  strong {
+    @apply font-display text-2xl font-extrabold tracking-[-0.02em];
+  }
+
+  a[data-direction="prev"] {
+    @apply border-[1.5px] border-line text-ink;
+
+    span {
+      @apply text-muted;
+    }
+  }
+
+  a[data-direction="next"] {
+    @apply items-end bg-accent text-right text-white;
+
+    span {
+      @apply text-white/85;
+    }
+  }
+}

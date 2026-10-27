@@ -1,0 +1,22 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.glance {
+  @apply m-0 grid gap-6 pb-24;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+
+  > div {
+    @apply flex flex-col gap-1 border-t-2 border-rule pt-[18px];
+  }
+
+  dt {
+    @apply text-xs font-bold tracking-[0.06em] text-muted uppercase;
+  }
+
+  dd {
+    @apply m-0 font-display text-[22px] leading-[1.2] font-extrabold tracking-[-0.02em];
+  }
+
+  > div[data-featured="true"] dd {
+    @apply text-[30px] leading-[1.1] tracking-[-0.03em] text-accent;
+  }
+}

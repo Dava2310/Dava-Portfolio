@@ -1,0 +1,14 @@
+@reference "../../styles/tailwind.css";
+
+.tape {
+  @apply absolute h-[26px] w-[84px] bg-tape;
+  top: var(--tape-top, -12px);
+  left: var(--tape-left, 24px);
+  right: var(--tape-right, auto);
+  rotate: var(--tape-rotate, -4deg);
+}
+
+/* Centered tape (`left="50%"`) sits on its own midpoint. */
+.tape[style*="--tape-left: 50%"] {
+  translate: -50% 0;
+}

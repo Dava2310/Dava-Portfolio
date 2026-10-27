@@ -1,0 +1,61 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.people {
+  @apply pb-[104px];
+}
+
+.people-card {
+  @apply relative flex flex-wrap gap-x-14 gap-y-8 rounded-lg bg-card p-[clamp(24px,4vw,44px)] shadow-card-lg;
+}
+
+.people-languages {
+  @apply flex min-w-0 flex-[1_1_320px] flex-col gap-[18px];
+
+  dl {
+    @apply m-0 flex flex-col gap-3.5;
+  }
+
+  dl > div {
+    @apply flex items-baseline justify-between gap-4 border-b-[1.5px] border-[#e3d7c2] pb-3;
+  }
+
+  dt {
+    @apply text-xl font-bold;
+  }
+
+  dd {
+    @apply m-0 text-base font-bold text-accent;
+  }
+
+  dd[data-style="hand"] {
+    @apply font-hand text-[26px] leading-none font-normal;
+  }
+}
+
+.people-skills {
+  @apply flex min-w-0 flex-[1.4_1_420px] flex-col gap-[18px];
+
+  ul {
+    @apply m-0 flex list-none flex-col gap-3 p-0 text-base text-ink-soft;
+  }
+
+  li {
+    @apply flex gap-3;
+  }
+
+  li > svg {
+    @apply mt-[3px] flex-[0_0_20px] text-accent;
+  }
+
+  strong {
+    @apply text-ink;
+  }
+
+  a {
+    @apply font-bold;
+  }
+}
+
+.people-card h2 {
+  @apply m-0 font-display text-[clamp(28px,3vw,36px)] leading-[1.05] font-extrabold tracking-[-0.03em];
+}

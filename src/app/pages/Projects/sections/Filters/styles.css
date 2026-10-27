@@ -1,0 +1,13 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.projects-filters {
+  @apply flex flex-wrap gap-2 pb-10;
+
+  button {
+    @apply cursor-pointer rounded-full border-[1.5px] border-line bg-card px-[18px] py-[11px] font-[inherit] text-sm font-semibold text-ink;
+  }
+
+  button[aria-pressed="true"] {
+    @apply border-accent bg-accent text-white;
+  }
+}

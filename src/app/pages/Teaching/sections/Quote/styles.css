@@ -1,0 +1,18 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.teaching-quote {
+  @apply pb-24;
+
+  figure {
+    @apply relative mx-auto my-0 flex max-w-[820px] flex-col gap-[18px] rounded-md bg-card p-[clamp(28px,4vw,48px)] shadow-card-lg;
+    rotate: 0.8deg;
+  }
+
+  blockquote {
+    @apply m-0 font-hand text-[clamp(30px,3.4vw,40px)] leading-[1.2];
+  }
+
+  figcaption {
+    @apply text-[15px] font-semibold text-muted;
+  }
+}

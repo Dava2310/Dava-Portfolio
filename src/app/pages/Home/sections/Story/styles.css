@@ -1,0 +1,26 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.story {
+  @apply flex flex-col gap-11 pb-[104px];
+}
+
+.story-timeline {
+  @apply m-0 grid list-none gap-x-6 gap-y-8 p-0;
+  grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
+
+  li {
+    @apply relative flex flex-col gap-2.5 border-t-2 border-rule pt-7;
+  }
+
+  p {
+    @apply m-0 text-[15px] leading-[1.55];
+  }
+}
+
+.story-dot {
+  @apply absolute -top-2 left-0 size-3.5 rounded-full bg-accent shadow-[0_0_0_4px_var(--color-paper)];
+}
+
+.story-year {
+  @apply font-display text-[34px] leading-none font-extrabold tracking-[-0.03em] text-accent;
+}

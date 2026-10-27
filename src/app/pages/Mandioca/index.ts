@@ -1,0 +1,1 @@
+export { MandiocaPage } from "./MandiocaPage";

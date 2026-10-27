@@ -1,0 +1,41 @@
+@reference "../../styles/tailwind.css";
+
+.project-card {
+  @apply relative flex flex-col gap-[18px] rounded-lg bg-card px-3.5 pt-3.5 pb-[18px] shadow-card;
+}
+
+.project-card-body {
+  @apply flex flex-1 flex-col gap-2.5 px-1;
+
+  h3 {
+    @apply m-0 font-display text-2xl leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  p {
+    @apply m-0 text-[15px] leading-[1.6] text-muted;
+  }
+}
+
+.project-card-kind {
+  @apply text-[13px] font-bold tracking-[0.04em] text-muted uppercase;
+}
+
+.project-card-link {
+  @apply mt-auto self-start pt-2.5 font-bold text-ink underline decoration-accent decoration-2 underline-offset-[6px];
+}
+
+.project-card-link:hover {
+  @apply text-accent;
+}
+
+.project-card-footer {
+  @apply mt-auto flex items-center justify-between gap-3 pt-1.5;
+
+  .project-card-link {
+    @apply mt-0 pb-2.5;
+  }
+}
+
+.project-card-actions {
+  @apply flex gap-1.5;
+}

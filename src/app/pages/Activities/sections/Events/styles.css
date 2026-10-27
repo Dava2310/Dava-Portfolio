@@ -1,0 +1,95 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.events-filters {
+  @apply flex flex-wrap items-center gap-2 pb-12;
+
+  button {
+    @apply cursor-pointer rounded-full border-[1.5px] border-line bg-card px-[18px] py-[11px] font-[inherit] text-sm font-semibold text-ink;
+  }
+
+  button[aria-pressed="true"] {
+    @apply border-accent bg-accent text-white;
+  }
+}
+
+.events {
+  @apply pb-24;
+}
+
+.events-grid {
+  @apply grid gap-x-7 gap-y-10;
+  grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr));
+}
+
+.event-card {
+  @apply relative flex flex-col bg-card px-3 pt-3 pb-[18px] text-ink no-underline shadow-photo;
+  border-radius: 6px;
+  rotate: -1.2deg;
+
+  &:nth-child(6n + 2) {
+    rotate: 1deg;
+  }
+
+  &:nth-child(6n + 3) {
+    rotate: -0.6deg;
+  }
+
+  &:nth-child(6n + 4) {
+    rotate: 1.4deg;
+  }
+
+  &:nth-child(6n + 5) {
+    rotate: -1deg;
+  }
+
+  &:nth-child(6n) {
+    rotate: 0.8deg;
+  }
+}
+
+.event-card-photos {
+  @apply grid aspect-[3/2] gap-1.5;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  > :first-child {
+    grid-row: 1 / span 2;
+  }
+}
+
+.event-card-shade {
+  background: #ddd3c0;
+}
+
+.event-card-count {
+  @apply flex items-center justify-center bg-photo text-[13px] font-bold;
+  color: #4d4637;
+}
+
+.event-card-body {
+  @apply flex flex-col gap-2 px-1.5 pt-[18px] pb-1;
+}
+
+.event-card-head {
+  @apply flex flex-wrap items-center justify-between gap-2;
+}
+
+.event-card-type {
+  @apply text-xs font-bold tracking-[0.06em] text-muted uppercase;
+}
+
+.event-card-badge {
+  @apply rounded-full bg-accent px-2.5 py-0.5 text-[13px] font-bold text-white;
+}
+
+.event-card-title {
+  @apply font-display text-2xl leading-[1.15] font-extrabold tracking-[-0.02em];
+}
+
+.event-card-meta {
+  @apply text-[15px] text-muted;
+}
+
+.event-card-note {
+  @apply font-hand text-2xl leading-[1.1] text-accent;
+}

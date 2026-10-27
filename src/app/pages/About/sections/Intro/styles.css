@@ -1,0 +1,29 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.about-intro {
+  @apply flex flex-wrap items-center gap-x-[72px] gap-y-12 pt-14 pb-[104px];
+}
+
+.about-intro-photo {
+  @apply min-w-[260px] flex-[0_1_420px];
+
+  img {
+    @apply aspect-[4/5] object-[50%_18%];
+  }
+}
+
+.about-intro-copy {
+  @apply flex min-w-0 flex-[1_1_480px] flex-col gap-5;
+
+  h1 {
+    @apply m-0 font-display text-[clamp(44px,5.6vw,72px)] leading-[0.98] font-extrabold tracking-[-0.045em];
+  }
+
+  p {
+    @apply m-0 text-[19px] leading-[1.7] text-ink-soft;
+  }
+
+  .about-intro-kicker {
+    @apply font-hand text-[34px] leading-none font-semibold text-accent;
+  }
+}

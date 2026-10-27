@@ -1,0 +1,57 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.mandioca-back {
+  @apply mt-6 inline-flex items-center gap-2 py-2.5 text-[15px] font-bold text-muted no-underline;
+}
+
+.mandioca-back:hover {
+  @apply text-accent;
+}
+
+.mandioca-intro {
+  @apply flex flex-wrap items-end justify-between gap-x-14 gap-y-8 pt-5 pb-10;
+}
+
+.mandioca-intro-copy {
+  @apply flex min-w-0 flex-[1_1_560px] flex-col gap-[18px];
+
+  h1 {
+    @apply m-0 font-display text-[clamp(46px,6vw,80px)] leading-[0.98] font-extrabold tracking-[-0.045em];
+  }
+
+  p {
+    @apply m-0 max-w-[620px] text-xl leading-[1.6] text-ink-soft;
+  }
+}
+
+.mandioca-intro-kind {
+  @apply text-[13px] font-bold tracking-[0.06em] text-muted uppercase;
+}
+
+.mandioca-facts {
+  @apply m-0 grid min-w-[260px] flex-[0_1_380px] grid-cols-2 gap-x-6 gap-y-[18px] rounded-lg bg-card px-[22px] py-5 shadow-card;
+
+  dt {
+    @apply text-xs font-bold tracking-[0.06em] text-muted uppercase;
+  }
+
+  dd {
+    @apply mx-0 mt-0.5 mb-0 font-semibold;
+  }
+}
+
+.mandioca-jump {
+  @apply flex flex-wrap items-center gap-2 pb-10;
+
+  span {
+    @apply mr-1.5 font-hand text-2xl text-muted;
+  }
+
+  a {
+    @apply rounded-full border-[1.5px] border-line px-4 py-[9px] text-sm font-semibold text-ink no-underline;
+  }
+
+  a:hover {
+    @apply border-accent text-accent;
+  }
+}

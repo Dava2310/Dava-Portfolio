@@ -1,0 +1,10 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.home-projects {
+  @apply flex flex-col gap-10 pb-[104px];
+}
+
+.home-projects-grid {
+  @apply grid gap-x-7 gap-y-8;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+}

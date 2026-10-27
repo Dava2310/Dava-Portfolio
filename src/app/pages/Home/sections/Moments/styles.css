@@ -1,0 +1,10 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.moments {
+  @apply flex flex-col gap-10 pb-28;
+}
+
+.moments-grid {
+  @apply grid gap-x-7 gap-y-9 px-1.5 py-2;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+}

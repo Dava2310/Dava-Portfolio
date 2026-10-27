@@ -1,0 +1,47 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.built {
+  @apply flex flex-col gap-10 pb-[104px];
+}
+
+.built-head {
+  @apply flex flex-wrap items-baseline gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(34px,4vw,52px)] leading-none font-extrabold tracking-[-0.035em];
+  }
+
+  span {
+    @apply font-hand text-[28px] text-muted;
+  }
+}
+
+.built-grid {
+  @apply grid gap-x-7 gap-y-9 px-1.5 py-2;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+
+  figure {
+    @apply m-0 bg-card px-3 pt-3 shadow-photo;
+    rotate: -1.5deg;
+  }
+
+  figure:nth-child(2) {
+    rotate: 1.2deg;
+  }
+
+  figure:nth-child(3) {
+    rotate: -0.8deg;
+  }
+
+  figcaption {
+    @apply flex flex-col gap-1 px-1.5 pt-3.5 pb-[18px];
+
+    span:first-child {
+      @apply font-hand text-[28px] leading-none;
+    }
+
+    span:last-child {
+      @apply text-[15px] text-muted;
+    }
+  }
+}

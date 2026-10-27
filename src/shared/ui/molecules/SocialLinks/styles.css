@@ -1,0 +1,13 @@
+@reference "../../styles/tailwind.css";
+
+.social-links {
+  @apply flex gap-2;
+
+  a {
+    @apply inline-flex size-12 items-center justify-center rounded-[14px] border-[1.5px] border-line text-ink;
+  }
+
+  a:hover {
+    @apply border-accent text-accent;
+  }
+}

@@ -1,0 +1,37 @@
+@reference "../../styles/tailwind.css";
+
+.site-header {
+  @apply flex flex-wrap items-center justify-between gap-x-8 gap-y-2 py-[18px];
+}
+
+.site-logo {
+  @apply py-1.5 font-display text-[26px] font-extrabold tracking-[-0.03em] text-ink no-underline;
+
+  span {
+    @apply text-accent;
+  }
+}
+
+.site-nav {
+  @apply flex flex-wrap items-center gap-x-[22px] gap-y-1 text-[15px] font-semibold;
+
+  > a:not(.site-cta) {
+    @apply py-3 text-ink no-underline;
+  }
+
+  > a:not(.site-cta):hover {
+    @apply text-accent;
+  }
+
+  > a[aria-current] {
+    @apply underline decoration-accent decoration-2 underline-offset-8;
+  }
+}
+
+.site-cta {
+  @apply ml-1.5 inline-flex items-center rounded-xl bg-accent px-[18px] py-[11px] text-white no-underline;
+}
+
+.site-cta:hover {
+  @apply bg-accent-strong text-white;
+}

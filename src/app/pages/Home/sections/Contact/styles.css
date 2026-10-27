@@ -1,0 +1,96 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.contact {
+  @apply flex flex-wrap items-start gap-x-16 gap-y-12 pb-24;
+}
+
+.contact-copy {
+  @apply flex min-w-0 flex-[1_1_420px] flex-col gap-[18px] pt-6;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(40px,5vw,68px)] leading-none font-extrabold tracking-[-0.045em];
+  }
+}
+
+.contact-kicker {
+  @apply m-0 font-hand text-[34px] leading-none font-semibold text-accent;
+}
+
+.contact-lead {
+  @apply m-0 max-w-[460px] text-lg leading-[1.65] text-ink-soft;
+}
+
+.contact-email {
+  @apply self-start py-2 text-[clamp(20px,2.2vw,24px)] font-bold text-accent underline-offset-[7px];
+}
+
+.contact-card {
+  @apply relative min-w-0 flex-[1_1_480px] rotate-[0.6deg] rounded-lg bg-card p-[clamp(22px,3vw,36px)] shadow-card-lg;
+}
+
+.contact-form {
+  @apply flex flex-col gap-5;
+
+  label,
+  legend {
+    @apply mb-1.5 block p-0 text-sm font-bold;
+  }
+
+  fieldset {
+    @apply m-0 min-w-0 border-0 p-0;
+  }
+
+  input,
+  textarea {
+    @apply box-border w-full rounded-[10px] border-[1.5px] border-line bg-white px-3.5 py-3 font-[inherit] text-base text-ink;
+  }
+
+  textarea {
+    @apply resize-y;
+  }
+}
+
+.contact-fields {
+  @apply grid gap-x-[18px] gap-y-[18px];
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+}
+
+.contact-topics {
+  @apply flex flex-wrap gap-2;
+
+  button {
+    @apply cursor-pointer rounded-full border-[1.5px] border-line bg-white px-4 py-2.5 font-[inherit] text-sm font-semibold text-ink;
+  }
+
+  button[aria-pressed="true"] {
+    @apply border-accent bg-accent text-white;
+  }
+}
+
+.contact-send {
+  @apply inline-flex cursor-pointer items-center gap-2.5 self-start rounded-[14px] border-0 bg-accent px-6 py-3.5 font-[inherit] font-bold text-white;
+}
+
+.contact-send:hover {
+  @apply bg-accent-strong;
+}
+
+.contact-thanks {
+  @apply flex min-h-[380px] flex-col items-start justify-center gap-3;
+
+  p {
+    @apply m-0 text-muted;
+  }
+
+  button {
+    @apply mt-2 cursor-pointer rounded-xl border-[1.5px] border-line bg-white px-[18px] py-3 font-[inherit] font-semibold text-ink;
+  }
+
+  .contact-thanks-kicker {
+    @apply font-hand text-5xl leading-none font-bold text-accent;
+  }
+
+  .contact-thanks-title {
+    @apply font-display text-[30px] leading-[1.1] font-extrabold tracking-[-0.03em] text-ink;
+  }
+}

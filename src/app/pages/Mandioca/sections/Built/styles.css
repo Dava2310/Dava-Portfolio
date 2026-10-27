@@ -1,0 +1,26 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.mandioca-built {
+  @apply flex flex-col gap-10 pb-[104px];
+}
+
+.mandioca-built-grid {
+  @apply grid gap-7;
+  grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr));
+
+  article {
+    @apply flex flex-col gap-[18px] rounded-lg bg-card px-3.5 pt-3.5 pb-[22px] shadow-card;
+  }
+}
+
+.mandioca-built-body {
+  @apply flex flex-col gap-2.5 px-1.5;
+
+  h3 {
+    @apply m-0 font-display text-2xl leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  p {
+    @apply m-0 text-base text-muted;
+  }
+}

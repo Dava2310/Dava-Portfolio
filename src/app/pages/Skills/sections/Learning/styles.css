@@ -1,0 +1,38 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.learning {
+  @apply flex flex-col gap-7 pb-[88px];
+}
+
+.learning-header {
+  @apply flex flex-wrap items-baseline gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 flex items-center gap-3.5 font-display text-[clamp(30px,3.4vw,42px)] leading-none font-extrabold tracking-[-0.035em];
+  }
+
+  h2 span {
+    @apply box-border size-[18px] rounded-full border-[2.5px] border-dashed border-muted;
+  }
+
+  > span {
+    @apply font-hand text-[26px] text-muted;
+  }
+}
+
+.learning-grid {
+  @apply grid gap-4;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+
+  article {
+    @apply flex flex-col gap-3 rounded-lg border-2 border-dashed border-[#cdbfa6] pt-[22px] pr-[22px] pb-5 pl-[22px];
+  }
+
+  h3 {
+    @apply m-0 font-display text-[22px] leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  p {
+    @apply m-0 text-[15px] text-muted;
+  }
+}

@@ -1,0 +1,37 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.right-now {
+  @apply flex flex-wrap gap-x-16 gap-y-8 pb-[104px];
+
+  ul {
+    @apply m-0 flex min-w-0 flex-[2_1_560px] list-none flex-col p-0;
+  }
+
+  li {
+    @apply flex gap-5 border-t-[1.5px] border-rule py-5 last:border-b-[1.5px];
+  }
+
+  li > span:first-child {
+    @apply flex-[0_0_120px] pt-[3px] text-[13px] font-bold tracking-[0.06em] text-muted uppercase;
+  }
+
+  li > span:last-child {
+    @apply text-lg;
+  }
+
+  a {
+    @apply font-bold;
+  }
+}
+
+.right-now-title {
+  @apply flex min-w-0 flex-[1_1_300px] flex-col gap-2.5;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(34px,4vw,52px)] leading-none font-extrabold tracking-[-0.035em];
+  }
+
+  span {
+    @apply font-hand text-[26px] text-muted;
+  }
+}

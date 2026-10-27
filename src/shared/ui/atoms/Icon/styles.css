@@ -1,0 +1,5 @@
+@reference "../../styles/tailwind.css";
+
+.icon {
+  @apply shrink-0;
+}

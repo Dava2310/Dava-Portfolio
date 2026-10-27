@@ -1,0 +1,98 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.mandioca-architecture {
+  @apply flex flex-col gap-10 pb-[104px];
+}
+
+.mandioca-architecture-header {
+  @apply flex flex-wrap items-end justify-between gap-x-12 gap-y-4;
+
+  p {
+    @apply m-0 max-w-[520px] text-ink-soft;
+  }
+}
+
+.mandioca-diagrams {
+  @apply flex flex-wrap items-start gap-7;
+
+  figure {
+    @apply m-0 rounded-md bg-white px-3 pt-3 shadow-[0_1px_0_#e3d7c2,0_12px_28px_rgb(60_45_20/0.1)];
+  }
+
+  figcaption {
+    @apply px-1 pt-3 pb-3.5 text-[15px] text-muted;
+  }
+
+  strong {
+    @apply text-ink;
+  }
+}
+
+.mandioca-diagram-main {
+  @apply min-w-0 flex-[2_1_560px] px-3.5 pt-3.5;
+
+  figcaption {
+    @apply flex justify-between gap-3 pt-3.5 pb-4;
+  }
+}
+
+.mandioca-zoom {
+  @apply font-hand text-[22px] leading-none text-accent;
+}
+
+.mandioca-diagram-side {
+  @apply flex min-w-0 flex-[1_1_300px] flex-col gap-7;
+
+  figure[data-tilt="right"] {
+    rotate: 1deg;
+  }
+
+  figure[data-tilt="left"] {
+    rotate: -1deg;
+  }
+}
+
+.diagram-placeholder {
+  @apply box-border flex flex-col items-center justify-center rounded-sm border-[1.5px] border-dashed border-[#b9c4dd] bg-[#f6f8fc] text-accent-tint-ink;
+  aspect-ratio: 4 / 3;
+
+  &[data-size="lg"] {
+    @apply gap-2 text-sm;
+  }
+
+  &[data-size="sm"] {
+    @apply gap-1.5 text-[13px];
+  }
+}
+
+.mandioca-stack {
+  @apply overflow-x-auto rounded-lg bg-card px-[clamp(16px,2.4vw,28px)] pt-2 pb-3 shadow-card;
+
+  table {
+    @apply w-full min-w-[560px] border-collapse text-base;
+  }
+
+  caption {
+    @apply pt-[18px] pb-2.5 text-left font-display text-[22px] font-extrabold tracking-[-0.02em];
+  }
+
+  thead th {
+    @apply w-[22%] border-b-2 border-rule py-2.5 text-left text-xs font-bold tracking-[0.06em] text-muted uppercase;
+  }
+
+  thead th + th {
+    @apply w-auto;
+  }
+
+  tbody th {
+    @apply border-b border-[#e8dfd0] py-3.5 pr-4 text-left font-bold;
+  }
+
+  tbody td {
+    @apply border-b border-[#e8dfd0] py-3.5 text-ink-soft;
+  }
+
+  tbody tr:last-child :is(th, td) {
+    @apply border-b-0;
+  }
+}

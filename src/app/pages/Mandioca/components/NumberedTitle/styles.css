@@ -1,0 +1,13 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.numbered-title {
+  @apply flex flex-col gap-2;
+
+  span {
+    @apply font-display text-lg font-extrabold text-accent;
+  }
+
+  h2 {
+    @apply m-0 font-display text-[clamp(32px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+}

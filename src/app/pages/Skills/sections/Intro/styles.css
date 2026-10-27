@@ -1,0 +1,45 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.skills-intro {
+  @apply flex flex-wrap items-end justify-between gap-x-14 gap-y-7 pt-14 pb-12;
+}
+
+.skills-intro-copy {
+  @apply flex min-w-0 flex-[1_1_600px] flex-col gap-5;
+
+  h1 {
+    @apply m-0 font-display text-[clamp(46px,6vw,78px)] leading-[0.98] font-extrabold tracking-[-0.045em];
+  }
+}
+
+.skills-intro-kicker {
+  @apply m-0 font-hand text-[32px] leading-none font-semibold text-accent;
+}
+
+.skills-intro-lead {
+  @apply m-0 max-w-[640px] text-[19px] leading-[1.65] text-ink-soft;
+}
+
+.skills-legend {
+  @apply m-0 flex list-none flex-col gap-2.5 rounded-lg bg-card px-[22px] py-[18px] text-[15px] font-semibold shadow-card;
+
+  li {
+    @apply flex items-center gap-3;
+  }
+
+  span {
+    @apply box-border size-3.5 rounded-full;
+  }
+
+  span[data-level="daily"] {
+    @apply bg-accent;
+  }
+
+  span[data-level="comfortable"] {
+    @apply border-[3px] border-accent;
+  }
+
+  span[data-level="learning"] {
+    @apply border-2 border-dashed border-muted;
+  }
+}

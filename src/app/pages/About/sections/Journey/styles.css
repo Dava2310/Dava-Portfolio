@@ -1,0 +1,37 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.journey {
+  @apply flex flex-col gap-8 pb-[104px];
+}
+
+.journey-card {
+  @apply relative flex flex-col gap-2 rounded-[10px] bg-card p-[clamp(24px,4vw,44px)] text-accent shadow-card-lg;
+
+  svg {
+    @apply block h-[150px] w-full;
+  }
+}
+
+.journey-distance {
+  @apply m-0 text-center font-hand text-[34px] leading-none font-bold;
+}
+
+.journey-places {
+  @apply flex flex-wrap justify-between gap-x-10 gap-y-6 text-ink;
+
+  > div {
+    @apply flex max-w-[440px] flex-[1_1_300px] flex-col gap-1.5;
+  }
+
+  > div[data-side="end"] {
+    @apply items-end text-right;
+  }
+
+  h3 {
+    @apply m-0 font-display text-[26px] leading-[1.1] font-extrabold tracking-[-0.02em];
+  }
+
+  p {
+    @apply m-0 text-base text-muted;
+  }
+}

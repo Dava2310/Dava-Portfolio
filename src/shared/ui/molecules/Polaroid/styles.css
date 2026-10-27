@@ -1,0 +1,30 @@
+@reference "../../styles/tailwind.css";
+
+.polaroid {
+  @apply relative m-0 box-border block bg-card text-ink no-underline;
+  rotate: var(--polaroid-rotate, 0deg);
+
+  &[data-size="md"] {
+    @apply px-3 pt-3 shadow-photo;
+  }
+
+  &[data-size="lg"] {
+    @apply px-3.5 pt-3.5 shadow-photo-lg;
+  }
+
+  img {
+    @apply block w-full object-cover;
+  }
+}
+
+.polaroid-caption {
+  @apply block text-center font-hand leading-none;
+
+  .polaroid[data-size="md"] & {
+    @apply px-1 pt-3 pb-4 text-[25px] leading-[1.1];
+  }
+
+  .polaroid[data-size="lg"] & {
+    @apply pt-3.5 pb-[18px] text-[28px];
+  }
+}

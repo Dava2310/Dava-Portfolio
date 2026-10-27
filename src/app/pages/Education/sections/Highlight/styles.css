@@ -1,0 +1,37 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.highlight {
+  @apply relative flex flex-wrap items-center gap-x-14 gap-y-10 rounded-[10px] bg-card p-[clamp(24px,4vw,48px)] shadow-card-lg;
+}
+
+.highlight-photo {
+  @apply min-w-[240px] flex-[0_1_340px];
+}
+
+.highlight-copy {
+  @apply flex min-w-0 flex-[1_1_440px] flex-col gap-4;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(32px,3.8vw,48px)] leading-[1.02] font-extrabold tracking-[-0.04em];
+  }
+
+  p {
+    @apply m-0 text-[18px] leading-[1.65] text-ink-soft;
+  }
+}
+
+.highlight-badge {
+  @apply self-start rounded-full bg-accent px-3 py-1 text-[13px] font-bold text-white;
+}
+
+.highlight-copy .highlight-score {
+  @apply flex items-baseline gap-2 font-display leading-none font-extrabold tracking-[-0.05em] text-accent;
+
+  span:first-child {
+    @apply text-[clamp(56px,7vw,88px)];
+  }
+
+  span:last-child {
+    @apply text-[28px] text-muted;
+  }
+}

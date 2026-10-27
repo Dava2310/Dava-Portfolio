@@ -1,0 +1,13 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.teaching-photos {
+  @apply flex flex-wrap items-start gap-7 px-1.5 pt-2 pb-[104px];
+}
+
+.teaching-photos-main {
+  @apply min-w-0 flex-[2_1_560px];
+}
+
+.teaching-photos-side {
+  @apply flex min-w-0 flex-[1_1_300px] flex-col gap-7;
+}

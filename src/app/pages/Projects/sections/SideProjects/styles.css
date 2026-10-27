@@ -1,0 +1,30 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-projects {
+  @apply flex flex-col gap-10 pt-22 pb-[104px];
+}
+
+.side-projects-header {
+  @apply flex flex-wrap items-baseline gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(30px,3.4vw,42px)] leading-none font-extrabold tracking-[-0.035em];
+  }
+
+  span {
+    @apply font-hand text-[26px] text-muted;
+  }
+}
+
+.side-projects-grid {
+  @apply grid gap-x-7 gap-y-9;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+}
+
+.side-projects-action {
+  @apply inline-flex size-11 items-center justify-center rounded-xl border-[1.5px] border-line text-ink;
+}
+
+.side-projects-action:hover {
+  @apply text-accent;
+}

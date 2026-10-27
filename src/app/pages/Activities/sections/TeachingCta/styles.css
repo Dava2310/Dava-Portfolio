@@ -1,0 +1,29 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.teaching-cta {
+  @apply pb-24;
+}
+
+.teaching-cta-box {
+  @apply flex flex-wrap items-center justify-between gap-x-10 gap-y-6 rounded-xl border-2 border-dashed border-line p-[clamp(24px,4vw,40px)];
+}
+
+.teaching-cta-copy {
+  @apply flex flex-col gap-1.5;
+
+  p {
+    @apply m-0 font-hand text-[28px] leading-none text-accent;
+  }
+
+  h2 {
+    @apply m-0 font-display text-[clamp(26px,3vw,36px)] leading-[1.1] font-extrabold tracking-[-0.03em];
+  }
+}
+
+.teaching-cta-link {
+  @apply inline-flex items-center gap-2.5 rounded-[14px] bg-accent px-[22px] py-3.5 font-bold text-white no-underline;
+}
+
+.teaching-cta-link:hover {
+  @apply bg-accent-strong text-white;
+}

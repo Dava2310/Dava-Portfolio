@@ -1,0 +1,17 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.projects-intro {
+  @apply flex max-w-[760px] flex-col gap-5 pt-14 pb-10;
+
+  h1 {
+    @apply m-0 font-display text-[clamp(46px,6vw,78px)] leading-[0.98] font-extrabold tracking-[-0.045em];
+  }
+}
+
+.projects-intro-kicker {
+  @apply m-0 font-hand text-[32px] leading-none font-semibold text-accent;
+}
+
+.projects-intro-lead {
+  @apply m-0 text-[19px] leading-[1.65] text-ink-soft;
+}

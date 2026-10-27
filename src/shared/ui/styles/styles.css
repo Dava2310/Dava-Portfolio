@@ -1,0 +1,6 @@
+/* Global entry, imported once by app/mount.tsx. Component styles are imported by their own TSX. */
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/figtree";
+@import "@fontsource-variable/caveat";
+@import "./tailwind.css";
+@import "./base.css";

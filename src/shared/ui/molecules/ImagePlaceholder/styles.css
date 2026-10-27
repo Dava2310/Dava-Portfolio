@@ -1,0 +1,13 @@
+@reference "../../styles/tailwind.css";
+
+.image-placeholder {
+  @apply box-border flex flex-col items-center justify-center gap-1.5 p-2 text-center text-[13px];
+
+  &[data-tone="photo"] {
+    @apply bg-photo text-photo-ink;
+  }
+
+  &[data-tone="tint"] {
+    @apply rounded bg-accent-tint text-accent-tint-ink;
+  }
+}
