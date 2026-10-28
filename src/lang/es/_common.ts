@@ -32,6 +32,7 @@ export const _common: Dict["_common"] = {
   aria: {
     builtWith: "Hecho con",
     zoomIn: "Ampliar imagen",
+    toTop: "Volver arriba",
     close: "Cerrar",
   },
 };

@@ -30,6 +30,7 @@ export const _common = {
   aria: {
     builtWith: "Built with",
     zoomIn: "Enlarge image",
+    toTop: "Back to top",
     close: "Close",
   },
 };

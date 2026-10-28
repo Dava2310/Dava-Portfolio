@@ -1,7 +1,8 @@
 @reference "../../styles/tailwind.css";
 
 .page {
-  @apply overflow-hidden bg-paper text-ink;
+  /* `clip` (not `hidden`) so the sticky header keeps working. */
+  @apply overflow-x-clip bg-paper text-ink;
 }
 
 .page-column {

@@ -3,6 +3,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Anchors land below the sticky header. */
+    scroll-padding-top: 96px;
   }
 
   body {

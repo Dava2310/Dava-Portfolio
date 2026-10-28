@@ -1,0 +1,11 @@
+/* Press feedback: anything clickable shrinks slightly while pressed. Uses `scale` so it
+   composes with components that tilt via `rotate`. Inline links ignore it (not transformable). */
+:where(a[href], button:not(:disabled), summary) {
+  transition: scale 120ms ease-out;
+}
+
+a[href]:active,
+button:not(:disabled):active,
+summary:active {
+  scale: 0.96;
+}

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { useTranslation } from "@/features/i18n";
 import type { PageId } from "@/shared/config/pages";
+import { ToTop } from "@/shared/ui/molecules/ToTop";
 import { Footer } from "@/shared/ui/templates/Footer";
 import { Header } from "@/shared/ui/templates/Header";
 
@@ -26,6 +27,7 @@ export function PageLayout({ page, children }: PageLayoutProps) {
         <main id="main">{children}</main>
         <Footer />
       </div>
+      <ToTop label={t("_common:aria.toTop")} />
     </div>
   );
 }

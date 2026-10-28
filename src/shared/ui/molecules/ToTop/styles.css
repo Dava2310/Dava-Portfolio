@@ -1,0 +1,21 @@
+@reference "../../styles/tailwind.css";
+
+.to-top {
+  @apply fixed right-[clamp(16px,3vw,32px)] bottom-[clamp(16px,3vw,32px)] z-20 inline-flex size-12 cursor-pointer items-center justify-center rounded-full border-0 bg-accent text-white shadow-photo-lg;
+  opacity: 0;
+  translate: 0 12px;
+  transition:
+    opacity 200ms ease-out,
+    translate 200ms ease-out,
+    scale 120ms ease-out,
+    background-color 150ms;
+
+  &[data-visible="true"] {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  &:hover {
+    @apply bg-accent-strong;
+  }
+}
