@@ -1,8 +1,8 @@
 import { useLang, useTranslation } from "@/features/i18n";
 import { pageUrl } from "@/shared/config/pages";
-import { SOCIALS } from "@/shared/config/socials";
 import { Icon } from "@/shared/ui/atoms/Icon";
 import type { TapeProps } from "@/shared/ui/atoms/Tape";
+import { SIDE_PROJECT_IDS, SIDE_PROJECTS } from "@/app/pages/SideProject";
 import { ImagePlaceholder } from "@/shared/ui/molecules/ImagePlaceholder";
 import { ProjectCard } from "@/shared/ui/molecules/ProjectCard";
 
@@ -19,12 +19,9 @@ const tapeProps = (index: number) => {
   return tape ? { tape } : {};
 };
 
-const CARDS = [0, 1, 2, 3, 4, 5];
-
 export function SideProjects() {
   const { t } = useTranslation();
   const lang = useLang();
-  const tool = t("_pages:projects.side.tool");
 
   return (
     <section className="side-projects" aria-labelledby="side-projects-title">
@@ -33,46 +30,55 @@ export function SideProjects() {
         <span>{t("_pages:projects.side.note")}</span>
       </div>
       <div className="side-projects-grid">
-        {CARDS.map((index) => (
-          <ProjectCard
-            key={index}
-            media={
-              <ImagePlaceholder
-                label={t("_pages:projects.side.shot")}
-                ratio="16/10"
-                tone="tint"
-              />
-            }
-            kind={t("_pages:projects.side.kind")}
-            title={t("_pages:projects.side.name")}
-            description={t("_pages:projects.side.description")}
-            tags={[tool, tool, tool]}
-            tagsLabel={t("_common:aria.builtWith")}
-            link={{
-              href: pageUrl(lang, "mandioca"),
-              label: t("_pages:projects.side.story"),
-            }}
-            {...tapeProps(index)}
-            actions={
-              <>
-                <a
-                  className="side-projects-action"
-                  href={SOCIALS.github}
-                  aria-label={t("_pages:projects.side.code")}
-                >
-                  <Icon name="github" strokeWidth={1.8} />
-                </a>
-                <a
-                  className="side-projects-action"
-                  href="#"
-                  aria-label={t("_pages:projects.side.demo")}
-                >
-                  <Icon name="external" strokeWidth={1.8} />
-                </a>
-              </>
-            }
-          />
-        ))}
+        {SIDE_PROJECT_IDS.map((id, index) => {
+          const text = t(`_pages:${id}`, { returnObjects: true });
+          const data = SIDE_PROJECTS[id];
+          const repo = data.repos.find((r) => r.url && !r.private);
+          return (
+            <ProjectCard
+              key={id}
+              media={
+                <ImagePlaceholder
+                  label={text.hero.label}
+                  ratio="16/10"
+                  tone="tint"
+                />
+              }
+              kind={text.kind}
+              title={text.name}
+              description={text.oneLiner}
+              tags={data.tags.slice(0, 5)}
+              tagsLabel={t("_common:aria.builtWith")}
+              link={{
+                href: pageUrl(lang, id),
+                label: t("_pages:projects.side.story"),
+              }}
+              {...tapeProps(index)}
+              actions={
+                <>
+                  {repo?.url ? (
+                    <a
+                      className="side-projects-action"
+                      href={repo.url}
+                      aria-label={t("_pages:projects.side.code")}
+                    >
+                      <Icon name="github" strokeWidth={1.8} />
+                    </a>
+                  ) : null}
+                  {data.live ? (
+                    <a
+                      className="side-projects-action"
+                      href={data.live.url}
+                      aria-label={t("_pages:projects.side.demo")}
+                    >
+                      <Icon name="external" strokeWidth={1.8} />
+                    </a>
+                  ) : null}
+                </>
+              }
+            />
+          );
+        })}
       </div>
     </section>
   );

@@ -32,14 +32,7 @@ export const home = {
       name: "Mandioca Platform",
       description:
         "A web platform, QR traceability, a Telegram bot and a weighbridge app for an agro-industrial company.",
-      shot: "Screenshot · Mandioca platform",
-    },
-    side: {
-      kind: "Side project · [year]",
-      name: "[Side project name]",
-      description: "[One line: what it does and who it's for.]",
-      tool: "[Tool]",
-      shot: "Screenshot · side project",
+      alt: "Landing page of the Mandioca web platform",
     },
   },
   moments: {

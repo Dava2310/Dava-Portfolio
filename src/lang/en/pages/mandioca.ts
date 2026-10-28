@@ -9,15 +9,6 @@ export const mandioca = {
     company: { label: "Company", value: "Agroindustrial Mandioca C.A." },
     timeline: { label: "Timeline", value: "15 months" },
   },
-  jump: {
-    label: "On this page",
-    intro: "jump to:",
-    problem: "The problem",
-    built: "What I built",
-    architecture: "Architecture",
-    decisions: "Key decisions",
-    learned: "What I learned",
-  },
   hero: {
     alt: "Mandioca dashboard showing the main overview screen",
     caption: "the main dashboard",
@@ -126,13 +117,12 @@ export const mandioca = {
   },
   learned: {
     title: "what I learned",
-    body: "[Two or three sentences in your own words — what surprised you, what you'd do differently, and what you're proudest of.]",
+    body: "I learned how get an Information System from its raw client requirements to the production-ready web platform. Designing, implementing, testing, and deployment.",
   },
   pager: {
     label: "More projects",
     backLabel: "Back to",
     back: "All projects",
     nextLabel: "Next project",
-    next: "[Side project name]",
   },
 };

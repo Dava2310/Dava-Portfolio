@@ -1,0 +1,25 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-lessons {
+  @apply pb-[clamp(64px,9vw,104px)];
+
+  > div {
+    @apply relative mx-auto box-border flex w-full max-w-[820px] -rotate-[0.8deg] flex-col gap-[18px] rounded-md bg-card p-[clamp(26px,4vw,48px)] shadow-[0_1px_0_#e3d7c2,0_16px_36px_rgb(60_45_20/0.1)];
+  }
+
+  h2 {
+    @apply m-0 font-hand text-5xl leading-none font-bold text-ink;
+  }
+
+  ol {
+    @apply m-0 flex list-none flex-col gap-3.5 p-0;
+  }
+
+  li {
+    @apply flex gap-3.5 text-lg leading-[1.6] text-ink-soft;
+  }
+
+  li > span:first-child {
+    @apply flex-[0_0_26px] font-hand text-[32px] leading-[0.9] font-bold text-accent;
+  }
+}

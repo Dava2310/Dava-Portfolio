@@ -1,0 +1,90 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-highlights {
+  @apply flex flex-col gap-8 pb-[clamp(64px,9vw,104px)];
+}
+
+.side-highlights-header {
+  @apply flex flex-wrap items-baseline gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(30px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+
+  span {
+    @apply font-hand text-[26px] text-muted;
+  }
+}
+
+.side-label {
+  @apply m-0 text-xs font-bold tracking-[0.06em] text-muted uppercase;
+}
+
+.side-rank {
+  @apply font-display font-extrabold tracking-[-0.05em] text-accent;
+}
+
+.side-evidence {
+  @apply m-0 flex list-none flex-wrap gap-1.5 p-0;
+
+  code {
+    @apply inline-block rounded-md bg-[#efe8da] px-2 py-[3px] font-mono text-[12.5px] leading-normal text-[#2e3443] [word-break:break-all];
+  }
+}
+
+.side-highlights-top {
+  @apply m-0 grid list-none gap-x-6 gap-y-8 p-0;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+
+  > li {
+    @apply relative flex flex-col gap-3.5 rounded-lg bg-card px-[26px] pt-7 pb-6 shadow-[0_1px_0_#e3d7c2,0_16px_36px_rgb(60_45_20/0.12)];
+  }
+
+  .side-rank {
+    @apply text-[60px] leading-[0.9];
+  }
+
+  h3 {
+    @apply m-0 font-display text-2xl leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  p:not(.side-label) {
+    @apply m-0 text-base text-ink-soft;
+  }
+
+  div {
+    @apply flex flex-col gap-0.5;
+  }
+}
+
+.side-highlights-evidence {
+  @apply mt-auto gap-2 border-t border-dashed border-line pt-3;
+}
+
+.side-highlights-rest {
+  @apply m-0 flex list-none flex-col gap-4 p-0;
+
+  > li {
+    @apply flex flex-wrap gap-x-7 gap-y-3 rounded-lg border-[1.5px] border-line px-6 py-[22px];
+  }
+
+  .side-rank {
+    @apply flex-[0_0_44px] text-[28px] leading-none text-muted;
+  }
+
+  h3 {
+    @apply m-0 font-display text-xl leading-[1.2] font-extrabold tracking-[-0.02em];
+  }
+
+  div {
+    @apply flex min-w-0 flex-[1_1_220px] flex-col gap-0.5;
+  }
+
+  p:not(.side-label) {
+    @apply m-0 text-[15px] text-ink-soft;
+  }
+}
+
+.side-highlights-rest-main {
+  @apply flex-[1_1_240px] gap-2.5;
+}

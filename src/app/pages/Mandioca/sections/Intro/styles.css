@@ -39,19 +39,3 @@
     @apply mx-0 mt-0.5 mb-0 font-semibold;
   }
 }
-
-.mandioca-jump {
-  @apply flex flex-wrap items-center gap-2 pb-10;
-
-  span {
-    @apply mr-1.5 font-hand text-2xl text-muted;
-  }
-
-  a {
-    @apply rounded-full border-[1.5px] border-line px-4 py-[9px] text-sm font-semibold text-ink no-underline;
-  }
-
-  a:hover {
-    @apply border-accent text-accent;
-  }
-}

@@ -14,7 +14,7 @@ export const projects = {
   },
   featured: {
     badge: "Featured · Client project",
-    shot: "Screenshot · Mandioca dashboard",
+    alt: "Landing page of the Mandioca web platform",
     title: "Mandioca Platform",
     description:
       "From the farm to the truck scale: a web platform, QR traceability with a Telegram bot, and a desktop weighbridge app for an agro-industrial company in Maturín.",
@@ -28,11 +28,6 @@ export const projects = {
   side: {
     title: "Side projects",
     note: "(built for fun, and to learn)",
-    shot: "Project screenshot",
-    kind: "[Type] · [Year]",
-    name: "[Side project name]",
-    description: "[One line: what it does and who it's for.]",
-    tool: "[Tool]",
     story: "Read the story",
     code: "Code on GitHub",
     demo: "Live demo",

@@ -1,5 +1,5 @@
 import { useLang, useTranslation } from "@/features/i18n";
-import { pageUrl, type PageId } from "@/shared/config/pages";
+import { pageUrl, parentOf, type PageId } from "@/shared/config/pages";
 import { LANGS } from "@/lang";
 import { LangSwitch } from "@/shared/ui/molecules/LangSwitch";
 
@@ -20,14 +20,13 @@ const NAV: readonly {
     | "teaching"
     | "activities"
     | "skills";
-  parentOf?: PageId;
 }[] = [
   { id: "about", key: "about" },
-  { id: "projects", key: "projects", parentOf: "mandioca" },
+  { id: "projects", key: "projects" },
   { id: "experience", key: "experience" },
   { id: "education", key: "education" },
   { id: "teaching", key: "teaching" },
-  { id: "activities", key: "activities", parentOf: "petrobowl" },
+  { id: "activities", key: "activities" },
   { id: "skills", key: "skills" },
 ];
 
@@ -53,14 +52,14 @@ export function Header({ current }: HeaderProps) {
         daniel<span>.</span>v
       </a>
       <nav className="site-nav" aria-label={t("_common:nav.label")}>
-        {NAV.map(({ id, key, parentOf }) => (
+        {NAV.map(({ id, key }) => (
           <a
             key={id}
             href={pageUrl(lang, id)}
             aria-current={
               current === id
                 ? "page"
-                : current === parentOf
+                : parentOf(current) === id
                   ? "true"
                   : undefined
             }

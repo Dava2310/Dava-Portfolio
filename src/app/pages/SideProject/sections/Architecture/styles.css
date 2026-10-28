@@ -1,0 +1,101 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-architecture {
+  @apply flex flex-col gap-8 pb-[clamp(64px,9vw,104px)];
+
+  h2 {
+    @apply m-0 font-display text-[clamp(30px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+}
+
+.side-diagram {
+  @apply m-0 rounded-md bg-white px-3.5 pt-3.5 shadow-[0_1px_0_#e3d7c2,0_12px_28px_rgb(60_45_20/0.1)];
+
+  figcaption {
+    @apply flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1.5 px-1.5 pt-3.5 pb-4 text-[15px] text-muted;
+  }
+
+  strong {
+    @apply text-ink;
+  }
+
+  .image-placeholder {
+    @apply rounded-sm border-[1.5px] border-dashed border-[#b9c4dd] bg-[#f6f8fc];
+  }
+}
+
+.side-zoom {
+  @apply font-hand text-[22px] leading-none text-accent;
+}
+
+.side-layers {
+  @apply relative flex flex-col gap-4 rounded-lg bg-card p-[clamp(20px,3vw,32px)] shadow-card;
+
+  > p {
+    @apply m-0 font-hand text-[28px] leading-[1.1] text-accent;
+  }
+
+  ol {
+    @apply m-0 flex list-none flex-col gap-2 p-0;
+  }
+
+  li {
+    @apply flex flex-col items-stretch gap-2;
+  }
+
+  li > div {
+    @apply flex flex-wrap items-center gap-x-5 gap-y-1.5 rounded-lg border-[1.5px] border-[#c9d3e8] bg-[#f6f8fc] px-[18px] py-4;
+  }
+
+  li > .icon {
+    @apply self-center text-[#7a8ab0];
+  }
+}
+
+.side-layer-name {
+  @apply flex-[0_1_210px] font-display text-xl leading-[1.2] font-extrabold tracking-[-0.02em];
+}
+
+.side-layer-detail {
+  @apply min-w-0 flex-[1_1_240px] text-[15px] text-ink-soft;
+}
+
+.side-layers code {
+  @apply inline-block rounded-md bg-[#efe8da] px-2 py-[3px] font-mono text-[12.5px] text-[#2e3443] [word-break:break-all];
+}
+
+.side-stack {
+  @apply rounded-lg bg-card px-[clamp(16px,2.4vw,28px)] pt-2 pb-3 shadow-[0_1px_0_#e3d7c2,0_8px_20px_rgb(60_45_20/0.06)];
+
+  h3 {
+    @apply m-0 pt-[18px] pb-2.5 font-display text-[22px] font-extrabold tracking-[-0.02em];
+  }
+
+  dl {
+    @apply m-0;
+  }
+
+  div {
+    @apply flex flex-wrap gap-x-4 gap-y-1 border-b border-[#e8dfd0] py-3.5;
+  }
+
+  dt {
+    @apply flex-[0_0_180px] font-bold;
+  }
+
+  dd {
+    @apply m-0 min-w-0 flex-[1_1_260px] text-ink-soft;
+  }
+
+  [data-head] {
+    @apply border-b-2 border-rule py-2.5;
+  }
+
+  [data-head] :is(dt, dd) {
+    @apply text-xs font-bold tracking-[0.06em] text-muted uppercase;
+  }
+
+  div:last-child {
+    @apply border-b-0;
+  }
+}

@@ -11,15 +11,6 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
     company: { label: "Empresa", value: "Agroindustrial Mandioca C.A." },
     timeline: { label: "Duración", value: "15 meses" },
   },
-  jump: {
-    label: "En esta página",
-    intro: "ir a:",
-    problem: "El problema",
-    built: "Lo que construí",
-    architecture: "Arquitectura",
-    decisions: "Decisiones clave",
-    learned: "Lo que aprendí",
-  },
   hero: {
     alt: "Panel de control de Mandioca con la pantalla principal",
     caption: "el panel principal",
@@ -135,6 +126,5 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
     backLabel: "Volver a",
     back: "Todos los proyectos",
     nextLabel: "Siguiente proyecto",
-    next: "[Nombre del proyecto personal]",
   },
 };

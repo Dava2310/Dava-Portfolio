@@ -41,6 +41,36 @@ export const meta = {
       title: "Petrobowl 2025 — Daniel Vetencourt",
       description: "National runner-up at Petrobowl 2025.",
     },
+    spira: {
+      title: "Spira — Daniel Vetencourt",
+      description:
+        "Food-surplus platform where shops list expiring stock and NGOs claim it with a QR/PIN pass. NestJS, PostgreSQL and React.",
+    },
+    itassets: {
+      title: "IT Assets Tracker — Daniel Vetencourt",
+      description:
+        "Inventory API with two frontends, Next.js and Vue, built for Harbour.Space.",
+    },
+    clinica: {
+      title: "Clinica — Daniel Vetencourt",
+      description:
+        "Clinic appointments platform for patients, doctors and administrators. React, Express and Prisma.",
+    },
+    escuela: {
+      title: "Escuela — Daniel Vetencourt",
+      description:
+        "Academy management platform with admin, teacher and student portals. Next.js, Express and Prisma.",
+    },
+    conejos: {
+      title: "Sistema Conejos — Daniel Vetencourt",
+      description:
+        "Rabbit farm management system in native PHP and MySQL, with parentage, crossings and PDF reports.",
+    },
+    stii: {
+      title: "Proyecto STII — Daniel Vetencourt",
+      description:
+        "Java desktop app that centralises supplier data and generates weekly payment orders for an accounting team.",
+    },
     teaching: {
       title: "Teaching — Daniel Vetencourt",
       description: "Teaching Python and robotics at Academos.",

@@ -16,7 +16,7 @@ export const projects: Dict["_pages"]["projects"] = {
   },
   featured: {
     badge: "Destacado · Proyecto para cliente",
-    shot: "Captura · Panel de Mandioca",
+    alt: "Página de inicio de la plataforma web de Mandioca",
     title: "Plataforma Mandioca",
     description:
       "Del campo a la báscula del camión: una plataforma web, trazabilidad con QR y un bot de Telegram, y una app de escritorio para la báscula de una empresa agroindustrial en Maturín.",
@@ -30,11 +30,6 @@ export const projects: Dict["_pages"]["projects"] = {
   side: {
     title: "Proyectos personales",
     note: "(hechos por diversión y para aprender)",
-    shot: "Captura del proyecto",
-    kind: "[Tipo] · [Año]",
-    name: "[Nombre del proyecto personal]",
-    description: "[Una línea: qué hace y para quién es.]",
-    tool: "[Herramienta]",
     story: "Leer la historia",
     code: "Código en GitHub",
     demo: "Demo en vivo",

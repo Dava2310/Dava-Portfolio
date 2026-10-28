@@ -10,6 +10,13 @@ import { about } from "./pages/about";
 import { activities } from "./pages/activities";
 import { petrobowl } from "./pages/petrobowl";
 import { teaching } from "./pages/teaching";
+import { spira } from "./pages/spira";
+import { itassets } from "./pages/itassets";
+import { clinica } from "./pages/clinica";
+import { escuela } from "./pages/escuela";
+import { conejos } from "./pages/conejos";
+import { stii } from "./pages/stii";
+import { sideProject } from "./pages/side-project";
 import type { Dict } from "../types";
 
 export const es: Dict = {
@@ -25,6 +32,13 @@ export const es: Dict = {
     activities,
     petrobowl,
     teaching,
+    spira,
+    itassets,
+    clinica,
+    escuela,
+    conejos,
+    stii,
+    sideProject,
   },
   meta,
 };

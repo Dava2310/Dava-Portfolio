@@ -1,0 +1,22 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-numbers {
+  @apply pb-[clamp(64px,9vw,104px)];
+
+  dl {
+    @apply m-0 grid gap-6;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  }
+
+  div {
+    @apply flex flex-col gap-1.5 border-t-2 border-rule pt-[18px];
+  }
+
+  dt {
+    @apply order-2 text-base text-ink-soft;
+  }
+
+  dd {
+    @apply order-1 m-0 font-display text-[clamp(44px,5vw,60px)] leading-none font-extrabold tracking-[-0.05em] text-accent;
+  }
+}

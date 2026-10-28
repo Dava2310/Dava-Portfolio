@@ -5,13 +5,6 @@ import { Icon } from "@/shared/ui/atoms/Icon";
 import "./styles.css";
 
 const FACTS = ["role", "where", "company", "timeline"] as const;
-const SECTIONS = [
-  "problem",
-  "built",
-  "architecture",
-  "decisions",
-  "learned",
-] as const;
 
 export function Intro() {
   const { t } = useTranslation();
@@ -40,17 +33,6 @@ export function Intro() {
           ))}
         </dl>
       </section>
-      <nav
-        className="mandioca-jump"
-        aria-label={t("_pages:mandioca.jump.label")}
-      >
-        <span>{t("_pages:mandioca.jump.intro")}</span>
-        {SECTIONS.map((id) => (
-          <a key={id} href={`#${id}`}>
-            {t(`_pages:mandioca.jump.${id}`)}
-          </a>
-        ))}
-      </nav>
     </>
   );
 }

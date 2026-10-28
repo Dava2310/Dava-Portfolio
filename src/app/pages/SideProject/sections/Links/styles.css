@@ -1,0 +1,66 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-links {
+  @apply flex flex-col gap-7 pb-[clamp(64px,9vw,96px)];
+
+  h2 {
+    @apply m-0 font-display text-[clamp(30px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+}
+
+.side-links-grid {
+  @apply grid items-start gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+}
+
+.side-links-side {
+  @apply flex flex-col gap-6;
+}
+
+.side-links-card {
+  @apply flex flex-col rounded-lg bg-card px-6 pt-[22px] pb-2.5 shadow-[0_1px_0_#e3d7c2,0_8px_20px_rgb(60_45_20/0.06)];
+
+  h3 {
+    @apply m-0 mb-1.5 text-[13px] font-bold tracking-[0.06em] text-muted uppercase;
+  }
+}
+
+.side-link {
+  @apply flex min-h-11 items-center gap-3.5 border-b border-[#e8dfd0] px-1 py-3.5 text-ink no-underline last:border-b-0;
+
+  > span {
+    @apply flex min-w-0 flex-1 flex-col;
+  }
+
+  strong {
+    @apply font-bold [overflow-wrap:anywhere];
+  }
+
+  small {
+    @apply text-sm text-muted [overflow-wrap:anywhere];
+  }
+
+  &[data-private="true"] {
+    @apply text-ink-soft;
+  }
+
+  em {
+    @apply mt-1 self-start rounded-full border-[1.5px] border-[#cdbfa6] px-2.5 py-px text-[13px] font-semibold not-italic;
+  }
+}
+
+a.side-link:hover strong {
+  @apply text-accent;
+}
+
+.side-links-wake {
+  @apply mt-3 mb-2 flex gap-2.5 text-sm leading-normal text-muted;
+
+  .icon {
+    @apply mt-px;
+  }
+}
+
+.side-links-nolive {
+  @apply m-0 flex gap-3 rounded-lg border-[1.5px] border-dashed border-line px-[22px] py-5 text-[15px] leading-[1.55] text-ink-soft;
+}

@@ -1,5 +1,6 @@
 import { useLang, useTranslation } from "@/features/i18n";
 import { pageUrl } from "@/shared/config/pages";
+import { projectCard } from "@/app/pages/SideProject";
 import { Icon } from "@/shared/ui/atoms/Icon";
 
 import "./styles.css";
@@ -8,6 +9,7 @@ export function Pager() {
   const { t } = useTranslation();
   const lang = useLang();
   const projectsUrl = pageUrl(lang, "projects");
+  const next = projectCard.read(t, "spira");
 
   return (
     <nav
@@ -21,12 +23,12 @@ export function Pager() {
         </span>
         <strong>{t("_pages:mandioca.pager.back")}</strong>
       </a>
-      <a className="mandioca-pager-next" href={projectsUrl}>
+      <a className="mandioca-pager-next" href={pageUrl(lang, "spira")}>
         <span>
           {t("_pages:mandioca.pager.nextLabel")}
           <Icon name="arrow" size={16} />
         </span>
-        <strong>{t("_pages:mandioca.pager.next")}</strong>
+        <strong>{next.name}</strong>
       </a>
     </nav>
   );

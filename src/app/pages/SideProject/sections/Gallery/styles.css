@@ -1,0 +1,47 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-gallery {
+  @apply flex flex-col gap-6 pb-[clamp(64px,9vw,104px)];
+}
+
+.side-gallery-header {
+  @apply flex flex-wrap items-baseline justify-between gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(30px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+
+  span {
+    @apply font-hand text-[26px] text-muted;
+  }
+}
+
+.side-gallery-note {
+  @apply m-0 inline-flex items-center gap-2.5 self-start rounded-[10px] border-[1.5px] border-dashed border-[#cdbfa6] px-4 py-2.5 text-[15px] text-ink-soft;
+}
+
+.side-gallery-grid {
+  @apply px-1 pt-1.5;
+  columns: 3 150px;
+  column-gap: 24px;
+
+  figure {
+    @apply m-0 mb-6 box-border inline-block w-full bg-card px-2.5 pt-2.5 shadow-[0_10px_24px_rgb(60_45_20/0.1)] [break-inside:avoid];
+  }
+
+  figcaption {
+    @apply px-1 pt-2.5 pb-3.5 text-center font-hand text-[23px] leading-[1.1];
+  }
+
+  .image-placeholder {
+    @apply rounded-[3px];
+  }
+
+  img {
+    @apply block h-auto w-full rounded-[3px];
+  }
+
+  &[data-pending="true"] .image-placeholder {
+    @apply border-2 border-dashed border-[#cdbfa6] bg-[#f4eee2] text-[#5e5747];
+  }
+}

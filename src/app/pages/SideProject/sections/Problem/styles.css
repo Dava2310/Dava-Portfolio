@@ -1,0 +1,17 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-problem {
+  @apply flex flex-wrap gap-x-16 gap-y-4 pb-[clamp(64px,9vw,104px)];
+
+  h2 {
+    @apply m-0 min-w-0 flex-[1_1_280px] font-display text-[clamp(30px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+
+  div {
+    @apply flex min-w-0 flex-[2_1_520px] flex-col gap-4 text-lg leading-[1.7] text-ink-soft;
+  }
+
+  p {
+    @apply m-0;
+  }
+}

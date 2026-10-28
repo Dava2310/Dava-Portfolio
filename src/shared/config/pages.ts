@@ -2,17 +2,31 @@
 export const PAGES = [
   { id: "home", path: "" },
   { id: "projects", path: "projects" },
-  { id: "mandioca", path: "projects/mandioca" },
+  { id: "mandioca", path: "projects/mandioca", parent: "projects" },
+  { id: "spira", path: "projects/spira", parent: "projects" },
+  { id: "itassets", path: "projects/it-assets-tracker", parent: "projects" },
+  { id: "clinica", path: "projects/clinica", parent: "projects" },
+  { id: "escuela", path: "projects/escuela", parent: "projects" },
+  { id: "conejos", path: "projects/sistema-conejos", parent: "projects" },
+  { id: "stii", path: "projects/proyecto-stii", parent: "projects" },
   { id: "experience", path: "experience" },
   { id: "education", path: "education" },
   { id: "skills", path: "skills" },
   { id: "about", path: "about" },
   { id: "activities", path: "activities" },
-  { id: "petrobowl", path: "activities/petrobowl-2025" },
+  { id: "petrobowl", path: "activities/petrobowl-2025", parent: "activities" },
   { id: "teaching", path: "teaching" },
 ] as const;
 
 export type PageId = (typeof PAGES)[number]["id"];
+
+/** Parent page of a nested page (the nav link that stays highlighted), if any. */
+export const parentOf = (id: PageId): PageId | undefined => {
+  const page: { id: PageId; parent?: PageId } | undefined = PAGES.find(
+    (p) => p.id === id,
+  );
+  return page?.parent;
+};
 
 /** Public URL of a page in a language, always with a trailing slash (`/es/projects/`). */
 export const pageUrl = (lang: string, id: PageId): string => {

@@ -1,0 +1,44 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-pager {
+  @apply grid gap-5 pb-[72px];
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+
+  a {
+    @apply flex flex-col gap-1 rounded-[10px] px-6 py-[22px] no-underline;
+  }
+
+  span {
+    @apply inline-flex items-center gap-2 text-sm font-bold;
+  }
+
+  strong {
+    @apply font-display text-2xl leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  small {
+    @apply text-sm;
+  }
+}
+
+.side-pager-prev {
+  @apply border-[1.5px] border-line text-ink;
+
+  span,
+  small {
+    @apply text-muted;
+  }
+}
+
+.side-pager-next {
+  @apply items-end bg-accent text-right text-white;
+
+  &:hover {
+    @apply bg-accent-strong text-white;
+  }
+
+  span,
+  small {
+    @apply text-white/90;
+  }
+}

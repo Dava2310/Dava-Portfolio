@@ -8,3 +8,7 @@
   @apply grid gap-x-7 gap-y-8;
   grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
 }
+
+.home-projects-shot {
+  @apply block aspect-[16/10] w-full rounded object-cover object-left-top;
+}

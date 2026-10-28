@@ -36,14 +36,7 @@ export const home: Dict["_pages"]["home"] = {
       name: "Plataforma Mandioca",
       description:
         "Una plataforma web, trazabilidad con QR, un bot de Telegram y una app de báscula para una empresa agroindustrial.",
-      shot: "Captura · Plataforma Mandioca",
-    },
-    side: {
-      kind: "Proyecto propio · [año]",
-      name: "[Nombre del proyecto]",
-      description: "[Una línea: qué hace y para quién.]",
-      tool: "[Herramienta]",
-      shot: "Captura · proyecto propio",
+      alt: "Página de inicio de la plataforma web de Mandioca",
     },
   },
   moments: {

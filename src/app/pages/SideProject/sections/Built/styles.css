@@ -1,0 +1,30 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.side-built {
+  @apply flex flex-col gap-8 pb-[clamp(64px,9vw,104px)];
+
+  h2 {
+    @apply m-0 font-display text-[clamp(30px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];
+  }
+}
+
+.side-built-grid {
+  @apply grid items-start gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+
+  article {
+    @apply flex flex-col gap-4 rounded-lg bg-card px-3.5 pt-3.5 pb-[22px] shadow-card;
+  }
+}
+
+.side-built-body {
+  @apply flex flex-col gap-3 px-2;
+
+  h3 {
+    @apply m-0 font-display text-2xl leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  ul {
+    @apply m-0 flex flex-col gap-1.5 pl-5 text-base text-ink-soft;
+  }
+}
