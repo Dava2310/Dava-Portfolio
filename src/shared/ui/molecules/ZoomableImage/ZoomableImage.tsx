@@ -11,6 +11,8 @@ type ZoomableImageProps = {
   /** Accessible name of the button that opens the zoomed view, e.g. "Enlarge image: …". */
   zoomLabel: string;
   closeLabel: string;
+  /** Extra class for the clickable image (to size or crop it in its context). */
+  className?: string;
 };
 
 /** Image that opens full-size in a modal `<dialog>` on click (Esc, the close button or a click outside closes it). */
@@ -21,6 +23,7 @@ export function ZoomableImage({
   height,
   zoomLabel,
   closeLabel,
+  className,
 }: ZoomableImageProps) {
   const dialog = useRef<HTMLDialogElement>(null);
 
@@ -31,7 +34,7 @@ export function ZoomableImage({
   return (
     <>
       <button
-        className="zoomable"
+        className={className ? `zoomable ${className}` : "zoomable"}
         type="button"
         aria-label={zoomLabel}
         aria-haspopup="dialog"

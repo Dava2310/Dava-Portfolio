@@ -21,12 +21,11 @@
 }
 
 .side-gallery-grid {
-  @apply px-1 pt-1.5;
-  columns: 3 150px;
-  column-gap: 24px;
+  @apply grid items-start gap-x-6 gap-y-6 px-1 pt-1.5;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
 
   figure {
-    @apply m-0 mb-6 box-border inline-block w-full bg-card px-2.5 pt-2.5 shadow-[0_10px_24px_rgb(60_45_20/0.1)] [break-inside:avoid];
+    @apply m-0 box-border w-full bg-card px-2.5 pt-2.5 shadow-[0_10px_24px_rgb(60_45_20/0.1)];
   }
 
   figcaption {
