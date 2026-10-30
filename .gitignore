@@ -11,4 +11,6 @@ coverage
 npm-debug.log*
 pnpm-debug.log*
 sito-portfolio/
-.claude/
+.claude/*
+!.claude/skills/
+side-projects
