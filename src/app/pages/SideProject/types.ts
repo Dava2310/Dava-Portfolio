@@ -36,11 +36,7 @@ export type SideProjectData = {
   numbers: readonly string[];
   /** One entry per feature group, same order as `text.features` (undefined = no image yet). */
   featureShots: readonly (Shot | undefined)[];
-  /** Evidence chips (file or module names) per highlight, same order as `text.highlights`. */
-  evidence: readonly (readonly string[])[];
   diagram?: Shot;
-  /** Source paths of the layering note, same order as `text.architecture.layers`. */
-  layerPaths: readonly string[];
   stack: Partial<Record<StackLayer, string>>;
   solo: boolean;
   /** One entry per gallery tile, same order as `text.gallery`. */

@@ -20,7 +20,6 @@ export const sideProject: Dict["_pages"]["sideProject"] = {
   highlightsNote: "lo más importante primero",
   what: "Qué es",
   why: "Por qué importa",
-  evidence: "Evidencia",
   architecture: "Arquitectura",
   zoomHint: "clic para ampliar",
   stack: "El stack, capa por capa",

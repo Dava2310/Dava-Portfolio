@@ -64,29 +64,24 @@ export const spira: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Detecté y corregí una fuga de datos entre organizaciones",
-      what: "Al probar con dos comercios y dos ONG vi que cualquier usuario autenticado podía acceder a datos de otra organización. Lo corregí con una capa de aislamiento y dejé la comprobación como un script repetible.",
-      why: "Cada comercio y cada ONG debe ver solo sus propios datos, y el script comprueba que la corrección se mantiene.",
+      title: "Una fuga de datos que encontré y corregí",
+      what: "Al probar con dos comercios y dos ONG vi que un usuario autenticado podía acceder a datos de otra organización. Lo corregí con una capa de aislamiento y dejé un script que lo comprueba.",
+      why: "Cada organización ve solo sus propios datos.",
     },
     {
-      title: "Reclamos a prueba de carreras",
-      what: "Los reclamos se ejecutan en una transacción de base de datos con bloqueo de filas, y quien llega segundo recibe un aviso claro de conflicto.",
-      why: "Dos ONG que reclaman la misma donación en el mismo instante no pueden quedársela las dos.",
+      title: "Dos ONG, una donación",
+      what: "Los reclamos se ejecutan en una transacción con bloqueo de filas. La segunda ONG recibe un aviso claro de conflicto.",
+      why: "Una misma donación no se puede reclamar dos veces.",
     },
     {
-      title: "Una máquina de estados con pase de un solo uso",
-      what: "Cada donación pasa por estados definidos, y la recogida exige un pase QR o PIN que funciona una sola vez, garantizado en la base de datos.",
-      why: "No se saltan pasos y un pase no se puede usar dos veces.",
+      title: "Un pase de recogida que sirve una sola vez",
+      what: "Cada donación pasa por estados fijos, y la recogida exige un QR o PIN que la base de datos acepta una sola vez.",
+      why: "No se saltan pasos y no se reutilizan pases.",
     },
     {
-      title: "Certificados de custodia inmutables",
-      what: "Cada entrega genera un certificado numerado que congela a ambas partes y las cifras de impacto.",
-      why: "Un registro de quién tuvo la comida y cuándo, que no se puede alterar en silencio.",
-    },
-    {
-      title: "Un único contrato de API para front y back",
+      title: "Un contrato único entre front y back",
       what: "El cliente de la API de la aplicación web se genera desde la especificación OpenAPI del backend.",
-      why: "Front y back se mantienen sincronizados cuando cambia la API, y una sola persona pudo construir ambos lados.",
+      why: "Ambos lados se mantienen sincronizados y una sola persona pudo construir los dos.",
     },
   ],
   architecture: {

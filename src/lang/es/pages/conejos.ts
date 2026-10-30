@@ -67,34 +67,24 @@ export const conejos: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Una capa de datos limpia, basada en clases, en PHP puro",
-      what: "Cada tabla tiene su propia clase PHP que contiene todo su SQL, más una clase de conexión singleton. Pequeños scripts de endpoint leen la petición, llaman a una clase y responden JSON con un código HTTP, y las páginas solo muestran.",
-      why: "El acceso a datos, los endpoints y las vistas quedan separados, hecho a mano sin framework y con todas las consultas preparadas.",
+      title: "Una clase por cada tabla",
+      what: "Cada tabla tiene una clase PHP que se encarga de su SQL, con consultas preparadas y una conexión compartida. Endpoints pequeños responden en JSON.",
+      why: "Datos, endpoints y páginas quedan separados, sin framework.",
     },
     {
-      title: "Un modelo relacional de una granja de cría",
-      what: "Un esquema MySQL de 8 tablas guarda los padres de cada conejo mediante su cruce. Al crear un conejo desde un cruce se actualiza el contador de camadas, y cada cruce actualiza los contadores de cruces de ambos padres.",
-      why: "Parentesco, cruces, gestaciones, historiales médicos, alimentación y ventas cuelgan de una sola tabla de conejos, y una pantalla “ver padres” sigue el vínculo.",
+      title: "Una granja modelada con su linaje",
+      what: "Un esquema de 8 tablas enlaza cada conejo con sus padres a través de los cruces y mantiene al día los conteos de camadas y cruces.",
+      why: "Registros, cruces, gestaciones, alimentación y ventas cuelgan de un mismo conejo.",
     },
     {
       title: "Un reporte de producción en PDF",
-      what: "Un “Reporte de Producción” hecho con FPDF: logo y encabezado de la granja, una tabla con estilo y una fila por venta, números de página y fecha de impresión.",
-      why: "Un entregable real para el dueño: el encabezado y el pie se repiten en cada página y cada fila muestra el nombre del conejo.",
+      what: "Un PDF con la imagen de la granja hecho con FPDF: encabezado, una fila por venta, números de página y fecha de impresión.",
+      why: "Un documento real para el dueño de la granja.",
     },
     {
-      title: "Reglas de negocio que mantienen los datos coherentes",
-      what: "Solo los machos apareadores vivos y las hembras vivas pueden cruzarse, solo los conejos vivos pueden venderse, y una venta crea un registro de producción y marca al conejo como vendido. Una gestación no puede empezar antes del nacimiento de la hembra.",
-      why: "El estado y el rol de un conejo funcionan como una pequeña máquina de estados que decide qué ofrece cada pantalla.",
-    },
-    {
-      title: "Pantallas compartidas con un menú por rol",
-      what: "Las primeras versiones tenían páginas separadas por rol. Las unificamos en un solo conjunto de pantallas compartidas con un menú por rol.",
-      why: "Eliminó unas 1.800 líneas duplicadas en un solo commit y dejó un único conjunto de pantallas que mantener.",
-    },
-    {
-      title: "Validación en el navegador y en el servidor",
-      what: "Los validadores del cliente revisan formatos venezolanos de teléfono y cédula, nombres y fechas (incluidos los años bisiestos) antes de cada petición. El servidor comprueba que el correo y la cédula sean únicos.",
-      why: "Los datos incorrectos se detectan pronto, con mensajes claros en los formularios.",
+      title: "Reglas que mantienen coherente el rebaño",
+      what: "Solo los reproductores vivos se pueden cruzar, solo los conejos vivos se pueden vender y una venta crea un registro de producción.",
+      why: "El estado de un conejo decide qué ofrece cada pantalla.",
     },
   ],
   architecture: {

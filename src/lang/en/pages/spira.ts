@@ -58,29 +58,24 @@ export const spira: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Found and fixed a cross-tenant data leak",
-      what: "Testing with two shops and two NGOs showed that any logged-in user could reach another organisation’s data. I fixed it with one scoping layer and kept the check as a repeatable probe script.",
-      why: "Each shop and NGO must only ever see its own data, and the probe keeps checking that the fix holds.",
+      title: "A data leak I found and fixed",
+      what: "Testing with two shops and two NGOs showed that a logged-in user could reach another organisation’s data. I fixed it with one scoping layer and kept a script that checks it.",
+      why: "Each organisation only ever sees its own data.",
     },
     {
-      title: "Race-safe claiming",
-      what: "Claims run inside a database transaction with row locks, and the loser gets a clear conflict message.",
-      why: "Two NGOs claiming the same donation at the same moment can’t both get it.",
+      title: "Two NGOs, one donation",
+      what: "Claims run in a database transaction with row locks. The second NGO gets a clear conflict message.",
+      why: "The same donation can’t be claimed twice.",
     },
     {
-      title: "A donation state machine with a single-use pass",
-      what: "Every donation moves through defined states, and pickup needs a QR or PIN pass that works only once, enforced in the database.",
-      why: "No skipped steps, and a pass can’t be used twice.",
+      title: "A pickup pass that works once",
+      what: "Each donation moves through fixed states, and pickup needs a QR or PIN that the database only accepts once.",
+      why: "No skipped steps and no reused passes.",
     },
     {
-      title: "Immutable custody certificates",
-      what: "Each handover produces a numbered certificate that freezes both parties and the impact figures.",
-      why: "A record of who held the food, and when, that can’t be quietly changed.",
-    },
-    {
-      title: "One API contract for front and back",
+      title: "One contract for front and back",
       what: "The web app’s API client is generated from the backend’s OpenAPI spec.",
-      why: "Front end and back end stay in sync as the API changes, and one person could build both sides.",
+      why: "Both sides stay in sync, and one person could build both.",
     },
   ],
   architecture: {

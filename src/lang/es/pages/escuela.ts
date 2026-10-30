@@ -14,8 +14,8 @@ export const escuela: SideProjectText = {
     status: "Fuera de servicio por ahora · código público",
   },
   hero: {
-    label: "Captura · aplicación web de Escuela",
-    caption: "Escuela, de la inscripción al certificado",
+    label: "Gestión de cursos",
+    caption: "gestión de cursos y secciones",
   },
   numbers: [
     { label: "roles de usuario, una interfaz cada uno" },
@@ -72,50 +72,33 @@ export const escuela: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Un flujo de inscripción completo entre tres roles",
-      what: "Está implementado todo el ciclo de la academia: el estudiante reporta un pago, el administrador lo aprueba o rechaza, la aprobación crea el cupo, el profesor sigue la lista, el administrador marca aprobado o reprobado y emite un certificado, y el estudiante descarga el PDF.",
-      why: "Es un dominio real con estado y varias entidades relacionadas, no solo CRUD.",
+      title: "Del pago al certificado",
+      what: "Un estudiante reporta una transferencia y el administrador la aprueba. Eso abre el cupo, el profesor ve la lista y quien aprueba recibe su certificado.",
+      why: "Un solo flujo para tres roles, con la aprobación hecha en una transacción.",
     },
     {
-      title: "Un backend que valida por capas",
-      what: "Cada escritura pasa por el mismo flujo: ruta, middleware de ids, esquema Joi, chequeos de duplicados, llamada a Prisma y un único helper de respuesta con códigos HTTP consistentes. Los formularios repiten las mismas reglas con zod.",
-      why: "El usuario recibe mensajes claros antes de enviar la petición y la base de datos se mantiene limpia.",
+      title: "Validado dos veces",
+      what: "Joi revisa las peticiones en el servidor y zod aplica las mismas reglas en los formularios.",
+      why: "El usuario ve errores claros antes de enviar y los datos malos no llegan a la base de datos.",
     },
     {
-      title: "Certificados PDF dibujados en código",
-      what: "La API genera un certificado A4 horizontal con PDFKit, maquetando el borde, el logo, los nombres, el curso y las líneas de firma, y combinando datos del estudiante, el curso y el profesor en una sola consulta.",
-      why: "Produce un documento imprimible real, y la maquetación vive en el código y no en una plantilla.",
+      title: "Certificados hechos en código",
+      what: "La API dibuja el certificado PDF con PDFKit: borde, logo, nombres, curso y firmas.",
+      why: "Un documento imprimible, sin depender de una herramienta de plantillas.",
     },
     {
-      title: "Un panel de profesor armado con una consulta",
-      what: "El profesor se identifica por el token de sesión, y una consulta anidada de Prisma devuelve sus secciones con curso, horario y estudiantes inscritos, listas para la pantalla.",
-      why: "La interfaz recibe justo los datos que muestra, sin viajes extra al servidor.",
-    },
-    {
-      title: "Manejo cuidadoso de los datos",
-      what: "El registro y la aprobación de inscripciones se ejecutan en transacciones, los borrados son lógicos y el vínculo estudiante-sección usa una clave compuesta. Las pruebas de integración cubren las rutas de autenticación, usuarios, estudiantes, profesores y cursos.",
-      why: "Un fallo no puede dejar registros a medio crear.",
+      title: "Panel del profesor con una sola consulta",
+      what: "El profesor se identifica por el token de sesión y una consulta devuelve sus secciones, horarios y estudiantes.",
+      why: "La pantalla recibe justo lo que muestra, en una sola petición.",
     },
   ],
   architecture: {
-    layersTitle: "Tres capas, empezando por el backend",
-    layers: [
-      {
-        name: "Interfaz en Next.js",
-        detail:
-          "Un árbol de carpetas por rol, cada uno con su barra lateral y sus guardas de ruta",
-      },
-      {
-        name: "API en Express",
-        detail:
-          "Rutas, controladores, validaciones Joi y middleware, con un único helper de respuesta",
-      },
-      {
-        name: "Base de datos MySQL",
-        detail:
-          "13 modelos de Prisma, borrado lógico y migraciones incrementales",
-      },
-    ],
+    diagram: {
+      title: "Arquitectura del sistema",
+      label: "Diagrama · arquitectura del sistema",
+      caption:
+        "quién lo usa, la app Next.js, la API Express y la base de datos MySQL",
+    },
   },
   team: {
     mine: [
@@ -139,31 +122,25 @@ export const escuela: SideProjectText = {
     "Las reglas de negocio deben vivir en el flujo, no solo en la pantalla: mostré la capacidad de la sección en todas partes, y el siguiente paso sería hacerla cumplir al aprobar una inscripción.",
   ],
   gallery: [
-    { label: "Inicio de sesión y registro", caption: "las entradas públicas" },
     {
-      label: "Estadísticas del administrador",
-      caption: "estudiantes y cursos en gráficos",
-    },
-    { label: "Cursos y secciones", caption: "editando un curso en un modal" },
-    {
-      label: "Formulario de horario",
-      caption: "fechas, horas y días de la semana",
+      label: "Lista de estudiantes",
+      caption:
+        "todos los estudiantes, con filtros por cédula, nombre y apellido",
     },
     {
-      label: "Cursos del estudiante",
-      caption: "no inscrito, en espera, aprobada",
+      label: "Lista de profesores",
+      caption: "los profesores, con su profesión",
     },
     {
-      label: "Formulario de inscripción",
-      caption: "reportando un pago bancario",
+      label: "Estadísticas de estudiantes",
+      caption: "distribución de edades de los estudiantes",
     },
+    { label: "Estadísticas de cursos", caption: "cursos por categoría" },
+    { label: "Certificados", caption: "generación de certificados" },
     {
-      label: "Revisión de inscripciones",
-      caption: "aprobar o rechazar cada pago",
+      label: "Certificado en PDF",
+      caption: "certificado del curso en formato PDF",
     },
-    { label: "Panel del profesor", caption: "horario, capacidad y lista" },
-    { label: "Certificados", caption: "emitiendo uno para un estudiante" },
-    { label: "Certificado PDF", caption: "generado en el servidor" },
   ],
   links: {},
 };

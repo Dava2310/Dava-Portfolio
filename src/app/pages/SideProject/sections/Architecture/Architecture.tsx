@@ -62,9 +62,6 @@ export function Architecture({ text, data }: SectionProps) {
                 <div>
                   <span className="side-layer-name">{layer.name}</span>
                   <span className="side-layer-detail">{layer.detail}</span>
-                  {data.layerPaths[index] ? (
-                    <code>{data.layerPaths[index]}</code>
-                  ) : null}
                 </div>
                 {index < layers.length - 1 ? (
                   <Icon name="arrowDown" size={20} />

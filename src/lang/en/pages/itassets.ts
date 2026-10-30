@@ -66,29 +66,24 @@ export const itassets: SideProjectText = {
   ],
   highlights: [
     {
-      title: "One API contract drives both frontends",
-      what: "The API publishes an OpenAPI spec, and a generator turns it into a typed TypeScript client. Both frontends use that client, so calling the API is a typed method call instead of hand-written fetch code.",
-      why: "Every API call is checked at compile time and the apps can’t drift from the backend. It was the best decision on the API side.",
+      title: "One API contract, two frontends",
+      what: "A typed client is generated from the API’s OpenAPI spec, and both frontends use it.",
+      why: "A wrong API call fails when compiling, not in the browser.",
     },
     {
-      title: "A three-layer frontend test suite, in both apps",
-      what: "More than 170 unit and component tests, Playwright end-to-end flows against the real API, and a Storybook catalog, all running in CI.",
-      why: "Schemas and mappers, mocked components and real browser flows each catch a different kind of bug. It was my biggest lesson.",
+      title: "Tests in three layers",
+      what: "More than 170 unit and component tests, plus Playwright flows against the real API, in both apps.",
+      why: "Each layer catches a different kind of bug. It was my biggest lesson.",
     },
     {
-      title: "The same app twice, a fair comparison",
-      what: "The data layer, the validation rules and even one end-to-end spec are the same in Next.js and in Vue, so the comparison isolates what the frameworks really change.",
-      why: "It gave me an evidence-based verdict: with a separate API, Next.js added server features I did not use.",
+      title: "The same app, twice",
+      what: "The data layer and the validation rules are shared between the Next.js and Vue versions.",
+      why: "It shows what the frameworks really change: with a separate API, Next.js added server features I did not use.",
     },
     {
-      title: "API rules kept in one place",
-      what: "Feature modules with the same layout, strict DTO validation that rejects unknown fields, a shared repository interface, and soft deletes that keep unique constraints and relations consistent.",
-      why: "Each new endpoint was fast to add, and edge cases give a clear error instead of a database failure.",
-    },
-    {
-      title: "Quality gates on the frontends",
-      what: "Both frontends run lint, formatting and tests on every pull request. A second job runs Playwright and waits for the sleeping API to wake up first. A pre-commit hook checks staged files.",
-      why: "A team-style workflow applied by one person. I even broke tests on purpose to check that CI really fails.",
+      title: "API rules in one place",
+      what: "The same module layout everywhere, strict DTO validation and soft deletes that keep constraints consistent.",
+      why: "New endpoints were quick to add, and edge cases give clear errors.",
     },
   ],
   comparison: {

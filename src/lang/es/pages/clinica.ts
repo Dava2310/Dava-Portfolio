@@ -70,29 +70,24 @@ export const clinica: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Un modelo relacional de todo el flujo de la clínica",
-      what: "Un esquema de 10 modelos en MySQL con Prisma, que fue creciendo a lo largo de 8 migraciones. La identidad está separada de los tres perfiles por rol, y las opciones propuestas tienen su propia tabla en lugar de columnas en la cita.",
-      why: "Esa separación hace posible el flujo de proponer y elegir, y cada resumen médico queda enlazado a su cita, paciente, doctor e historial. Es la parte que diseñé de principio a fin.",
+      title: "Un modelo de toda la clínica",
+      what: "Un esquema de 10 modelos en Prisma a lo largo de 8 migraciones, con las opciones propuestas en su propia tabla.",
+      why: "Esa separación hace posible el flujo de citas. Fue la parte que construí de principio a fin.",
     },
     {
-      title: "Un ciclo de vida de cita negociado",
-      what: "Una cita pasa de solicitada a con opciones, programada y finalizada, con cancelada como salida. Proponer opciones guarda todas las filas de opciones y cambia el estado en una sola transacción de base de datos.",
-      why: "Modela un flujo real de recepción y no un simple formulario de reserva, y finalizar una consulta va ligado a su resumen médico.",
+      title: "Las citas como una negociación",
+      what: "Una solicitud pasa a opciones propuestas, programada y finalizada. Proponer opciones y cambiar el estado ocurre en una transacción.",
+      why: "Sigue el flujo real de una recepción, no un simple formulario de reserva.",
     },
     {
-      title: "Registro atómico con perfiles por rol",
-      what: "Un solo endpoint crea el usuario, el perfil del rol y, para pacientes, un historial médico vacío, todo en una transacción. La validación depende del rol y las contraseñas se guardan con hash.",
-      why: "No quedan cuentas a medio crear: si falla el perfil o el historial, se revierte el usuario.",
+      title: "Cuentas creadas en un solo paso",
+      what: "Un endpoint crea el usuario, el perfil de su rol y, si es paciente, su historial médico, todo en una transacción.",
+      why: "No quedan cuentas a medio crear.",
     },
     {
-      title: "Sesiones revocables y pacientes con baja lógica",
-      what: "Tokens de acceso de corta duración, refresh tokens rotativos y lista negra al cerrar sesión. A los pacientes se les desactiva, nunca se eliminan de verdad.",
-      why: "Las sesiones se pueden cerrar de verdad y el historial clínico del paciente se conserva, lo correcto para registros médicos.",
-    },
-    {
-      title: "Liderar la API mientras el frontend tomaba forma",
-      what: "Unos 45 endpoints REST detrás de un frontend en React con módulos separados por rol. Adapté endpoints y rutas a lo que necesitaban las pantallas.",
-      why: "En un equipo de dos la API es un contrato, así que tuvo que cambiar con las necesidades reales del frontend.",
+      title: "Sesiones que de verdad terminan",
+      what: "Tokens de acceso cortos, refresh tokens rotativos y una lista negra al cerrar sesión. Los pacientes se desactivan, nunca se borran.",
+      why: "El historial de un paciente siempre se conserva.",
     },
   ],
   architecture: {

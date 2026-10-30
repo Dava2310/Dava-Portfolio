@@ -62,29 +62,24 @@ export const stii: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Reglas contables reales en un motor de órdenes de pago semanales",
-      what: "Para cada proveedor activo en una semana, la app calcula cuatro conceptos de pago, resta los anticipos y guarda una orden en bolívares y en dólares, según la tasa de cambio de la semana y una tabla de precios por materia seca.",
-      why: "Las reglas vienen del proceso real del equipo contable, no de un ejemplo de manual, y toda la corrida semanal es una sola acción.",
+      title: "Una corrida semanal de pagos en una sola acción",
+      what: "Para cada proveedor, la app calcula la orden de pago de la semana en bolívares y dólares, con la tasa de cambio de esa semana.",
+      why: "Reemplaza un trabajo de hojas de cálculo con las reglas reales del equipo contable.",
     },
     {
-      title: "Un modelo relacional que refleja el negocio",
-      what: "Un esquema MySQL de 12 tablas con llaves foráneas, restricciones de unicidad y columnas de estado. Un boleto puede respaldar hasta 4 transacciones, los beneficiarios están separados de los proveedores y las tarifas y tasas conservan su historial.",
-      why: "Rediseñé el modelo cuando los requisitos se aclararon, separando boletos de transacciones.",
+      title: "Un modelo de 12 tablas del negocio",
+      what: "Proveedores, beneficiarios, boletos de pesaje, tasas y anticipos viven en un solo esquema MySQL, y las tarifas y tasas conservan su historial.",
+      why: "Una sola fuente de verdad en lugar de hojas de cálculo dispersas.",
     },
     {
       title: "Un cierre de semana seguro",
-      what: "Al generar las órdenes de una semana, primero se comprueba si ya existen; si no, se crean y las transacciones de esa semana quedan marcadas como procesadas.",
-      why: "Protege contra pagar dos veces la misma transacción.",
+      what: "Al generar las órdenes de una semana, primero se comprueba que no existan y luego se marcan como procesadas las transacciones de esa semana.",
+      why: "Una misma transacción no se puede pagar dos veces.",
     },
     {
-      title: "Interfaz y lógica de datos separadas",
-      what: "20 pantallas Swing agrupadas por módulo, aparte de una clase de datos por entidad, con todas las consultas como sentencias parametrizadas en la capa lógica.",
-      why: "La interfaz nunca construye SQL y los errores se informan al usuario.",
-    },
-    {
-      title: "Validación y reportes PDF",
-      what: "Los formularios revisan sus datos y resaltan los campos incorrectos antes de guardar. La app exporta reportes PDF con iText, incluida la plantilla de pago semanal en bolívares o dólares.",
-      why: "Los datos erróneos se detienen al entrar y el equipo obtiene documentos que puede imprimir y compartir.",
+      title: "Órdenes de pago en PDF",
+      what: "Las órdenes y reportes se exportan en PDF con iText.",
+      why: "El equipo recibe documentos que puede imprimir y archivar.",
     },
   ],
   architecture: {

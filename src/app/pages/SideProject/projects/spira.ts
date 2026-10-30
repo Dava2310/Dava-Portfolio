@@ -12,17 +12,6 @@ export const spira: SideProjectData = {
   ],
   numbers: ["~120", "16", "3"],
   featureShots: [undefined, undefined, undefined],
-  evidence: [
-    ["common/scoping/org-scope.ts", "scripts/tenant-isolation-probe.sh"],
-    ["recipient-portal/reservations.service.ts"],
-    [
-      "donations/donations.service.ts",
-      "donations/entities/pickup-token.entity.ts",
-    ],
-    ["donation-receipts/donation-receipts.service.ts"],
-    ["src/generate-swagger.ts", "Spira-Portal/src/api-client/"],
-  ],
-  layerPaths: [],
   stack: {
     frontend: "React 19 · Vite 8 · Tailwind 4 · TanStack Query · Leaflet",
     backend: "NestJS 12 · TypeScript · class-validator · Swagger · pdfkit",

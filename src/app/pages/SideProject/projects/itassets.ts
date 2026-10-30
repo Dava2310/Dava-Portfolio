@@ -12,22 +12,6 @@ export const itassets: SideProjectData = {
   ],
   numbers: ["3", "170+", "23"],
   featureShots: [undefined, undefined, undefined],
-  evidence: [
-    ["src/generate-swagger.ts", "openapitools.json", "api-client/"],
-    ["app/employees/_logic/index.test.ts", "e2e/assets.spec.ts", "stories/"],
-    ["app/assets/_logic/index.ts", "views/assets/composables/useAsset.ts"],
-    [
-      "src/main.ts",
-      "common/use-case/crud-repository.ts",
-      "categories.service.ts",
-    ],
-    [".github/workflows/ci.yml", ".husky/pre-commit"],
-  ],
-  layerPaths: [
-    "NextJS-HS · VueJS-HS",
-    "API-HS-2026/src",
-    "API-HS-2026/src/database",
-  ],
   stack: {
     frontend:
       "Next.js 16 · Vue 3 · Vite 8 · Tailwind 4 · shadcn/ui · TanStack Query · Zod · Recharts · Unovis",

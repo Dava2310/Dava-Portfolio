@@ -70,29 +70,24 @@ export const clinica: SideProjectText = {
   ],
   highlights: [
     {
-      title: "A relational model of the whole clinic workflow",
-      what: "A 10-model MySQL schema in Prisma, evolved through 8 migrations. Identity is separate from the three role profiles, and the proposed options are their own table instead of columns on the appointment.",
-      why: "That split is what makes the propose-then-choose flow possible, and every medical summary links to its appointment, patient, doctor and history. It is the part I owned end to end.",
+      title: "A model of the whole clinic",
+      what: "A 10-model Prisma schema over 8 migrations, with the proposed options in their own table.",
+      why: "That split makes the appointment flow possible. It was the part I owned end to end.",
     },
     {
-      title: "A negotiated appointment lifecycle",
-      what: "An appointment moves from requested to options proposed, scheduled and finished, with cancelled as an exit. Proposing options writes all the option rows and changes the state in one database transaction.",
-      why: "It models a real reception workflow rather than a simple booking form, and finishing a visit is tied to its medical summary.",
+      title: "Appointments as a negotiation",
+      what: "A request moves to options proposed, scheduled and finished. Proposing options and the state change happen in one transaction.",
+      why: "It follows a real reception workflow, not a simple booking form.",
     },
     {
-      title: "Atomic registration with role profiles",
-      what: "One endpoint creates the user, the matching role profile and, for patients, an empty medical history, all in one transaction. Validation depends on the role, and passwords are hashed.",
-      why: "No half-created accounts: if the profile or the history fails, the user is rolled back.",
+      title: "Accounts created in one step",
+      what: "One endpoint creates the user, the role profile and a patient’s medical history in a single transaction.",
+      why: "No half-created accounts.",
     },
     {
-      title: "Revocable sessions and soft-deleted patients",
-      what: "Short-lived access tokens, rotating refresh tokens and a logout blacklist. Patients are deactivated, never hard-deleted.",
-      why: "Sessions can be ended for real, and a patient’s clinical history survives, which is the right call for medical records.",
-    },
-    {
-      title: "Leading the API as the front end took shape",
-      what: "About 45 REST endpoints behind a React front end with separate modules per role. I adapted endpoints and routes to what the screens needed.",
-      why: "In a team of two the API is a contract, so it had to change with the real needs of the front end.",
+      title: "Sessions that can really end",
+      what: "Short-lived access tokens, rotating refresh tokens and a logout blacklist. Patients are deactivated, never deleted.",
+      why: "A patient’s history always survives.",
     },
   ],
   architecture: {

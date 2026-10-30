@@ -4,14 +4,6 @@ export const stii: SideProjectData = {
   tags: ["Java", "Swing", "MySQL", "JDBC", "iText", "NetBeans", "MVC"],
   numbers: ["20", "12"],
   featureShots: [undefined, undefined, undefined],
-  evidence: [
-    ["src/logica/ODP.java", "generar_ODP_Completa", "Tasa_USD.java"],
-    ["TABLA SQL PROVEEDOR.sql", "Relacion_Proveedor_Beneficiario"],
-    ["ODP.verificarODP", "transacciones.cerrarTransacciones"],
-    ["src/clases/", "src/logica/", "PreparedStatement"],
-    ["verificacionCompleta", "ODP.CrearPDF_PlantillaPagoBS"],
-  ],
-  layerPaths: ["src/clases/", "src/logica/", "TABLA SQL PROVEEDOR.sql"],
   stack: {
     frontend: "Java Swing · GroupLayout · NetBeans GUI builder",
     backend: "Java 8 · plain classes · JDBC with prepared statements",

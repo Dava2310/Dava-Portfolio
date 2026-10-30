@@ -8,25 +8,10 @@ import "./styles.css";
 const TOP = 3;
 const rank = (index: number) => String(index + 1).padStart(2, "0");
 
-type EvidenceProps = { label: string; items: readonly string[] };
-
-function Evidence({ label, items }: EvidenceProps) {
-  return (
-    <ul aria-label={label} className="side-evidence">
-      {items.map((item) => (
-        <li key={item}>
-          <code>{item}</code>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-export function Highlights({ text, data }: SectionProps) {
+export function Highlights({ text }: SectionProps) {
   const { t } = useTranslation();
   const top = text.highlights.slice(0, TOP);
   const rest = text.highlights.slice(TOP);
-  const evidenceLabel = t("_pages:sideProject.evidence");
 
   return (
     <section
@@ -51,13 +36,6 @@ export function Highlights({ text, data }: SectionProps) {
               <p className="side-label">{t("_pages:sideProject.why")}</p>
               <p>{item.why}</p>
             </div>
-            <div className="side-highlights-evidence">
-              <p className="side-label">{evidenceLabel}</p>
-              <Evidence
-                label={evidenceLabel}
-                items={data.evidence[index] ?? []}
-              />
-            </div>
           </li>
         ))}
       </ol>
@@ -66,13 +44,7 @@ export function Highlights({ text, data }: SectionProps) {
           {rest.map((item, index) => (
             <li key={item.title}>
               <span className="side-rank">{rank(index + TOP)}</span>
-              <div className="side-highlights-rest-main">
-                <h3>{item.title}</h3>
-                <Evidence
-                  label={evidenceLabel}
-                  items={data.evidence[index + TOP] ?? []}
-                />
-              </div>
+              <h3>{item.title}</h3>
               <div>
                 <p className="side-label">{t("_pages:sideProject.what")}</p>
                 <p>{item.what}</p>

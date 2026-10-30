@@ -14,8 +14,8 @@ export const escuela: SideProjectText = {
     status: "Not running now · code is public",
   },
   hero: {
-    label: "Screenshot · Escuela web app",
-    caption: "Escuela, from enrollment to certificate",
+    label: "Course management",
+    caption: "managing courses and sections",
   },
   numbers: [
     { label: "user roles, one interface each" },
@@ -72,49 +72,33 @@ export const escuela: SideProjectText = {
   ],
   highlights: [
     {
-      title: "A full enrollment workflow across three roles",
-      what: "The whole academy lifecycle is implemented: the student reports a payment, the administrator approves or rejects it, approval creates the seat, the teacher follows the roster, the administrator marks pass or fail and issues a certificate, and the student downloads the PDF.",
-      why: "It is a real domain with state and several linked entities, not just CRUD.",
+      title: "From payment to certificate",
+      what: "A student reports a bank transfer and the admin approves it. That opens the seat, the teacher sees the roster, and a student who passes gets a certificate.",
+      why: "One flow across three roles, with the approval done in a single transaction.",
     },
     {
-      title: "A backend that validates in layers",
-      what: "Every write goes through the same pipeline: route, id middleware, Joi schema, duplicate checks, Prisma call and one response helper with consistent HTTP codes. The forms repeat the same rules with zod.",
-      why: "Users get clear messages before the request is even sent, and the database stays clean.",
+      title: "Validated twice",
+      what: "Joi checks the requests on the server, and zod applies the same rules in the forms.",
+      why: "Users see clear errors before sending, and bad data never reaches the database.",
     },
     {
-      title: "PDF certificates drawn in code",
-      what: "The API builds a landscape A4 certificate with PDFKit, laying out the border, logo, names, course and signature lines, and joining student, course and teacher data in one query.",
-      why: "It produces a real printable document, and the layout lives in code rather than in a template.",
+      title: "Certificates made in code",
+      what: "The API draws the PDF certificate itself with PDFKit: border, logo, names, course and signatures.",
+      why: "A printable document, with no template tool involved.",
     },
     {
-      title: "A teacher dashboard shaped by one query",
-      what: "The teacher is identified from the login token, and one nested Prisma query returns their sections with course, schedule and enrolled students, ready for the screen.",
-      why: "The UI gets exactly the data it shows, without extra round trips.",
-    },
-    {
-      title: "Careful data handling",
-      what: "Registration and enrollment approval run in transactions, deletes are soft, and a student-section link uses a composite key. Integration tests cover the auth, user, student, teacher and course routes.",
-      why: "A failure can’t leave half-created records behind.",
+      title: "A teacher dashboard from one query",
+      what: "The teacher is read from the login token, and a single query returns their sections, schedules and students.",
+      why: "The screen gets exactly what it shows, in one request.",
     },
   ],
   architecture: {
-    layersTitle: "Three layers, backend first",
-    layers: [
-      {
-        name: "Next.js interface",
-        detail:
-          "One folder tree per role, each with its own sidebar and route guards",
-      },
-      {
-        name: "Express API",
-        detail:
-          "Routes, controllers, Joi validations and middleware, with one response helper",
-      },
-      {
-        name: "MySQL database",
-        detail: "13 Prisma models, soft deletes and incremental migrations",
-      },
-    ],
+    diagram: {
+      title: "System architecture",
+      label: "Diagram · system architecture",
+      caption:
+        "who uses it, the Next.js app, the Express API and the MySQL database",
+    },
   },
   team: {
     mine: [
@@ -138,19 +122,18 @@ export const escuela: SideProjectText = {
     "Business rules need to live in the workflow, not just in the display: I showed section capacity everywhere, and the next step would be to enforce it when approving an enrollment.",
   ],
   gallery: [
-    { label: "Login and register", caption: "the public entry points" },
     {
-      label: "Administrator statistics",
-      caption: "students and courses in charts",
+      label: "Student list",
+      caption: "every student, searchable by cédula, name and last name",
     },
-    { label: "Courses and sections", caption: "editing a course in a modal" },
-    { label: "Schedule form", caption: "dates, hours and days of the week" },
-    { label: "Student courses", caption: "not enrolled, waiting, approved" },
-    { label: "Enrollment form", caption: "reporting a bank payment" },
-    { label: "Enrollment review", caption: "approve or reject each payment" },
-    { label: "Teacher dashboard", caption: "schedule, capacity and roster" },
-    { label: "Certificates", caption: "issuing one for a student" },
-    { label: "PDF certificate", caption: "generated on the server" },
+    { label: "Teacher list", caption: "the teachers, with their professions" },
+    {
+      label: "Student statistics",
+      caption: "age distribution of the students",
+    },
+    { label: "Course statistics", caption: "courses by category" },
+    { label: "Certificates", caption: "certificates generation" },
+    { label: "PDF certificate", caption: "course certificate in PDF format" },
   ],
   links: {},
 };

@@ -62,29 +62,24 @@ export const stii: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Real accounting rules in a weekly payment-order engine",
-      what: "For each supplier active in a week, the app works out four payment concepts, subtracts advances and stores one order in both bolivars and dollars, using the week’s exchange rate and a price table by dry matter.",
-      why: "The rules come from the accounting team’s real process, not a textbook example, and the whole weekly run is a single action.",
+      title: "A weekly payment run in one action",
+      what: "For each supplier, the app works out the week’s payment order in bolivars and dollars, using the week’s exchange rate.",
+      why: "It replaces a spreadsheet job with the accounting team’s real rules.",
     },
     {
-      title: "A relational model that carries the business",
-      what: "A 12-table MySQL schema with foreign keys, unique constraints and status columns. A weigh ticket can back up to 4 transactions, beneficiaries are separate from suppliers, and tariffs and rates keep their history.",
-      why: "I redesigned the model once the requirements became clearer, splitting tickets from transactions.",
+      title: "A 12-table model of the business",
+      what: "Suppliers, beneficiaries, weigh tickets, rates and advances live in one MySQL schema, with tariffs and rates keeping their history.",
+      why: "One source of truth instead of scattered spreadsheets.",
     },
     {
-      title: "A safe week-closing flow",
-      what: "Generating a week’s orders first checks whether they already exist, then creates them and marks the week’s transactions as processed.",
-      why: "It protects against paying the same transaction twice.",
+      title: "A safe week closing",
+      what: "Generating a week’s orders first checks they don’t already exist, then marks the week’s transactions as processed.",
+      why: "The same transaction can’t be paid twice.",
     },
     {
-      title: "UI and data logic kept apart",
-      what: "20 Swing screens grouped by module sit apart from one data class per entity, with every query a parameterised statement in the logic layer.",
-      why: "The interface never builds SQL, and errors are reported back to the user.",
-    },
-    {
-      title: "Validation and PDF reports",
-      what: "Forms check their input and highlight bad fields before saving. The app exports PDF reports with iText, including the weekly payment template in bolivars or dollars.",
-      why: "Bad data is stopped at entry, and the team gets documents it can print and share.",
+      title: "Payment orders as PDF",
+      what: "Orders and reports are exported as PDF with iText.",
+      why: "The team gets documents it can print and file.",
     },
   ],
   architecture: {

@@ -67,34 +67,24 @@ export const conejos: SideProjectText = {
   ],
   highlights: [
     {
-      title: "A clean class-based data layer in plain PHP",
-      what: "Every table has its own PHP class that owns all of its SQL, plus a singleton connection class. Small endpoint scripts read the request, call a class and answer JSON with an HTTP status, and pages only render.",
-      why: "Data access, endpoints and views stay separate, built by hand without a framework, with every query a prepared statement.",
+      title: "A class for every table",
+      what: "Each table has a PHP class that owns its SQL, with prepared statements and a shared connection. Small endpoints answer in JSON.",
+      why: "Data, endpoints and pages stay separate, with no framework.",
     },
     {
-      title: "A relational model of a breeding farm",
-      what: "An 8-table MySQL schema stores each rabbit’s parents through its crossing. Creating a rabbit from a crossing updates the litter count, and each crossing updates both parents’ crossing counters.",
-      why: "Parentage, crossings, pregnancies, medical records, feeding and sales all hang from one rabbit table, and a “see parents” screen follows the link.",
+      title: "A farm modelled with lineage",
+      what: "An 8-table schema links each rabbit to its parents through crossings and keeps litter and crossing counts up to date.",
+      why: "Records, crossings, pregnancies, feeding and sales all hang from one rabbit.",
     },
     {
-      title: "A production report as a PDF",
-      what: "A “Reporte de Producción” built with FPDF: farm logo and header, a styled table with one row per sale, page numbers and the print date.",
-      why: "A real deliverable for the farm owner: the header and footer repeat on every page and each row shows the rabbit’s name.",
+      title: "A production report in PDF",
+      what: "A branded PDF built with FPDF: farm header, one row per sale, page numbers and the print date.",
+      why: "A real document for the farm owner.",
     },
     {
-      title: "Business rules that keep herd data consistent",
-      what: "Only living breeding males and living females can be crossed, only living rabbits can be sold, and a sale creates a production record and marks the rabbit as sold. A pregnancy cannot start before the female’s birth date.",
-      why: "A rabbit’s status and role act as a small state machine that decides what each screen offers.",
-    },
-    {
-      title: "Shared screens with a menu per role",
-      what: "Early versions had separate pages per role. We merged them into one set of shared screens with one menu per role.",
-      why: "It removed about 1,800 duplicated lines in a single commit and left one screen set to maintain.",
-    },
-    {
-      title: "Validation in the browser and on the server",
-      what: "Client-side validators check Venezuelan phone and ID formats, names and dates (leap years included) before any request. The server checks that email and ID number are unique.",
-      why: "Bad data is caught early, with clear messages in the forms.",
+      title: "Rules that keep the herd consistent",
+      what: "Only living breeding rabbits can be crossed, only living ones can be sold, and a sale creates a production record.",
+      why: "A rabbit’s status decides what each screen offers.",
     },
   ],
   architecture: {

@@ -4,14 +4,6 @@ export const clinica: SideProjectData = {
   tags: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL", "JWT"],
   numbers: ["~45", "10", "8", "3"],
   featureShots: [undefined, undefined, undefined],
-  evidence: [
-    ["prisma/schema.prisma", "prisma/migrations/"],
-    ["citas.controller.js", "resumenMedico.controller.js"],
-    ["auth.controller.js", "userValidation.js", "test/auth/01_auth.spec.js"],
-    ["auth.controller.js", "middleware/auth.js", "pacientes.controller.js"],
-    ["src/routes/", "modules/", "ProtectedRoute.tsx"],
-  ],
-  layerPaths: [],
   stack: {
     frontend:
       "React 18 · TypeScript · Vite · React Router · Tailwind · Flowbite · react-hook-form · axios",

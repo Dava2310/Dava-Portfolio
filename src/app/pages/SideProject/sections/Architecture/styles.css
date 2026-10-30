@@ -60,10 +60,6 @@
   @apply min-w-0 flex-[1_1_240px] text-[15px] text-ink-soft;
 }
 
-.side-layers code {
-  @apply inline-block rounded-md bg-[#efe8da] px-2 py-[3px] font-mono text-[12.5px] text-[#2e3443] [word-break:break-all];
-}
-
 .side-stack {
   @apply rounded-lg bg-card px-[clamp(16px,2.4vw,28px)] pt-2 pb-3 shadow-[0_1px_0_#e3d7c2,0_8px_20px_rgb(60_45_20/0.06)];
 

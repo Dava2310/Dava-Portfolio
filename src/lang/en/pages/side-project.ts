@@ -18,7 +18,6 @@ export const sideProject = {
   highlightsNote: "most important first",
   what: "What it is",
   why: "Why it matters",
-  evidence: "Evidence",
   architecture: "Architecture",
   zoomHint: "click to zoom",
   stack: "The stack, layer by layer",

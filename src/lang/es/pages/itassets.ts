@@ -66,29 +66,24 @@ export const itassets: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Un solo contrato de API para los dos frontends",
-      what: "La API publica una especificación OpenAPI y un generador la convierte en un cliente TypeScript tipado. Ambos frontends usan ese cliente, así que llamar a la API es una llamada a un método tipado y no código fetch escrito a mano.",
-      why: "Cada llamada a la API se verifica al compilar y las apps no se desvían del backend. Fue la mejor decisión del lado de la API.",
+      title: "Un contrato de API, dos frontends",
+      what: "Se genera un cliente tipado desde la especificación OpenAPI de la API, y los dos frontends lo usan.",
+      why: "Una llamada incorrecta a la API falla al compilar, no en el navegador.",
     },
     {
-      title: "Pruebas del frontend en tres niveles, en ambas apps",
-      what: "Más de 170 pruebas unitarias y de componentes, flujos end-to-end con Playwright contra la API real y un catálogo en Storybook, todo ejecutándose en CI.",
-      why: "Esquemas y mapeadores, componentes con dependencias simuladas y flujos reales en el navegador detectan cada uno un tipo distinto de error. Fue mi mayor lección.",
+      title: "Pruebas en tres capas",
+      what: "Más de 170 pruebas unitarias y de componentes, más flujos con Playwright contra la API real, en ambas apps.",
+      why: "Cada capa detecta un tipo distinto de error. Fue mi mayor aprendizaje.",
     },
     {
-      title: "La misma app dos veces, una comparación justa",
-      what: "La capa de datos, las reglas de validación e incluso una especificación end-to-end son iguales en Next.js y en Vue, de modo que la comparación aísla lo que de verdad cambian los frameworks.",
-      why: "Me dio una conclusión basada en evidencia: con una API separada, Next.js añadía funciones de servidor que no usé.",
+      title: "La misma app, dos veces",
+      what: "La capa de datos y las reglas de validación se comparten entre las versiones de Next.js y Vue.",
+      why: "Muestra qué cambian realmente los frameworks: con una API aparte, Next.js añadió funciones de servidor que no usé.",
     },
     {
       title: "Las reglas de la API en un solo lugar",
-      what: "Módulos por funcionalidad con la misma estructura, validación estricta de DTOs que rechaza campos desconocidos, una interfaz de repositorio compartida y un borrado lógico que mantiene coherentes las restricciones únicas y las relaciones.",
-      why: "Cada endpoint nuevo se añadía rápido, y los casos límite devuelven un error claro en vez de un fallo de la base de datos.",
-    },
-    {
-      title: "Controles de calidad en los frontends",
-      what: "Ambos frontends ejecutan lint, formato y pruebas en cada pull request. Un segundo job ejecuta Playwright y antes espera a que la API dormida despierte. Un hook de pre-commit revisa los archivos en staging.",
-      why: "Un flujo de trabajo de equipo aplicado por una sola persona. Incluso rompí pruebas a propósito para comprobar que el CI falla de verdad.",
+      what: "La misma estructura de módulos en todas partes, validación estricta de DTOs y borrados lógicos que mantienen las restricciones consistentes.",
+      why: "Agregar endpoints fue rápido y los casos límite dan errores claros.",
     },
   ],
   comparison: {

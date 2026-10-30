@@ -1,4 +1,4 @@
-/** Translatable text of a side-project case-study page. Language-neutral data (tags, links, evidence, images) lives in `app/pages/SideProject/projects/`. Arrays are matched to that data by position. */
+/** Translatable text of a side-project case-study page. Language-neutral data (tags, links, stack, images) lives in `app/pages/SideProject/projects/`. Arrays are matched to that data by position. */
 export type SideProjectText = {
   /** Card label, e.g. "Academic project · 2026". */
   kind: string;
@@ -26,7 +26,7 @@ export type SideProjectText = {
     /** Present when the group has a screenshot slot (image in the data file, same position). */
     shot?: { label: string; caption: string };
   }[];
-  /** Ranked, most important first. Evidence chips are in the data file, same order. */
+  /** Ranked, most important first. */
   highlights: readonly { title: string; what: string; why: string }[];
   /** Optional side-by-side comparison block (used by the IT Assets Tracker). */
   comparison?: {
