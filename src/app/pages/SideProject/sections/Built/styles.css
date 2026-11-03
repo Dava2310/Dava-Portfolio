@@ -28,3 +28,24 @@
     @apply m-0 flex flex-col gap-1.5 pl-5 text-base text-ink-soft;
   }
 }
+
+/* Single large card: the few most important things built, each with a green check. */
+.side-built-checks {
+  @apply rounded-lg bg-card px-[clamp(22px,3.4vw,44px)] py-[clamp(24px,3vw,38px)] shadow-card;
+
+  h3 {
+    @apply m-0 mb-5 font-display text-2xl leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  ul {
+    @apply m-0 flex list-none flex-col gap-[18px] p-0;
+  }
+
+  li {
+    @apply flex items-start gap-4 text-[clamp(17px,1.5vw,20px)] leading-[1.5] text-ink;
+  }
+
+  li > span {
+    @apply mt-0.5 inline-flex size-7 flex-[0_0_28px] items-center justify-center rounded-full bg-[#dcefe2] text-[#2f7d4f];
+  }
+}

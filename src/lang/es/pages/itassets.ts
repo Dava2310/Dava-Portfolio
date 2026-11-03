@@ -28,39 +28,13 @@ export const itassets: SideProjectText = {
   ],
   features: [
     {
-      title: "Panel",
+      title: "",
       bullets: [
-        "Cinco tarjetas de métricas: total, asignados, disponibles, disponibilidad y categoría más popular",
-        "Gráfico de área de activos creados por mes, con rangos de 3 meses, 6 meses y año completo",
-        "Tabla de activos con reordenación de filas por arrastre",
-        "El mismo panel en Next.js y en Vue",
-      ],
-      shot: {
-        label: "Captura · panel",
-        caption: "tarjetas de métricas y el gráfico mensual",
-      },
-    },
-    {
-      title: "Activos, empleados y categorías",
-      bullets: [
-        "Listas con filtro, orden y paginación",
-        "Crear, ver, editar y borrado lógico",
-        "Validación de formularios sobre las reglas de la API, con errores claros en cada campo",
-        "Una categoría en uso no se puede borrar, y al borrar un empleado se liberan sus activos",
-        "Un aviso con el mensaje de la propia API en cada operación",
-      ],
-      shot: {
-        label: "Captura · validación de formularios",
-        caption: "errores en línea en el formulario de activos",
-      },
-    },
-    {
-      title: "Bajo el capó",
-      bullets: [
-        "23 rutas REST en NestJS, con documentación Swagger",
-        "Un esquema PostgreSQL con TypeORM y borrado lógico",
-        "Migraciones con 500 activos de ejemplo, y Docker Compose",
-        "Pruebas unitarias, de componentes y end-to-end, Storybook y CI en ambos frontends",
+        "Una API REST en NestJS y PostgreSQL, documentada con Swagger (OpenAPI)",
+        "Validación estricta y borrado lógico en todas las entidades",
+        "El mismo frontend construido dos veces, en Next.js y en Vue, con un único cliente de API generado",
+        "Un panel, tablas paginadas con filtros y acciones por fila, y formularios validados",
+        "Más de 170 pruebas unitarias, de componentes y de extremo a extremo, con CI en ambos frontends",
       ],
     },
   ],
@@ -112,24 +86,12 @@ export const itassets: SideProjectText = {
       "Con una API separada, una SPA simple encaja mejor: Vue resultó más fluido y la próxima vez elegiría React con Vite.",
   },
   architecture: {
-    layersTitle: "Tres capas",
-    layers: [
-      {
-        name: "Frontends",
-        detail:
-          "Una app en Next.js y otra en Vue, con las mismas páginas, capa de datos y cliente generado",
-      },
-      {
-        name: "API",
-        detail:
-          "Módulos de NestJS con controladores delgados, reglas de negocio en los servicios y un contrato OpenAPI",
-      },
-      {
-        name: "Base de datos",
-        detail:
-          "PostgreSQL con TypeORM, con borrado lógico y datos de ejemplo cargados",
-      },
-    ],
+    diagram: {
+      title: "Esquema de la base de datos",
+      label: "Diagrama · esquema de la base de datos",
+      caption:
+        "cuatro tablas con borrado lógico: roles, empleados, categorías y activos",
+    },
   },
   team: {
     mine: [
@@ -153,32 +115,30 @@ export const itassets: SideProjectText = {
   ],
   gallery: [
     {
-      label: "Panel con gráficos",
-      caption: "tarjetas de métricas y el gráfico mensual",
-    },
-    {
-      label: "Validación de formularios",
-      caption: "errores en línea en el formulario de activos",
+      label: "Documentación de la API",
+      caption: "Documentación Swagger OpenAPI",
     },
     {
       label: "Lista de activos",
-      caption: "filtrando portátiles por SKU",
+      caption:
+        "una tabla paginada con filtros y acciones de editar y borrar en cada fila",
     },
     {
-      label: "Diálogo de empleado",
-      caption: "validación de un código de empleado demasiado corto",
+      label: "Lista de empleados",
+      caption: "los empleados, filtrables por correo",
     },
     {
-      label: "Borrado de categoría bloqueado",
-      caption: "una categoría con activos activos no se puede borrar",
+      label: "Nuevo empleado",
+      caption:
+        "crear un empleado en un modal, con su rol y su código de empleado",
     },
     {
-      label: "Swagger UI",
-      caption: "la API documentada desde su especificación OpenAPI",
+      label: "Nuevo activo",
+      caption: "un formulario complejo y validado para crear un activo",
     },
     {
-      label: "Ejecución del CI",
-      caption: "lint, pruebas y Playwright, todo en verde",
+      label: "Validación de formularios",
+      caption: "un modal con errores de validación en línea",
     },
   ],
   links: {},

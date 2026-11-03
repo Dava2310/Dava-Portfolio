@@ -28,39 +28,13 @@ export const itassets: SideProjectText = {
   ],
   features: [
     {
-      title: "Dashboard",
+      title: "",
       bullets: [
-        "Five metric cards: total, assigned, available, availability and most popular category",
-        "Area chart of assets created per month, with 3-month, 6-month and full-year ranges",
-        "Assets table with drag-and-drop row ordering",
-        "Same dashboard in Next.js and in Vue",
-      ],
-      shot: {
-        label: "Screenshot · dashboard",
-        caption: "metric cards and the monthly chart",
-      },
-    },
-    {
-      title: "Assets, employees and categories",
-      bullets: [
-        "Lists with filtering, sorting and pagination",
-        "Create, view, edit and soft delete",
-        "Form validation on top of the API rules, with clear inline errors",
-        "A category in use cannot be deleted, and deleting an employee releases their assets",
-        "A toast with the API’s own message on every operation",
-      ],
-      shot: {
-        label: "Screenshot · form validation",
-        caption: "inline errors in the asset form",
-      },
-    },
-    {
-      title: "Under the hood",
-      bullets: [
-        "23 REST routes in NestJS, with Swagger documentation",
-        "A PostgreSQL schema with TypeORM and soft deletes",
-        "Seed migrations with 500 fake assets, and Docker Compose",
-        "Unit, component and end-to-end tests, Storybook and CI on both frontends",
+        "A REST API in NestJS and PostgreSQL, documented with Swagger (OpenAPI)",
+        "Strict validation and soft deletes on every entity",
+        "The same frontend built twice, in Next.js and in Vue, sharing one generated API client",
+        "A dashboard, paginated tables with filters and row actions, and validated forms",
+        "More than 170 unit, component and end-to-end tests, with CI on both frontends",
       ],
     },
   ],
@@ -111,24 +85,12 @@ export const itassets: SideProjectText = {
       "With a separate API, a plain SPA fits better: Vue felt smoother, and next time I would pick React with Vite.",
   },
   architecture: {
-    layersTitle: "Three layers",
-    layers: [
-      {
-        name: "Frontends",
-        detail:
-          "A Next.js app and a Vue app, with the same pages, data layer and generated client",
-      },
-      {
-        name: "API",
-        detail:
-          "NestJS modules with thin controllers, business rules in services and an OpenAPI contract",
-      },
-      {
-        name: "Database",
-        detail:
-          "PostgreSQL through TypeORM, with soft deletes and seeded fake data",
-      },
-    ],
+    diagram: {
+      title: "Database schema",
+      label: "Diagram · database schema",
+      caption:
+        "four tables with soft deletes: roles, employees, categories and assets",
+    },
   },
   team: {
     mine: [
@@ -151,33 +113,25 @@ export const itassets: SideProjectText = {
     "I left authentication out on purpose to finish in three weeks: scoping is also an engineering skill.",
   ],
   gallery: [
+    { label: "API documentation", caption: "Swagger OpenAPI documentation" },
     {
-      label: "Dashboard with charts",
-      caption: "metric cards and the monthly chart",
+      label: "Assets list",
+      caption:
+        "a paginated table with filters and edit and delete actions on each row",
+    },
+    { label: "Employees list", caption: "the employees, filterable by email" },
+    {
+      label: "New employee",
+      caption:
+        "creating an employee in a modal, with its role and employee code",
+    },
+    {
+      label: "New asset",
+      caption: "a complex, validated form to create an asset",
     },
     {
       label: "Form validation",
-      caption: "inline errors in the asset form",
-    },
-    {
-      label: "Assets list",
-      caption: "filtering laptops by SKU",
-    },
-    {
-      label: "Employee dialog",
-      caption: "validation on a short employee code",
-    },
-    {
-      label: "Blocked category delete",
-      caption: "a category with active assets can’t be deleted",
-    },
-    {
-      label: "Swagger UI",
-      caption: "the API documented from its OpenAPI spec",
-    },
-    {
-      label: "CI run",
-      caption: "lint, tests and Playwright, all green",
+      caption: "a modal with inline validation errors",
     },
   ],
   links: {},
