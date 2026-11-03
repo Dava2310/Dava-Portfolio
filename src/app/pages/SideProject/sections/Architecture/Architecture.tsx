@@ -28,6 +28,7 @@ export function Architecture({ text, data }: SectionProps) {
 
   return (
     <section
+      id="architecture"
       className="side-architecture"
       aria-labelledby="side-architecture-title"
     >

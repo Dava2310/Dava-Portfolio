@@ -14,7 +14,11 @@ export function Gallery({ text, data }: SectionProps) {
   const pending = data.gallery.every((tile) => !tile.image);
 
   return (
-    <section className="side-gallery" aria-labelledby="side-gallery-title">
+    <section
+      id="gallery"
+      className="side-gallery"
+      aria-labelledby="side-gallery-title"
+    >
       <div className="side-gallery-header">
         <h2 id="side-gallery-title">{t("_pages:sideProject.gallery")}</h2>
         <span>

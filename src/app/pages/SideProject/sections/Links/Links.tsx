@@ -11,7 +11,11 @@ export function Links({ text, data }: SectionProps) {
   const { noLive } = text.links;
 
   return (
-    <section className="side-links" aria-labelledby="side-links-title">
+    <section
+      id="links"
+      className="side-links"
+      aria-labelledby="side-links-title"
+    >
       <h2 id="side-links-title">{t("_pages:sideProject.links")}</h2>
       <div className="side-links-grid">
         <div className="side-links-card">

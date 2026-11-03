@@ -15,6 +15,7 @@ export function Highlights({ text }: SectionProps) {
 
   return (
     <section
+      id="highlights"
       className="side-highlights"
       aria-labelledby="side-highlights-title"
     >

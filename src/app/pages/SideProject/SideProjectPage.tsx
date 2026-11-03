@@ -26,9 +26,25 @@ export function SideProjectPage({ id }: SideProjectPageProps) {
   const { t } = useTranslation();
   const text = t(`_pages:${id}`, { returnObjects: true });
   const props = { id, text, data: SIDE_PROJECTS[id] };
+  const dots = [
+    { id: "top", label: t("_pages:sideProject.nav.overview") },
+    { id: "problem", label: t("_pages:sideProject.nav.problem") },
+    { id: "built", label: t("_pages:sideProject.nav.built") },
+    { id: "highlights", label: t("_pages:sideProject.nav.highlights") },
+    ...(text.comparison
+      ? [{ id: "comparison", label: text.comparison.title }]
+      : []),
+    { id: "architecture", label: t("_pages:sideProject.nav.architecture") },
+    { id: "team", label: t("_pages:sideProject.nav.team") },
+    { id: "lessons", label: t("_pages:sideProject.nav.lessons") },
+    ...(text.gallery.length > 0
+      ? [{ id: "gallery", label: t("_pages:sideProject.nav.gallery") }]
+      : []),
+    { id: "links", label: t("_pages:sideProject.nav.links") },
+  ];
 
   return (
-    <PageLayout page={id}>
+    <PageLayout page={id} sections={dots}>
       <Intro {...props} />
       <Hero {...props} />
       <Numbers {...props} />

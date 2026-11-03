@@ -19,7 +19,7 @@ export function Team({ text, data }: SectionProps) {
   const { team } = text;
 
   return (
-    <section className="side-team" aria-labelledby="side-team-title">
+    <section id="team" className="side-team" aria-labelledby="side-team-title">
       <h2 id="side-team-title">{t("_pages:sideProject.roleTeam")}</h2>
       <div className="side-team-columns">
         <div className="side-team-mine">
