@@ -55,11 +55,22 @@ export function Projects() {
             <ProjectCard
               key={id}
               media={
-                <ImagePlaceholder
-                  label={text.hero.label}
-                  ratio="16/10"
-                  tone="tint"
-                />
+                SIDE_PROJECTS[id].hero ? (
+                  <img
+                    className="home-projects-shot"
+                    src={SIDE_PROJECTS[id].hero?.src}
+                    alt={text.hero.caption}
+                    width={1920}
+                    height={1080}
+                    loading="lazy"
+                  />
+                ) : (
+                  <ImagePlaceholder
+                    label={text.hero.label}
+                    ratio="16/10"
+                    tone="tint"
+                  />
+                )
               }
               kind={text.kind}
               title={text.name}

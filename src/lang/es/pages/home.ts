@@ -3,9 +3,9 @@ import type { Dict } from "../../types";
 export const home: Dict["_pages"]["home"] = {
   hero: {
     kicker: "¡hola! Soy Daniel",
-    titleStart: "Código, ",
-    titleHighlight: "aulas",
-    titleEnd: " y competencias.",
+    titleStart: "Desarrollador, ",
+    titleHighlight: "profesor",
+    titleEnd: " y competidor.",
     lead: "Ingeniero de software de Maturín, Venezuela, ahora en Barcelona. Construyo sistemas backend y herramientas para agentes de IA en Toloka AI — además enseñé Python y robótica durante un año y fui capitán de un equipo de Petrobowl en el podio nacional.",
     cta: "Ver mis proyectos",
     photoAlt: "Daniel Vetencourt sonriendo con blazer oscuro y camisa azul",

@@ -1,9 +1,9 @@
 export const home = {
   hero: {
     kicker: "¡hola! I'm Daniel",
-    titleStart: "Code, ",
-    titleHighlight: "classrooms",
-    titleEnd: " & competitions.",
+    titleStart: "Developer, ",
+    titleHighlight: "teacher",
+    titleEnd: " & competitor.",
     lead: "Software engineer from Maturín, Venezuela, now in Barcelona. I build backend systems and developer tooling for AI agents at Toloka AI — and I've spent a year teaching Python and robotics, and captained a national-podium Petrobowl team.",
     cta: "See my projects",
     photoAlt: "Daniel Vetencourt smiling in a dark blazer and blue shirt",
