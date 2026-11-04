@@ -15,8 +15,9 @@ export const spira: SideProjectText = {
     outcome: "Muy bien recibido, sobre todo por su propuesta de negocio",
   },
   hero: {
-    label: "Captura · aplicación web de Spira",
-    caption: "Spira, del listado a la recogida",
+    label: "Captura · Spira en sus dos lados",
+    caption:
+      "los dos lados en una app: el inicio del comercio, el escaparate de la ONG y un pase de recogida",
   },
   numbers: [
     { label: "rutas de la API" },
@@ -36,8 +37,9 @@ export const spira: SideProjectText = {
         "Confirmar cada recogida con un QR o PIN",
       ],
       shot: {
-        label: "Captura · vista del comercio",
-        caption: "el lado del comercio",
+        label: "Captura · inventario del comercio",
+        caption:
+          "el inventario con filtros de urgencia y el registro de un lote",
       },
     },
     {
@@ -48,8 +50,8 @@ export const spira: SideProjectText = {
         "Recogerlo con un pase QR o PIN de un solo uso",
       ],
       shot: {
-        label: "Captura · mapa de la ONG",
-        caption: "las donaciones en el mapa",
+        label: "Captura · reclamos de la ONG",
+        caption: "aceptar una oferta y el historial de recogidas",
       },
     },
     {
@@ -60,6 +62,10 @@ export const spira: SideProjectText = {
         "Un certificado de custodia inmutable por cada entrega",
         "Un cliente tipado generado desde la especificación OpenAPI",
       ],
+      shot: {
+        label: "Captura · documentación de la API",
+        caption: "la API documentada con Swagger (OpenAPI)",
+      },
     },
   ],
   highlights: [
@@ -86,9 +92,10 @@ export const spira: SideProjectText = {
   ],
   architecture: {
     diagram: {
-      title: "Máquina de estados de la donación",
-      label: "Diagrama · máquina de estados de la donación",
-      caption: "todos los estados de una donación y qué la hace avanzar",
+      title: "Despliegue",
+      label: "Diagrama · despliegue",
+      caption:
+        "la app web en Vercel, la API en Render y la base de datos en Supabase, y cómo se comunican",
     },
   },
   team: {
@@ -114,22 +121,24 @@ export const spira: SideProjectText = {
   ],
   gallery: [
     {
-      label: "Publicar stock por caducar",
-      caption: "un comercio publica su excedente",
+      label: "Dos lados, un registro",
+      caption: "comercios y ONG se registran en la misma app",
     },
-    { label: "Donaciones en el mapa", caption: "lo que ven las ONG" },
     {
-      label: "Reclamar una donación",
-      caption: "reclámala antes que nadie",
+      label: "Cola de donaciones",
+      caption: "cada donación y el estado en que está",
     },
-    { label: "Pase de recogida QR / PIN", caption: "el pase de un solo uso" },
     {
       label: "Certificado de custodia",
-      caption: "prueba de cada entrega",
+      caption: "un PDF numerado por cada entrega",
     },
     {
-      label: "Pantalla de entrega del comercio",
-      caption: "verificando una recogida",
+      label: "Impacto y socios",
+      caption: "comida rescatada este año y quién la recoge",
+    },
+    {
+      label: "Pase de verificación",
+      caption: "un QR permanente para presentarse en un comercio nuevo",
     },
   ],
   links: {},

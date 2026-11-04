@@ -15,8 +15,9 @@ export const spira: SideProjectText = {
     outcome: "Well received, mostly for its business case",
   },
   hero: {
-    label: "Screenshot · Spira web app",
-    caption: "Spira, from listing to pickup",
+    label: "Screenshot · Spira on both sides",
+    caption:
+      "both sides in one app: the shop’s home, the NGO shelf and a pickup pass",
   },
   numbers: [
     { label: "API routes" },
@@ -35,7 +36,10 @@ export const spira: SideProjectText = {
         "Follow each donation through its states",
         "Confirm each pickup with a QR or PIN",
       ],
-      shot: { label: "Screenshot · shop view", caption: "the shop side" },
+      shot: {
+        label: "Screenshot · shop inventory",
+        caption: "the inventory with urgency filters, and logging a new lot",
+      },
     },
     {
       title: "For NGOs",
@@ -44,7 +48,10 @@ export const spira: SideProjectText = {
         "Claim stock with no double-claim conflicts",
         "Collect it with a single-use QR or PIN pass",
       ],
-      shot: { label: "Screenshot · NGO map", caption: "donations on the map" },
+      shot: {
+        label: "Screenshot · NGO claims",
+        caption: "accepting an offer, and the history of collections",
+      },
     },
     {
       title: "Under the hood",
@@ -54,6 +61,10 @@ export const spira: SideProjectText = {
         "An immutable custody certificate for every handover",
         "A typed client generated from the OpenAPI spec",
       ],
+      shot: {
+        label: "Screenshot · API docs",
+        caption: "the API documented with Swagger (OpenAPI)",
+      },
     },
   ],
   highlights: [
@@ -80,9 +91,10 @@ export const spira: SideProjectText = {
   ],
   architecture: {
     diagram: {
-      title: "Donation state machine",
-      label: "Diagram · donation state machine",
-      caption: "every state a donation can be in, and what moves it forward",
+      title: "Deployment",
+      label: "Diagram · deployment",
+      caption:
+        "the web app on Vercel, the API on Render and the database on Supabase, and how they talk",
     },
   },
   team: {
@@ -107,12 +119,26 @@ export const spira: SideProjectText = {
     "Generating the client from the API spec is what made it realistic for one person to build both sides.",
   ],
   gallery: [
-    { label: "Listing expiring stock", caption: "a shop lists its surplus" },
-    { label: "Donations on the map", caption: "what NGOs see" },
-    { label: "Claiming a donation", caption: "claim it before anyone else" },
-    { label: "QR / PIN pickup pass", caption: "the single-use pass" },
-    { label: "Custody certificate", caption: "proof of every handover" },
-    { label: "Shop handover screen", caption: "verifying a pickup" },
+    {
+      label: "Two sides, one sign-up",
+      caption: "shops and NGOs register in the same app",
+    },
+    {
+      label: "Donation queue",
+      caption: "every donation and the state it is in",
+    },
+    {
+      label: "Custody certificate",
+      caption: "a numbered PDF for every handover",
+    },
+    {
+      label: "Impact and partners",
+      caption: "food rescued this year, and who collects it",
+    },
+    {
+      label: "NGO verification pass",
+      caption: "a permanent QR to show at a new shop",
+    },
   ],
   links: {},
 };
