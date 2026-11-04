@@ -97,3 +97,7 @@ Short and in the user's language. Include:
 | `clinica` | Clinica-Backend, Clinica-Frontend | Express + Prisma 5 + MySQL, React 18 + Vite | `clinica.md` | Roles: paciente, doctor, administrador (register accepts `tipoUsuario`). `npm test` runs `prisma migrate reset` and wipes the DB: never run it against the demo database. Appointment states: Solicitada, Opciones, Programada, Finalizada, Cancelada. |
 | `conejos` | SistemaConejos (private) | Native PHP + MySQL, FPDF | `conejos.md` | Roles: Administrador, Gerente, Jornalero, Veterinario. Import `baseDatos.sql`; DB credentials are hardcoded in `controllers/conexion.php` (adjust locally). Run PHP in a container. |
 | `stii` | Proyecto-STII | Java 8 Swing (NetBeans/Ant) + MySQL, iText | `stii.md` | Build with Ant to a jar; DB script `TABLA SQL PROVEEDOR.sql`; connection and login are hardcoded in `src/logica/conectate.java` and `src/clases/InicioUsuario.java` (adjust locally). Seed suppliers, tickets, transactions, rates and advances for several weeks. |
+
+## Notes
+
+When running a side-project, turn-off without deletion the containers used for databases for the other side-projects if the user didn't specify to let them opened, and turn off the apps to free the ports used.
