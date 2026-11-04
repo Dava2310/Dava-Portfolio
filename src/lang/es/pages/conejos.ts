@@ -45,7 +45,7 @@ export const conejos: SideProjectText = {
     {
       title: "Reproducción",
       bullets: [
-        "Cruzar un macho apareador vivo con una hembra viva",
+        "Cruzar un macho reproductor vivo con una hembra viva",
         "Lista de cruces con camadas y vista de detalle de los padres",
         "Gestaciones con fecha de inicio, fecha de parto esperada y notas",
         "Una lista de razas preferidas, según el consejo del dueño de la granja",
@@ -74,15 +74,15 @@ export const conejos: SideProjectText = {
     {
       title: "Una granja modelada con su linaje",
       what: "Un esquema de 8 tablas enlaza cada conejo con sus padres a través de los cruces y mantiene al día los conteos de camadas y cruces.",
-      why: "Registros, cruces, gestaciones, alimentación y ventas cuelgan de un mismo conejo.",
+      why: "Registros, cruces, gestaciones, alimentación y ventas se asocian a un mismo conejo.",
     },
     {
       title: "Un reporte de producción en PDF",
-      what: "Un PDF con la imagen de la granja hecho con FPDF: encabezado, una fila por venta, números de página y fecha de impresión.",
+      what: "Un PDF con el logo de la granja, hecho con FPDF: encabezado, una fila por venta, números de página y fecha de impresión.",
       why: "Un documento real para el dueño de la granja.",
     },
     {
-      title: "Reglas que mantienen coherente el rebaño",
+      title: "Reglas que mantienen coherentes los registros",
       what: "Solo los reproductores vivos se pueden cruzar, solo los conejos vivos se pueden vender y una venta crea un registro de producción.",
       why: "El estado de un conejo decide qué ofrece cada pantalla.",
     },

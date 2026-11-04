@@ -77,7 +77,7 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
         "modelo de datos: productores, choferes, camiones, boletos de pesada y análisis de calidad",
     },
     stack: {
-      title: "El stack, capa por capa",
+      title: "El stack tecnológico, capa por capa",
       layer: "Capa",
       tools: "Herramientas",
       frontend: { name: "Frontend", tools: "Next.js · shadcn/ui" },
@@ -102,7 +102,7 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
     title: "Decisiones clave",
     nest: {
       title: "Migrar la API de Express a NestJS",
-      body: "A medida que crecían los roles y permisos, los módulos y guards de NestJS dieron a la API una estructura más fácil de razonar, y ayudaron a reducir los tiempos de carga en un 60%.",
+      body: "A medida que crecían los roles y permisos, los módulos y guards de NestJS dieron a la API una estructura más clara y fácil de mantener, y ayudaron a reducir los tiempos de carga en un 60%.",
     },
     alerts: {
       title: "Alertas en tiempo real, por Telegram",

@@ -5,15 +5,15 @@ export const clinica: SideProjectText = {
   kicker: "una cita, paso a paso",
   name: "Clinica",
   oneLiner:
-    "App web de gestión de clínicas donde pacientes, doctores y administradores manejan citas y resúmenes médicos.",
+    "App web de gestión de clínicas donde pacientes, doctores y administradores gestionan citas y resúmenes médicos.",
   facts: {
     role: "Líder del proyecto, backend y diseño de la base de datos",
     context:
       "Académico · planteado a partir de una clínica real de Maturín, Venezuela, Clínica INMECA",
     period: "Unos 7 meses · 2024–2025",
     team: "2 personas",
-    status: "Prototipo funcional · mostrado en local",
-    effort: "Unas 60 horas de mi propio tiempo, incluido el diseño",
+    status: "Prototipo funcional · presentado en local",
+    effort: "Unas 60 horas de trabajo propio, incluido el diseño",
   },
   hero: {
     label: "Captura · app web de Clinica",
@@ -86,7 +86,7 @@ export const clinica: SideProjectText = {
     },
     {
       title: "Sesiones que de verdad terminan",
-      what: "Tokens de acceso cortos, refresh tokens rotativos y una lista negra al cerrar sesión. Los pacientes se desactivan, nunca se borran.",
+      what: "Tokens de acceso de corta duración, refresh tokens rotativos y una lista negra al cerrar sesión. Los pacientes se desactivan, nunca se borran.",
       why: "El historial de un paciente siempre se conserva.",
     },
   ],
@@ -115,10 +115,10 @@ export const clinica: SideProjectText = {
     ],
   },
   lessons: [
-    "Diseñar primero la base de datos y el sistema hizo que el resto del backend fuera directo: una vez claras las entidades y el ciclo de vida de la cita, los endpoints salieron solos.",
+    "Diseñar primero la base de datos y el sistema hizo que el resto del backend fuera mucho más sencillo: una vez claras las entidades y el ciclo de vida de la cita, los endpoints salieron solos.",
     "Al liderar un equipo pequeño, la API es un contrato: ajusté los endpoints según aparecían las necesidades reales del frontend, en vez de defender el primer diseño.",
     "El frontend fue la mitad más difícil del proyecto, y verlo desde el backend me enseñó a diseñar las respuestas pensando en lo que necesita una pantalla.",
-    "El flujo de citas me mostró hasta dónde llega una primera versión: planeé una validación de choques de horario de los doctores y transiciones de estado más estrictas, pero no las terminé, y los reportes PDF quedaron como plan.",
+    "El flujo de citas me mostró hasta dónde llega una primera versión: planeé una validación de choques de horario de los doctores y transiciones de estado más estrictas, pero no las terminé, y los reportes PDF quedaron pendientes.",
   ],
   gallery: [
     { label: "Doctores", caption: "la lista de doctores del administrador" },

@@ -6,7 +6,7 @@ export const meta: Dict["meta"] = {
     home: {
       title: "Daniel Vetencourt — Ingeniero de software, docente y competidor",
       description:
-        "Ingeniero de software de Maturín, Venezuela, ahora en Barcelona. Sistemas backend y herramientas para agentes de IA en Toloka AI.",
+        "Ingeniero de software de Maturín, Venezuela, ahora en Barcelona, España. Sistemas backend y herramientas para agentes de IA en Toloka AI.",
     },
     projects: {
       title: "Proyectos — Daniel Vetencourt",
@@ -30,11 +30,6 @@ export const meta: Dict["meta"] = {
       title: "Habilidades — Daniel Vetencourt",
       description: "Lenguajes, frameworks y herramientas con los que trabajo.",
     },
-    about: {
-      title: "Sobre mí — Daniel Vetencourt",
-      description:
-        "La versión larga de mi historia: ingeniería, docencia y competición.",
-    },
     activities: {
       title: "Actividades — Daniel Vetencourt",
       description: "Competencias, eventos y comunidad más allá del código.",
@@ -46,7 +41,7 @@ export const meta: Dict["meta"] = {
     spira: {
       title: "Spira — Daniel Vetencourt",
       description:
-        "Plataforma de excedentes de comida: los comercios publican productos por caducar y las ONG los reclaman con un pase QR/PIN. NestJS, PostgreSQL y React.",
+        "Plataforma para donar excedentes de alimentos: los comercios publican productos a punto de vencer y las ONG los reservan y los recogen con un pase QR o PIN. NestJS, PostgreSQL y React.",
     },
     itassets: {
       title: "IT Assets Tracker — Daniel Vetencourt",
@@ -75,7 +70,7 @@ export const meta: Dict["meta"] = {
     },
     teaching: {
       title: "Docencia — Daniel Vetencourt",
-      description: "Enseñando Python y robótica en Academos.",
+      description: "Clases de Python y robótica en Academos.",
     },
   },
 };

@@ -4,7 +4,7 @@ export const activities: Dict["_pages"]["activities"] = {
   intro: {
     kicker: "¡vamos, equipo!",
     title: "Actividades y eventos",
-    lead: "Competencias, representaciones de mi universidad y las ferias donde mostré a los nuevos estudiantes lo que habíamos construido. Cada evento tiene su propia página con las fotos y la historia detrás.",
+    lead: "Competencias, eventos en representación de mi universidad y ferias donde mostré a los nuevos estudiantes lo que habíamos construido. Cada evento tiene su propia página con las fotos y la historia detrás.",
   },
   filters: {
     all: "Todo",

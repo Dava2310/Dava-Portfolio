@@ -10,7 +10,7 @@ export const escuela: SideProjectText = {
     role: "Único desarrollador: requisitos, base de datos, backend, frontend y certificados PDF",
     context: "Proyecto real · hecho para una academia real en Venezuela",
     period: "Unos 2 meses · dic. 2024 – feb. 2025",
-    team: "Solo",
+    team: "Individual",
     status: "Fuera de servicio por ahora · código público",
   },
   hero: {
@@ -48,7 +48,7 @@ export const escuela: SideProjectText = {
       bullets: [
         "Ver solo sus propias secciones",
         "Consultar el horario, con los días en etiquetas",
-        "Seguir inscritos frente a capacidad en un gráfico",
+        "Ver en un gráfico los inscritos frente a la capacidad",
         "Leer la lista con el estado de aprobado o reprobado de cada estudiante",
       ],
       shot: {
@@ -73,16 +73,16 @@ export const escuela: SideProjectText = {
   highlights: [
     {
       title: "Del pago al certificado",
-      what: "Un estudiante reporta una transferencia y el administrador la aprueba. Eso abre el cupo, el profesor ve la lista y quien aprueba recibe su certificado.",
+      what: "Un estudiante reporta una transferencia y el administrador la aprueba. Eso le asigna el cupo, el profesor lo ve en su lista y, si aprueba el curso, recibe su certificado.",
       why: "Un solo flujo para tres roles, con la aprobación hecha en una transacción.",
     },
     {
       title: "Validado dos veces",
       what: "Joi revisa las peticiones en el servidor y zod aplica las mismas reglas en los formularios.",
-      why: "El usuario ve errores claros antes de enviar y los datos malos no llegan a la base de datos.",
+      why: "El usuario ve errores claros antes de enviar y los datos inválidos no llegan a la base de datos.",
     },
     {
-      title: "Certificados hechos en código",
+      title: "Certificados generados por código",
       what: "La API dibuja el certificado PDF con PDFKit: borde, logo, nombres, curso y firmas.",
       why: "Un documento imprimible, sin depender de una herramienta de plantillas.",
     },

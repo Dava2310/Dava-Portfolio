@@ -11,26 +11,26 @@ const PHOTOS = [
   { id: "barcelona", rotate: -1 },
 ] as const;
 
-export function Beyond() {
+export function Personal() {
   const { t } = useTranslation();
 
   return (
-    <section className="beyond" aria-labelledby="beyond-title">
+    <section className="personal" aria-labelledby="personal-title">
       <SectionHeader
-        id="beyond-title"
-        title={t("_pages:about.beyond.title")}
-        note={t("_pages:about.beyond.note")}
+        id="personal-title"
+        title={t("_pages:home.personal.title")}
+        note={t("_pages:home.personal.note")}
         noteTone="muted"
       />
-      <div className="beyond-grid">
+      <div className="personal-grid">
         {PHOTOS.map(({ id, rotate }) => (
           <Polaroid
             key={id}
-            caption={t(`_pages:about.beyond.${id}.caption`)}
+            caption={t(`_pages:home.personal.${id}.caption`)}
             rotate={rotate}
           >
             <ImagePlaceholder
-              label={t(`_pages:about.beyond.${id}.photo`)}
+              label={t(`_pages:home.personal.${id}.photo`)}
               ratio="4/3"
             />
           </Polaroid>

@@ -6,23 +6,22 @@ export const home: Dict["_pages"]["home"] = {
     titleStart: "Desarrollador, ",
     titleHighlight: "profesor",
     titleEnd: " y competidor.",
-    lead: "Ingeniero de software de Maturín, Venezuela, ahora en Barcelona. Construyo sistemas backend y herramientas para agentes de IA en Toloka AI — además enseñé Python y robótica durante un año y fui capitán de un equipo de Petrobowl en el podio nacional.",
+    lead: "Ingeniero de software de Maturín, Venezuela, ahora en Barcelona, España. En Toloka AI construyo sistemas backend y herramientas de desarrollo para agentes de IA. Además, durante un año di clases de Python y robótica, y fui capitán de un equipo de Petrobowl que llegó al podio nacional.",
     cta: "Ver mis proyectos",
     photoAlt: "Daniel Vetencourt sonriendo con blazer oscuro y camisa azul",
     photoCaption: "¡ese soy yo!",
     teamPhoto: "Foto · Equipo de Petrobowl",
-    teamCaption: "nacionales, 2025",
+    teamCaption: "final nacional, 2025",
   },
   story: {
-    title: "La historia hasta ahora",
+    title: "Mi historia hasta hoy",
     note: "(la versión corta)",
-    link: "La versión larga",
     y2022: "TSU en Informática — Magna Cum Laude.",
     y2023:
       "Ingeniero en Informática — el mejor promedio de la educación superior venezolana.",
     y2024:
-      "Primer trabajo como ingeniero, empecé a enseñar en Academos y 3.º en Petrobowl como capitán.",
-    y2025: "Subcampeón nacional de Petrobowl y luego entré a Toloka AI.",
+      "Primer trabajo como ingeniero, empecé a enseñar en Academos y 3.er lugar en Petrobowl como capitán.",
+    y2025: "Subcampeón nacional de Petrobowl y, después, me uní a Toloka AI.",
     y2026:
       "Me mudé a Barcelona para un máster en Ciencia de Datos en Harbour.Space.",
   },
@@ -40,10 +39,10 @@ export const home: Dict["_pages"]["home"] = {
     },
   },
   moments: {
-    title: "Fuera de la pantalla",
+    title: "Lejos de la pantalla",
     link: "Todas las actividades",
     petrobowlPhoto: "Foto · Petrobowl",
-    petrobowlCaption: "Nacionales de Petrobowl — ¡2.º lugar!",
+    petrobowlCaption: "Final nacional de Petrobowl: ¡2.º lugar!",
     universityPhoto: "Foto · Evento universitario",
     universityCaption: "representando a mi universidad",
     feriaPhoto: "Foto · Demo en la feria",
@@ -51,10 +50,26 @@ export const home: Dict["_pages"]["home"] = {
     teachingPhoto: "Foto · Docencia",
     teachingCaption: "enseñando robótica en Academos",
   },
+  personal: {
+    title: "Cuando no estoy programando",
+    note: "(algo más personal)",
+    hobby: {
+      photo: "Foto · un pasatiempo",
+      caption: "[algo que te encanta hacer]",
+    },
+    maturin: {
+      photo: "Foto · Maturín",
+      caption: "[un lugar de tu tierra]",
+    },
+    barcelona: {
+      photo: "Foto · Barcelona",
+      caption: "[un rincón favorito de Barcelona]",
+    },
+  },
   contact: {
-    kicker: "di hola —",
+    kicker: "escríbeme —",
     title: "Construyamos algo juntos.",
-    lead: "Sea un puesto, un proyecto o una pregunta sobre algo que construí, me encantará saber de ti — en español o en inglés.",
+    lead: "Ya sea por un puesto, un proyecto o una pregunta sobre algo que construí, me encantará leerte, en español o en inglés.",
     name: "Tu nombre",
     namePlaceholder: "Ana García",
     email: "Tu correo",
@@ -67,8 +82,9 @@ export const home: Dict["_pages"]["home"] = {
     messagePlaceholder: "Cuéntame un poco…",
     send: "Enviar mensaje",
     thanksKicker: "¡gracias!",
-    thanksTitle: "Tu app de correo debería estar abriéndose.",
-    thanksBody: "Solo pulsa enviar allí y responderé al correo que dejaste.",
+    thanksTitle: "Se está abriendo tu aplicación de correo.",
+    thanksBody:
+      "Solo tienes que enviarlo desde allí y te responderé a ese correo.",
     again: "Escribir otro",
     subject: {
       role: "Una oportunidad de trabajo",

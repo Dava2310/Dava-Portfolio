@@ -34,8 +34,8 @@ export const teaching: Dict["_pages"]["teaching"] = {
     },
   },
   built: {
-    title: "Construido con mis estudiantes",
-    note: "(sus momentos de mayor orgullo)",
+    title: "Lo que construimos juntos",
+    note: "(de lo que más orgullosos están)",
     crane: {
       photo: "Foto · grúa con servomotores",
       name: "grúa con servomotores",

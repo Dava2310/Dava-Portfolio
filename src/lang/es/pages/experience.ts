@@ -16,7 +16,7 @@ export const experience: Dict["_pages"]["experience"] = {
       role: "Ingeniero Python · Infraestructura para agentes de IA y DevTools",
       bullets: {
         b1: "Rediseñé el CI de los pipelines de calibración de agentes para ejecutar solo los workflows que un commit realmente afecta, reduciendo el tiempo de ejecución y el gasto en cómputo.",
-        b2: "Reconstruí una herramienta de equidad de tests con muestreo basado en puntuaciones sobre varios intentos del agente, que detecta tests inestables y de justicia dudosa.",
+        b2: "Reconstruí la herramienta que evalúa si un test es justo: puntúa varios intentos del agente y detecta los tests inestables o poco fiables.",
         b3: "Construí una capa de validación de extremo a extremo para los archivos de contexto de tareas: validador CLI, workflow de GitHub y cambios en el servidor MCP dentro del contenedor.",
         b4: "Redacté y calibré más de 10 tareas de ingeniería realistas con suites de verificación automatizadas.",
       },

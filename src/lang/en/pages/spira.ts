@@ -8,7 +8,7 @@ export const spira: SideProjectText = {
     "A food-surplus platform: shops list expiring stock, NGOs claim it and collect it with a single-use QR or PIN pass.",
   facts: {
     role: "Built the whole API and the web app",
-    context: "Academic · Harbour.Space, “From Zero to Hero”",
+    context: "Academic · Harbour.Space",
     period: "About 3 weeks · 2026",
     team: "6 people",
     status: "MVP · live demo available",

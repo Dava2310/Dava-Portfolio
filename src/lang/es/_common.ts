@@ -5,14 +5,13 @@ export const _common: Dict["_common"] = {
   skipToContent: "Saltar al contenido",
   nav: {
     label: "Principal",
-    about: "Sobre mí",
     projects: "Proyectos",
     experience: "Experiencia",
     education: "Educación",
     teaching: "Docencia",
     activities: "Actividades",
     skills: "Habilidades",
-    cta: "Di hola",
+    cta: "Escríbeme",
   },
   lang: {
     label: "Idioma",

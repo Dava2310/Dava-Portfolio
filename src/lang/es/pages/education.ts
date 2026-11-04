@@ -53,7 +53,7 @@ export const education: Dict["_pages"]["education"] = {
     },
   },
   graduation: {
-    title: "Días de grado",
+    title: "Graduaciones",
     note: "con quienes lo hicieron posible",
     ceremony: {
       photo: "Foto · ceremonia",
@@ -73,7 +73,7 @@ export const education: Dict["_pages"]["education"] = {
     },
   },
   honors: {
-    title: "Honores y premios",
+    title: "Distinciones y premios",
     outstanding: {
       title: "Premio al Joven Estudiante Sobresaliente",
       detail: "Mejor promedio de la educación universitaria, Venezuela · 2023",

@@ -74,12 +74,13 @@ export const itassets: SideProjectText = {
       {
         topic: "Formularios",
         left: "React Hook Form y Zod",
-        right: "VeeValidate y Zod, con las mismas reglas y menos ceremonia",
+        right:
+          "VeeValidate y Zod, con las mismas reglas y menos código repetitivo",
       },
       {
         topic: "Funciones de servidor",
         left: "Una separación servidor/cliente que aquí no aportó nada",
-        right: "Una SPA simple sobre Vite, sin nada sin usar",
+        right: "Una SPA simple sobre Vite, sin nada que sobre",
       },
     ],
     verdict:
@@ -116,7 +117,7 @@ export const itassets: SideProjectText = {
   gallery: [
     {
       label: "Documentación de la API",
-      caption: "Documentación Swagger OpenAPI",
+      caption: "la documentación de la API en Swagger (OpenAPI)",
     },
     {
       label: "Lista de activos",
