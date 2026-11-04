@@ -5,10 +5,10 @@ export const spira: SideProjectText = {
   kicker: "¡que nada se desperdicie!",
   name: "Spira",
   oneLiner:
-    "Plataforma de excedentes: los comercios publican productos por caducar y las ONG los reclaman y recogen con un pase QR o PIN de un solo uso.",
+    "Plataforma de excedentes de alimentos: los comercios publican productos a punto de vencer y las ONG los reservan y los recogen con un pase QR o PIN de un solo uso.",
   facts: {
     role: "Construí toda la API y la aplicación web",
-    context: "Académico · Harbour.Space, “From Zero to Hero”",
+    context: "Académico · Harbour.Space",
     period: "Unas 3 semanas · 2026",
     team: "6 personas",
     status: "MVP · demo en vivo disponible",
@@ -17,7 +17,7 @@ export const spira: SideProjectText = {
   hero: {
     label: "Captura · Spira en sus dos lados",
     caption:
-      "los dos lados en una app: el inicio del comercio, el escaparate de la ONG y un pase de recogida",
+      "los dos lados en una app: el inicio del comercio, los excedentes disponibles para las ONG y un pase de recogida",
   },
   numbers: [
     { label: "rutas de la API" },
@@ -25,14 +25,14 @@ export const spira: SideProjectText = {
     { label: "roles de usuario" },
   ],
   problem: [
-    "Los comercios tiran comida que está cerca de su fecha de caducidad, mientras las ONG necesitan una forma fiable de encontrarla y recogerla a tiempo.",
-    "Spira conecta a ambos: los comercios publican su stock por caducar, las ONG reclaman lo que necesitan y lo recogen con un pase QR o PIN de un solo uso, y cada entrega deja un registro de custodia. Lo planteamos como una posible iniciativa real, no solo como un ejercicio del curso.",
+    "Los comercios desechan alimentos cercanos a su fecha de vencimiento, mientras que las ONG necesitan una forma fiable de encontrarlos y recogerlos a tiempo.",
+    "Spira conecta a ambos: los comercios publican sus excedentes a punto de vencer, las ONG reservan lo que necesitan y lo recogen con un pase QR o PIN de un solo uso, y cada entrega deja un registro de custodia. Lo planteamos como una posible iniciativa real, no solo como un ejercicio del curso.",
   ],
   features: [
     {
       title: "Para los comercios",
       bullets: [
-        "Publicar excedentes antes de que caduquen",
+        "Publicar excedentes antes de que venzan",
         "Seguir cada donación por sus estados",
         "Confirmar cada recogida con un QR o PIN",
       ],
@@ -46,16 +46,16 @@ export const spira: SideProjectText = {
       title: "Para las ONG",
       bullets: [
         "Encontrar donaciones disponibles en un mapa",
-        "Reclamar stock sin conflictos de doble reclamo",
+        "Reservar productos sin que dos ONG se queden con lo mismo",
         "Recogerlo con un pase QR o PIN de un solo uso",
       ],
       shot: {
-        label: "Captura · reclamos de la ONG",
+        label: "Captura · reservas de la ONG",
         caption: "aceptar una oferta y el historial de recogidas",
       },
     },
     {
-      title: "Bajo el capó",
+      title: "La parte técnica",
       bullets: [
         "Unas 120 rutas REST en NestJS",
         "Un esquema PostgreSQL de 16 tablas con TypeORM",
@@ -76,8 +76,8 @@ export const spira: SideProjectText = {
     },
     {
       title: "Dos ONG, una donación",
-      what: "Los reclamos se ejecutan en una transacción con bloqueo de filas. La segunda ONG recibe un aviso claro de conflicto.",
-      why: "Una misma donación no se puede reclamar dos veces.",
+      what: "Las reservas se ejecutan en una transacción con bloqueo de filas. La segunda ONG recibe un aviso claro de conflicto.",
+      why: "Una misma donación no se puede reservar dos veces.",
     },
     {
       title: "Un pase de recogida que sirve una sola vez",
@@ -85,7 +85,7 @@ export const spira: SideProjectText = {
       why: "No se saltan pasos y no se reutilizan pases.",
     },
     {
-      title: "Un contrato único entre front y back",
+      title: "Un único contrato entre frontend y backend",
       what: "El cliente de la API de la aplicación web se genera desde la especificación OpenAPI del backend.",
       why: "Ambos lados se mantienen sincronizados y una sola persona pudo construir los dos.",
     },
@@ -115,9 +115,9 @@ export const spira: SideProjectText = {
     ],
   },
   lessons: [
-    "Un MVP rápido hecho con asistentes de IA esconde huecos: mi propia prueba mostró que la primera versión filtraba datos entre organizaciones, así que aprendí a probar las reglas y no solo el caso feliz.",
-    "Los reclamos dobles los evitan los bloqueos y las restricciones de la base de datos, no las comprobaciones de la interfaz.",
-    "Generar el cliente desde la especificación de la API fue lo que hizo realista que una sola persona construyera ambos lados.",
+    "Un MVP hecho rápido con asistentes de IA deja vacíos que no se ven: mi propia prueba mostró que la primera versión filtraba datos entre organizaciones, así que aprendí a probar las reglas y no solo el caso ideal.",
+    "Las reservas dobles se evitan con bloqueos y restricciones en la base de datos, no con comprobaciones en la interfaz.",
+    "Generar el cliente desde la especificación de la API fue lo que hizo posible que una sola persona construyera ambos lados.",
   ],
   gallery: [
     {

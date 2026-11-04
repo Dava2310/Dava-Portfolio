@@ -33,7 +33,7 @@ export const sideProject: Dict["_pages"]["sideProject"] = {
   why: "Por qué importa",
   architecture: "Arquitectura",
   zoomHint: "clic para ampliar",
-  stack: "El stack, capa por capa",
+  stack: "El stack tecnológico, capa por capa",
   layer: "Capa",
   tools: "Herramientas",
   layers: {
@@ -53,8 +53,7 @@ export const sideProject: Dict["_pages"]["sideProject"] = {
   lessons: "Lo que aprendí",
   gallery: "Galería",
   galleryCount: "capturas",
-  galleryEmpty:
-    "Las capturas vienen en camino: estos marcos muestran lo que viene.",
+  galleryEmpty: "Pronto habrá capturas: estos marcos muestran lo que vendrá.",
   links: "Enlaces",
   repos: "Repositorios",
   privateRepo: "Repositorio privado",

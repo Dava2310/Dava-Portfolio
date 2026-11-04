@@ -3,25 +3,25 @@ import type { Dict } from "../../types";
 export const skills: Dict["_pages"]["skills"] = {
   intro: {
     kicker: "mi caja de herramientas",
-    title: "Habilidades, y dónde las he usado",
-    lead: "Lo que uso cada día, con lo que me siento cómodo y lo que estoy aprendiendo ahora — cada una enlazada al trabajo donde realmente la usé.",
+    title: "Habilidades y dónde las he usado",
+    lead: "Lo que uso a diario, lo que domino y lo que estoy aprendiendo, cada habilidad enlazada al trabajo donde la usé de verdad.",
     legend: "Leyenda",
   },
   nav: {
     label: "Niveles de habilidad",
-    daily: "Cada día",
-    comfortable: "Con soltura",
+    daily: "A diario",
+    comfortable: "Domino",
     learning: "Aprendiendo ahora",
-    human: "Idiomas y habilidades con personas",
+    human: "Idiomas y habilidades interpersonales",
   },
   tiers: {
     daily: {
-      title: "Cada día",
-      note: "(con lo que funciona mi trabajo actual)",
+      title: "A diario",
+      note: "(la base de mi trabajo actual)",
     },
     comfortable: {
-      title: "Con soltura",
-      note: "(he entregado cosas reales con estas)",
+      title: "Domino",
+      note: "(con ellas he entregado proyectos reales)",
     },
     learning: {
       title: "Aprendiendo ahora",
@@ -63,7 +63,7 @@ export const skills: Dict["_pages"]["skills"] = {
     englishLevel: "C1 · profesional",
   },
   people: {
-    title: "Trabajo con personas",
+    title: "Habilidades interpersonales",
     lead: {
       strong: "Líder técnico",
       rest: "de equipos de proyecto de 4 a 10 personas",
@@ -75,7 +75,7 @@ export const skills: Dict["_pages"]["skills"] = {
     },
     captain: {
       strong: "Capitán de equipo",
-      rest: "en los nacionales de SPE Petrobowl",
+      rest: "en la final nacional de SPE Petrobowl",
     },
     writing: {
       strong: "Redacción técnica",

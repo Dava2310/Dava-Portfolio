@@ -13,7 +13,7 @@ export const stii: SideProjectText = {
     period: "2021",
     team: "4 personas",
     status: "Completado",
-    outcome: "Puntaje perfecto en la tesis",
+    outcome: "Calificación máxima en la tesis",
   },
   hero: {
     label: "Captura · pantalla principal de SARP",
@@ -31,7 +31,7 @@ export const stii: SideProjectText = {
         "Registrar, buscar, modificar, desactivar y reactivar proveedores",
         "Guardar los datos bancarios de cada beneficiario y una persona autorizada opcional",
         "Vincular cada proveedor con sus beneficiarios",
-        "Mantener el historial de tarifas estándar y aplicar las nuevas a los proveedores que la siguen",
+        "Mantener el historial de tarifas estándar y aplicar las nuevas a los proveedores que usan la tarifa estándar",
       ],
       shot: {
         label: "Captura · tabla de proveedores",
@@ -62,14 +62,14 @@ export const stii: SideProjectText = {
   ],
   highlights: [
     {
-      title: "Una corrida semanal de pagos en una sola acción",
+      title: "Todos los pagos de la semana con un solo clic",
       what: "Para cada proveedor, la app calcula la orden de pago de la semana en bolívares y dólares, con la tasa de cambio de esa semana.",
       why: "Reemplaza un trabajo de hojas de cálculo con las reglas reales del equipo contable.",
     },
     {
-      title: "Un modelo de 12 tablas del negocio",
+      title: "El negocio modelado en 12 tablas",
       what: "Proveedores, beneficiarios, boletos de pesaje, tasas y anticipos viven en un solo esquema MySQL, y las tarifas y tasas conservan su historial.",
-      why: "Una sola fuente de verdad en lugar de hojas de cálculo dispersas.",
+      why: "Una única fuente de datos confiable, en lugar de hojas de cálculo dispersas.",
     },
     {
       title: "Un cierre de semana seguro",
