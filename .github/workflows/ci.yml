@@ -47,6 +47,10 @@ jobs:
     # Deploy only on push to main, after lint and build pass
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: lint-and-build
+    # Records each deploy as a GitHub deployment (repo sidebar "Deployments", with the live link)
+    environment:
+      name: production
+      url: https://dava-portfolio.web.app
     concurrency:
       group: firebase-deploy
       cancel-in-progress: false
