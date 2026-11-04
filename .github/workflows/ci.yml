@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://dava-portfolio.web.app' }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -72,12 +72,12 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://dava-portfolio.web.app' }}
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DAVA_PORTFOLIO }}
           channelId: live
-          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          projectId: ${{ vars.FIREBASE_PROJECT_ID || 'dava-portfolio' }}

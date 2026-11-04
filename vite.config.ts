@@ -8,7 +8,7 @@ import { PAGES } from "./src/shared/config/pages";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const siteUrl = (env["SITE_URL"] ?? "https://dava-portfolio.web.app").replace(
+  const siteUrl = (env["SITE_URL"] || "https://dava-portfolio.web.app").replace(
     /\/$/,
     "",
   );

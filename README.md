@@ -39,6 +39,9 @@ Copy `.env.example` to `.env`. `SITE_URL` is the public origin used in canonical
 
 ## Deploy (Firebase Hosting)
 
-1. Put the project ID in `.firebaserc` and in the GitHub repository variable `FIREBASE_PROJECT_ID`.
-2. Add repository variable `SITE_URL` and secret `FIREBASE_SERVICE_ACCOUNT`.
-3. Push to `main`: CI runs format check, lint and build, then deploys.
+Live at https://dava-portfolio.web.app (Firebase project `dava-portfolio`).
+
+- Push to `main`: CI (`.github/workflows/ci.yml`) runs format check, lint and build, then deploys `dist/` to the live channel. Pull requests only run the checks.
+- CI authenticates with the repository secret `FIREBASE_SERVICE_ACCOUNT_DAVA_PORTFOLIO` (created by `firebase init hosting:github`).
+- Optional repository variables: `SITE_URL` (defaults to `https://dava-portfolio.web.app`; set it when a custom domain is added) and `FIREBASE_PROJECT_ID` (defaults to `dava-portfolio`).
+- Manual deploy: `npx firebase-tools login`, then `pnpm build && pnpm deploy`.
