@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .side-numbers {
-  @apply pb-[clamp(64px,9vw,104px)];
+  @apply pb-section;
 
   dl {
     @apply m-0 grid gap-6;

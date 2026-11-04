@@ -14,7 +14,6 @@ export function Story() {
         id="story-title"
         title={t("_pages:home.story.title")}
         note={t("_pages:home.story.note")}
-        noteTone="muted"
       />
       <ol className="story-timeline">
         {YEARS.map((key) => (

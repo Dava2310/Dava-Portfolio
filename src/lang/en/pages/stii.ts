@@ -130,8 +130,4 @@ export const stii: SideProjectText = {
     },
     { label: "PDF payment order", caption: "ready to print and file" },
   ],
-  links: {
-    noLive:
-      "Desktop app: it runs locally with Java and MySQL, so there is no live demo.",
-  },
 };

@@ -50,8 +50,4 @@ export type SideProjectText = {
   lessons: readonly string[];
   /** Captions of the gallery tiles (images and aspect ratios are in the data file, same order). */
   gallery: readonly { label: string; caption: string }[];
-  links: {
-    /** Shown instead of a live-demo card when there is no demo, e.g. desktop apps. */
-    noLive?: string;
-  };
 };

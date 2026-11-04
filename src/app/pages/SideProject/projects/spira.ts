@@ -49,8 +49,4 @@ export const spira: SideProjectData = {
     { label: "API", url: "https://github.com/Dava2310/SpiraAPI" },
     { label: "Web app", url: "https://github.com/Dava2310/Spira-Portal" },
   ],
-  live: {
-    url: "https://spira-portal.vercel.app",
-    display: "spira-portal.vercel.app",
-  },
 };

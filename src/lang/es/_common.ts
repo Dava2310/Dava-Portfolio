@@ -11,7 +11,7 @@ export const _common: Dict["_common"] = {
     teaching: "Docencia",
     activities: "Actividades",
     skills: "Habilidades",
-    cta: "Escríbeme",
+    cta: "Contáctame",
   },
   lang: {
     label: "Idioma",

@@ -143,5 +143,4 @@ export const clinica: SideProjectText = {
       caption: "el historial del paciente, consulta por consulta",
     },
   ],
-  links: {},
 };

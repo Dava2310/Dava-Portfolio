@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .side-hero {
-  @apply pb-[clamp(64px,9vw,96px)];
+  @apply pb-section;
 
   figure {
     @apply relative m-0 -rotate-[0.5deg] rounded-md bg-card px-3.5 pt-3.5 shadow-[0_1px_0_#e3d7c2,0_18px_40px_rgb(60_45_20/0.12)];

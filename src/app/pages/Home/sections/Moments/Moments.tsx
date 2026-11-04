@@ -26,6 +26,7 @@ export function Moments() {
       <SectionHeader
         id="moments-title"
         title={t("_pages:home.moments.title")}
+        note={t("_pages:home.moments.note")}
         link={{
           href: pageUrl(lang, "activities"),
           label: t("_pages:home.moments.link"),

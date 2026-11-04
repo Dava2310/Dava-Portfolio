@@ -141,5 +141,4 @@ export const conejos: SideProjectText = {
       caption: "the report the owner prints",
     },
   ],
-  links: {},
 };

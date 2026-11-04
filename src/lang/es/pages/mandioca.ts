@@ -58,7 +58,6 @@ export const mandioca: Dict["_pages"]["mandioca"] = {
   },
   architecture: {
     title: "Arquitectura",
-    lead: "Cómo encajan las piezas, directamente de mis diagramas UML: dónde corre cada cosa, cómo se comunican las aplicaciones y los servicios, y el modelo de datos del proceso de arrime de materia prima.",
     zoom: "clic para ampliar",
     deployment: {
       alt: "Diagrama UML de despliegue: un servidor AWS con Caddy, el frontend Next.js y el backend NestJS en EC2, junto a RDS con MySQL y un bucket S3, además del PC cliente con navegador y la app Python conectada a la báscula por USB serial, y la API de Telegram",

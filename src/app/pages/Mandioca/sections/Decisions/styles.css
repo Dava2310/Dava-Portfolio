@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .mandioca-decisions {
-  @apply flex flex-col gap-10 pb-[104px];
+  @apply flex flex-col gap-10 pb-section;
 }
 
 .mandioca-decisions-grid {

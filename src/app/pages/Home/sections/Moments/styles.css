@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .moments {
-  @apply flex flex-col gap-10 pb-28;
+  @apply flex flex-col gap-10 pb-section;
 }
 
 .moments-grid {

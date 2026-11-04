@@ -42,5 +42,4 @@ export type SideProjectData = {
   /** One entry per gallery tile, same order as `text.gallery`. */
   gallery: readonly { ratio: string; image?: Shot }[];
   repos: readonly { label: string; url?: string; private?: boolean }[];
-  live?: { url: string; display: string };
 };

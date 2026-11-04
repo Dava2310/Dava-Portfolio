@@ -5,14 +5,6 @@ export const skills: Dict["_pages"]["skills"] = {
     kicker: "mi caja de herramientas",
     title: "Habilidades y dónde las he usado",
     lead: "Lo que uso a diario, lo que domino y lo que estoy aprendiendo, cada habilidad enlazada al trabajo donde la usé de verdad.",
-    legend: "Leyenda",
-  },
-  nav: {
-    label: "Niveles de habilidad",
-    daily: "A diario",
-    comfortable: "Domino",
-    learning: "Aprendiendo ahora",
-    human: "Idiomas y habilidades interpersonales",
   },
   tiers: {
     daily: {

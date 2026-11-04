@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .teaching-cta {
-  @apply pb-24;
+  @apply pb-section;
 }
 
 .teaching-cta-box {

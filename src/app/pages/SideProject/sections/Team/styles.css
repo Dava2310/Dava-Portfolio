@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .side-team {
-  @apply flex flex-col gap-8 pb-[clamp(64px,9vw,104px)];
+  @apply flex flex-col gap-8 pb-section;
 
   h2 {
     @apply m-0 font-display text-[clamp(30px,3.6vw,46px)] leading-[1.02] font-extrabold tracking-[-0.035em];

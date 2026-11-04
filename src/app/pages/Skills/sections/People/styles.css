@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .people {
-  @apply pb-[104px];
+  @apply pb-section;
 }
 
 .people-card {

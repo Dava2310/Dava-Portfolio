@@ -142,5 +142,4 @@ export const escuela: SideProjectText = {
       caption: "certificado del curso en formato PDF",
     },
   ],
-  links: {},
 };

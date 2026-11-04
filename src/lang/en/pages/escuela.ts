@@ -135,5 +135,4 @@ export const escuela: SideProjectText = {
     { label: "Certificates", caption: "certificates generation" },
     { label: "PDF certificate", caption: "course certificate in PDF format" },
   ],
-  links: {},
 };

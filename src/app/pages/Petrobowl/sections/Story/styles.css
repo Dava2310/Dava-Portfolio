@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .event-story {
-  @apply flex flex-wrap gap-x-16 gap-y-6 pb-[104px];
+  @apply flex flex-wrap gap-x-16 gap-y-6 pb-section;
 }
 
 .event-story-title {

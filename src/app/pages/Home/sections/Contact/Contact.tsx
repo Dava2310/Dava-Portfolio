@@ -48,7 +48,7 @@ export function Contact() {
           {CONTACT_EMAIL}
         </a>
         <SocialLinks
-          items={["github", "linkedin"]}
+          items={["github", "linkedin", "email", "resume"]}
           labels={{
             github: t("_common:social.github"),
             linkedin: t("_common:social.linkedin"),

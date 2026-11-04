@@ -12,15 +12,7 @@
   }
 
   span {
-    @apply font-hand text-[26px];
-  }
-
-  span[data-tone="accent"] {
-    @apply text-accent;
-  }
-
-  span[data-tone="muted"] {
-    @apply text-muted;
+    @apply font-hand text-[26px] text-accent;
   }
 }
 

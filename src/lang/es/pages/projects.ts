@@ -23,7 +23,5 @@ export const projects: Dict["_pages"]["projects"] = {
     title: "Proyectos personales",
     note: "(hechos por diversión y para aprender)",
     story: "Leer la historia",
-    code: "Código en GitHub",
-    demo: "Demo en vivo",
   },
 };

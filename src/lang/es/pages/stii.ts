@@ -142,8 +142,4 @@ export const stii: SideProjectText = {
       caption: "lista para imprimir y archivar",
     },
   ],
-  links: {
-    noLive:
-      "Aplicación de escritorio: se ejecuta en local con Java y MySQL, así que no hay demo en vivo.",
-  },
 };

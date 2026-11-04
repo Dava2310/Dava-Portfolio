@@ -143,5 +143,4 @@ export const clinica: SideProjectText = {
       caption: "a patient’s history, visit by visit",
     },
   ],
-  links: {},
 };

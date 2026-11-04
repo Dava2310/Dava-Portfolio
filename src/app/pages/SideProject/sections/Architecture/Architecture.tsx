@@ -1,6 +1,7 @@
 import { useTranslation } from "@/features/i18n";
 import { Icon } from "@/shared/ui/atoms/Icon";
 import { Tape } from "@/shared/ui/atoms/Tape";
+import { ZoomHint } from "@/shared/ui/molecules/ZoomHint";
 
 import { Shot } from "../../components/Shot";
 import type { StackLayer } from "../../types";
@@ -47,9 +48,12 @@ export function Architecture({ text, data }: SectionProps) {
             <span>
               <strong>{diagram.title}</strong> — {diagram.caption}
             </span>
-            <span className="side-zoom">
-              {t("_pages:sideProject.zoomHint")}
-            </span>
+            {data.diagram ? (
+              <ZoomHint
+                className="side-zoom"
+                label={t("_pages:sideProject.zoomHint")}
+              />
+            ) : null}
           </figcaption>
         </figure>
       ) : null}

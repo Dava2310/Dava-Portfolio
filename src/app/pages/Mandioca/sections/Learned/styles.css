@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .mandioca-learned {
-  @apply pb-24;
+  @apply pb-section;
 }
 
 .mandioca-learned-note {

@@ -22,7 +22,6 @@ export const sideProject: Dict["_pages"]["sideProject"] = {
     gallery: "Galería",
     links: "Enlaces",
   },
-  liveDemo: "Demo en vivo",
   tags: "Etiquetas",
   keyNumbers: "Cifras clave",
   problem: "El problema y la idea",
@@ -58,7 +57,6 @@ export const sideProject: Dict["_pages"]["sideProject"] = {
   repos: "Repositorios",
   privateRepo: "Repositorio privado",
   docs: "Documentación",
-  wake: "El servidor se duerme cuando nadie lo usa, así que la primera visita puede tardar un poco en cargar.",
   pager: {
     label: "Más proyectos",
     prev: "Proyecto anterior",
