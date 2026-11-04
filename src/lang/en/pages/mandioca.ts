@@ -56,7 +56,6 @@ export const mandioca = {
   },
   architecture: {
     title: "Architecture",
-    lead: "How the pieces fit together, straight from my UML diagrams: where everything runs, how the applications and services talk to each other, and the data model behind the raw-material intake process. (The diagrams are labelled in Spanish.)",
     zoom: "click to zoom",
     deployment: {
       alt: "UML deployment diagram: an AWS server running Caddy, the Next.js frontend and the NestJS backend on EC2, next to RDS with MySQL and an S3 bucket, plus the client PC with a browser and the Python app connected to the scale over USB serial, and the Telegram API",

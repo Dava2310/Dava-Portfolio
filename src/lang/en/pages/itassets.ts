@@ -1,7 +1,7 @@
 import type { SideProjectText } from "../../sideProject";
 
 export const itassets: SideProjectText = {
-  kind: "Academic project · 2026 · Harbour.Space",
+  kind: "Academic project · 2026",
   kicker: "the same app, built twice",
   name: "IT Assets Tracker",
   oneLiner:
@@ -134,5 +134,4 @@ export const itassets: SideProjectText = {
       caption: "a modal with inline validation errors",
     },
   ],
-  links: {},
 };

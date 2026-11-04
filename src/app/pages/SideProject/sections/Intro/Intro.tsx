@@ -39,14 +39,8 @@ export function Intro({ text, data }: SectionProps) {
           <h1>{text.name}</h1>
           <p className="side-intro-lead">{text.oneLiner}</p>
           <TagList label={t("_pages:sideProject.tags")} tags={data.tags} />
-          {data.live || publicRepos.length > 0 ? (
+          {publicRepos.length > 0 ? (
             <div className="side-intro-chips">
-              {data.live ? (
-                <a className="side-chip" data-kind="live" href={data.live.url}>
-                  <Icon name="globe" strokeWidth={1.8} />
-                  {t("_pages:sideProject.liveDemo")}
-                </a>
-              ) : null}
               {publicRepos.map((repo) => (
                 <a key={repo.label} className="side-chip" href={repo.url}>
                   <Icon name="github" strokeWidth={1.8} />

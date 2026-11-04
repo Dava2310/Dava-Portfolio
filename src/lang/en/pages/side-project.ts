@@ -20,7 +20,6 @@ export const sideProject = {
     gallery: "Gallery",
     links: "Links",
   },
-  liveDemo: "Live demo",
   tags: "Tags",
   keyNumbers: "Key numbers",
   problem: "The problem and the idea",
@@ -57,7 +56,6 @@ export const sideProject = {
   repos: "Repositories",
   privateRepo: "Private repository",
   docs: "Documentation",
-  wake: "The server sleeps when nobody is using it, so the first visit may take a while to load.",
   pager: {
     label: "More projects",
     prev: "Previous project",

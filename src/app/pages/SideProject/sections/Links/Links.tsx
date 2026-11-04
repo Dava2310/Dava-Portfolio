@@ -5,10 +5,8 @@ import type { SectionProps } from "../props";
 
 import "./styles.css";
 
-export function Links({ text, data }: SectionProps) {
+export function Links({ data }: SectionProps) {
   const { t } = useTranslation();
-  const { live } = data;
-  const { noLive } = text.links;
 
   return (
     <section
@@ -40,29 +38,6 @@ export function Links({ text, data }: SectionProps) {
               </a>
             ),
           )}
-        </div>
-        <div className="side-links-side">
-          {live ? (
-            <div className="side-links-card">
-              <h3>{t("_pages:sideProject.liveDemo")}</h3>
-              <a className="side-link" href={live.url}>
-                <Icon name="globe" size={22} strokeWidth={1.8} />
-                <span>
-                  <strong>{live.display}</strong>
-                </span>
-                <Icon name="external" size={18} strokeWidth={1.8} />
-              </a>
-              <p className="side-links-wake">
-                <Icon name="clock" size={18} strokeWidth={1.8} />
-                <span>{t("_pages:sideProject.wake")}</span>
-              </p>
-            </div>
-          ) : noLive ? (
-            <p className="side-links-nolive">
-              <Icon name="monitor" size={22} strokeWidth={1.8} />
-              <span>{noLive}</span>
-            </p>
-          ) : null}
         </div>
       </div>
     </section>

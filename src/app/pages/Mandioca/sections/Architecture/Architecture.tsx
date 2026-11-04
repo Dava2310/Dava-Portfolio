@@ -2,6 +2,7 @@ import { useTranslation } from "@/features/i18n";
 import components from "@/assets/mandioca-system/component-diagram.png";
 import intake from "@/assets/mandioca-system/datamodel-arrime.png";
 import deployment from "@/assets/mandioca-system/deployment-diagram.png";
+import { ZoomHint } from "@/shared/ui/molecules/ZoomHint";
 import { ZoomableImage } from "@/shared/ui/molecules/ZoomableImage";
 
 import { NumberedTitle } from "../../components/NumberedTitle";
@@ -55,7 +56,6 @@ export function Architecture() {
           number="03"
           title={t("_pages:mandioca.architecture.title")}
         />
-        <p>{t("_pages:mandioca.architecture.lead")}</p>
       </div>
       <div className="mandioca-diagrams">
         <figure className="mandioca-diagram-main">
@@ -67,9 +67,10 @@ export function Architecture() {
               </strong>{" "}
               — {t("_pages:mandioca.architecture.deployment.caption")}
             </span>
-            <span className="mandioca-zoom">
-              {t("_pages:mandioca.architecture.zoom")}
-            </span>
+            <ZoomHint
+              className="mandioca-zoom"
+              label={t("_pages:mandioca.architecture.zoom")}
+            />
           </figcaption>
         </figure>
         <div className="mandioca-diagram-side">
@@ -78,9 +79,10 @@ export function Architecture() {
             <figcaption>
               <strong>{t("_pages:mandioca.architecture.intake.name")}</strong> —{" "}
               {t("_pages:mandioca.architecture.intake.caption")}
-              <span className="mandioca-zoom">
-                {t("_pages:mandioca.architecture.zoom")}
-              </span>
+              <ZoomHint
+                className="mandioca-zoom"
+                label={t("_pages:mandioca.architecture.zoom")}
+              />
             </figcaption>
           </figure>
           <figure data-tilt="left">
@@ -90,9 +92,10 @@ export function Architecture() {
                 {t("_pages:mandioca.architecture.components.name")}
               </strong>{" "}
               — {t("_pages:mandioca.architecture.components.caption")}
-              <span className="mandioca-zoom">
-                {t("_pages:mandioca.architecture.zoom")}
-              </span>
+              <ZoomHint
+                className="mandioca-zoom"
+                label={t("_pages:mandioca.architecture.zoom")}
+              />
             </figcaption>
           </figure>
         </div>

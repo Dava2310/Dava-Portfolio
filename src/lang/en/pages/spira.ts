@@ -11,7 +11,7 @@ export const spira: SideProjectText = {
     context: "Academic · Harbour.Space",
     period: "About 3 weeks · 2026",
     team: "6 people",
-    status: "MVP · live demo available",
+    status: "MVP · deployed",
     outcome: "Well received, mostly for its business case",
   },
   hero: {
@@ -140,5 +140,4 @@ export const spira: SideProjectText = {
       caption: "a permanent QR to show at a new shop",
     },
   ],
-  links: {},
 };

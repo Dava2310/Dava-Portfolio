@@ -13,7 +13,7 @@
 }
 
 .mandioca-results {
-  @apply grid gap-6 pt-18 pb-24;
+  @apply grid gap-6 pt-18 pb-section;
   grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
 
   div {
