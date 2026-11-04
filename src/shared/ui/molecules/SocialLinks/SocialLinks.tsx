@@ -17,11 +17,25 @@ const ICONS: Record<keyof typeof SOCIALS, IconName> = {
   resume: "download",
 };
 
+/** Links that open in a new tab, so the visitor keeps their place on the site. */
+const NEW_TAB: ReadonlySet<keyof typeof SOCIALS> = new Set([
+  "github",
+  "linkedin",
+  "resume",
+]);
+
 export function SocialLinks({ items, labels }: SocialLinksProps) {
   return (
     <div className="social-links">
       {items.map((id) => (
-        <a key={id} href={SOCIALS[id]} aria-label={labels[id]}>
+        <a
+          key={id}
+          href={SOCIALS[id]}
+          aria-label={labels[id]}
+          {...(NEW_TAB.has(id)
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+        >
           <Icon name={ICONS[id]} size={20} strokeWidth={1.8} />
         </a>
       ))}

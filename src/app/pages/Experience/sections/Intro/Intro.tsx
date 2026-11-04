@@ -18,7 +18,12 @@ export function Intro() {
           {t("_pages:experience.intro.lead")}
         </p>
       </div>
-      <a className="experience-intro-resume" href={SOCIALS.resume}>
+      <a
+        className="experience-intro-resume"
+        href={SOCIALS.resume}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Icon name="download" />
         {t("_common:social.resume")}
       </a>
