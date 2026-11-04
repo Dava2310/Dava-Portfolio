@@ -6,14 +6,6 @@ export const projects: Dict["_pages"]["projects"] = {
     title: "Lo que he construido",
     lead: "Trabajo para clientes y proyectos personales. Cada tarjeta abre su propia página: el problema, cómo lo construí, la arquitectura y lo que aprendí.",
   },
-  filters: {
-    all: "Todos",
-    web: "Apps web",
-    backend: "Backend y APIs",
-    desktop: "Escritorio",
-    data: "Datos e IA",
-    tools: "Herramientas para devs",
-  },
   featured: {
     badge: "Destacado · Proyecto para cliente",
     alt: "Página de inicio de la plataforma web de Mandioca",

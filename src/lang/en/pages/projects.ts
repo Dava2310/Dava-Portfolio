@@ -4,14 +4,6 @@ export const projects = {
     title: "Things I've built",
     lead: "Client work and side projects. Every card opens its own page: the problem, how I built it, the architecture, and what I learned.",
   },
-  filters: {
-    all: "All",
-    web: "Web apps",
-    backend: "Backend & APIs",
-    desktop: "Desktop",
-    data: "Data & AI",
-    tools: "Dev tools",
-  },
   featured: {
     badge: "Featured · Client project",
     alt: "Landing page of the Mandioca web platform",
