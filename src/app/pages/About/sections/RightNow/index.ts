@@ -1,1 +1,0 @@
-export { RightNow } from "./RightNow";

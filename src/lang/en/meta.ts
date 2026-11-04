@@ -4,7 +4,7 @@ export const meta = {
     home: {
       title: "Daniel Vetencourt — Software engineer, teacher & competitor",
       description:
-        "Software engineer from Maturín, Venezuela, now in Barcelona. Backend systems and developer tooling for AI agents at Toloka AI.",
+        "Software engineer from Maturín, Venezuela, now in Barcelona, Spain. Backend systems and developer tooling for AI agents at Toloka AI.",
     },
     projects: {
       title: "Projects — Daniel Vetencourt",
@@ -27,11 +27,6 @@ export const meta = {
     skills: {
       title: "Skills — Daniel Vetencourt",
       description: "Languages, frameworks and tools I work with.",
-    },
-    about: {
-      title: "About — Daniel Vetencourt",
-      description:
-        "The long version of my story: engineering, teaching and competing.",
     },
     activities: {
       title: "Activities — Daniel Vetencourt",

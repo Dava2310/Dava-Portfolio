@@ -4,7 +4,7 @@ export const home = {
     titleStart: "Developer, ",
     titleHighlight: "teacher",
     titleEnd: " & competitor.",
-    lead: "Software engineer from Maturín, Venezuela, now in Barcelona. I build backend systems and developer tooling for AI agents at Toloka AI — and I've spent a year teaching Python and robotics, and captained a national-podium Petrobowl team.",
+    lead: "Software engineer from Maturín, Venezuela, now in Barcelona, Spain. I build backend systems and developer tooling for AI agents at Toloka AI — and I've spent a year teaching Python and robotics, and captained a national-podium Petrobowl team.",
     cta: "See my projects",
     photoAlt: "Daniel Vetencourt smiling in a dark blazer and blue shirt",
     photoCaption: "hi, that's me!",
@@ -14,7 +14,6 @@ export const home = {
   story: {
     title: "The story so far",
     note: "(the short version)",
-    link: "The long version",
     y2022: "Associate degree in Informatics — Magna Cum Laude.",
     y2023: "BEng in Informatics — highest GPA in Venezuelan higher education.",
     y2024:
@@ -46,6 +45,22 @@ export const home = {
     feriaCaption: "demo day at the feria",
     teachingPhoto: "Photo · Teaching",
     teachingCaption: "teaching robotics at Academos",
+  },
+  personal: {
+    title: "When I'm not coding",
+    note: "(a bit more personal)",
+    hobby: {
+      photo: "Photo · a hobby",
+      caption: "[something you love doing]",
+    },
+    maturin: {
+      photo: "Photo · Maturín",
+      caption: "[a place from home]",
+    },
+    barcelona: {
+      photo: "Photo · Barcelona",
+      caption: "[a favorite spot in Barcelona]",
+    },
   },
   contact: {
     kicker: "say hola —",

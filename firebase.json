@@ -14,6 +14,13 @@
           }
         ]
       }
+    ],
+    "redirects": [
+      {
+        "regex": "^/(?P<lang>en|es)/about/?$",
+        "destination": "/:lang/",
+        "type": 301
+      }
     ]
   }
 }

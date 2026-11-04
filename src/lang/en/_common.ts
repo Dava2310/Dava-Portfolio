@@ -3,7 +3,6 @@ export const _common = {
   skipToContent: "Skip to content",
   nav: {
     label: "Main",
-    about: "About",
     projects: "Projects",
     experience: "Experience",
     education: "Education",

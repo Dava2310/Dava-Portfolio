@@ -12,7 +12,6 @@ export const PAGES = [
   { id: "experience", path: "experience" },
   { id: "education", path: "education" },
   { id: "skills", path: "skills" },
-  { id: "about", path: "about" },
   { id: "activities", path: "activities" },
   { id: "petrobowl", path: "activities/petrobowl-2025", parent: "activities" },
   { id: "teaching", path: "teaching" },

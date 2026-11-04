@@ -6,7 +6,6 @@ import { mandioca } from "./pages/mandioca";
 import { experience } from "./pages/experience";
 import { education } from "./pages/education";
 import { skills } from "./pages/skills";
-import { about } from "./pages/about";
 import { activities } from "./pages/activities";
 import { petrobowl } from "./pages/petrobowl";
 import { teaching } from "./pages/teaching";
@@ -27,7 +26,6 @@ export const en = {
     experience,
     education,
     skills,
-    about,
     activities,
     petrobowl,
     teaching,

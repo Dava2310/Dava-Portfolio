@@ -13,7 +13,6 @@ type HeaderProps = {
 const NAV: readonly {
   id: PageId;
   key:
-    | "about"
     | "projects"
     | "experience"
     | "education"
@@ -21,7 +20,6 @@ const NAV: readonly {
     | "activities"
     | "skills";
 }[] = [
-  { id: "about", key: "about" },
   { id: "projects", key: "projects" },
   { id: "experience", key: "experience" },
   { id: "education", key: "education" },
