@@ -3,14 +3,6 @@ export const skills = {
     kicker: "mi caja de herramientas",
     title: "Skills, and where I've used them",
     lead: "What I use every day, what I'm comfortable with, and what I'm learning right now — each one linked to the work where I actually used it.",
-    legend: "Legend",
-  },
-  nav: {
-    label: "Skill tiers",
-    daily: "Every day",
-    comfortable: "Comfortable",
-    learning: "Learning now",
-    human: "Languages & people skills",
   },
   tiers: {
     daily: {

@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .skill-tier {
-  @apply flex flex-col gap-7 pb-[88px];
+  @apply flex flex-col gap-7 pb-section;
 }
 
 .skill-tier-header {
@@ -24,7 +24,7 @@
   }
 
   > span {
-    @apply font-hand text-[26px] text-muted;
+    @apply font-hand text-[26px] text-accent;
   }
 }
 
