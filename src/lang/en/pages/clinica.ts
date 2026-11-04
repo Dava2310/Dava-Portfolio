@@ -17,7 +17,7 @@ export const clinica: SideProjectText = {
   },
   hero: {
     label: "Screenshot · Clinica web app",
-    caption: "Clinica, from request to medical summary",
+    caption: "the administrator’s queue of requested appointments, by state",
   },
   numbers: [
     { label: "API endpoints" },
@@ -40,7 +40,7 @@ export const clinica: SideProjectText = {
       ],
       shot: {
         label: "Screenshot · patient view",
-        caption: "the patient side",
+        caption: "requesting an appointment by service and specialty",
       },
     },
     {
@@ -52,7 +52,7 @@ export const clinica: SideProjectText = {
       ],
       shot: {
         label: "Screenshot · doctor view",
-        caption: "closing a visit",
+        caption: "closing a visit with diagnosis and treatment",
       },
     },
     {
@@ -64,7 +64,7 @@ export const clinica: SideProjectText = {
       ],
       shot: {
         label: "Screenshot · administrator view",
-        caption: "proposing options",
+        caption: "scheduling an appointment with a doctor and dates",
       },
     },
   ],
@@ -92,9 +92,10 @@ export const clinica: SideProjectText = {
   ],
   architecture: {
     diagram: {
-      title: "ER diagram",
+      title: "Database schema",
       label: "Diagram · database model",
-      caption: "the 10 models and how users, appointments and summaries relate",
+      caption:
+        "the 10 tables: users and roles, appointments, proposed options and medical summaries",
     },
   },
   team: {
@@ -120,29 +121,27 @@ export const clinica: SideProjectText = {
     "The appointment flow showed me where a first version stops: I planned a doctor time-conflict check and stricter state transitions but did not finish them, and the PDF reports stayed planned.",
   ],
   gallery: [
-    { label: "Login", caption: "one entry point for the three roles" },
+    { label: "Doctors", caption: "the administrator’s list of doctors" },
     {
-      label: "Requesting an appointment",
-      caption: "the patient’s request form",
+      label: "Registering a patient",
+      caption: "one form creates the account and the patient profile",
     },
     {
-      label: "Requested appointments",
-      caption: "the administrator’s queue by state",
+      label: "Doctor’s agenda",
+      caption: "scheduled appointments, ready to attend",
     },
-    {
-      label: "Proposing options",
-      caption: "doctor and dates for one request",
-    },
-    {
-      label: "Approving an option",
-      caption: "the patient picks one of the proposals",
-    },
-    { label: "Pending appointments", caption: "the doctor’s list" },
     {
       label: "Medical summary",
-      caption: "closing a visit with diagnosis and treatment",
+      caption: "diagnosis, treatment and observations of a visit",
     },
-    { label: "Patient history", caption: "summaries kept per patient" },
+    {
+      label: "My appointments",
+      caption: "the patient follows each request by state",
+    },
+    {
+      label: "Medical summaries",
+      caption: "a patient’s history, visit by visit",
+    },
   ],
   links: {},
 };

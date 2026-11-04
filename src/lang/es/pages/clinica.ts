@@ -17,7 +17,7 @@ export const clinica: SideProjectText = {
   },
   hero: {
     label: "Captura · app web de Clinica",
-    caption: "Clinica, de la solicitud al resumen médico",
+    caption: "la cola del administrador con las citas solicitadas, por estado",
   },
   numbers: [
     { label: "endpoints de la API" },
@@ -40,7 +40,7 @@ export const clinica: SideProjectText = {
       ],
       shot: {
         label: "Captura · vista del paciente",
-        caption: "el lado del paciente",
+        caption: "solicitar una cita por servicio y especialidad",
       },
     },
     {
@@ -52,7 +52,7 @@ export const clinica: SideProjectText = {
       ],
       shot: {
         label: "Captura · vista del doctor",
-        caption: "cerrando una consulta",
+        caption: "cerrar una consulta con diagnóstico y tratamiento",
       },
     },
     {
@@ -64,7 +64,7 @@ export const clinica: SideProjectText = {
       ],
       shot: {
         label: "Captura · vista del administrador",
-        caption: "proponiendo opciones",
+        caption: "programar una cita con un doctor y fechas",
       },
     },
   ],
@@ -92,10 +92,10 @@ export const clinica: SideProjectText = {
   ],
   architecture: {
     diagram: {
-      title: "Diagrama ER",
+      title: "Esquema de base de datos",
       label: "Diagrama · modelo de base de datos",
       caption:
-        "los 10 modelos y cómo se relacionan usuarios, citas y resúmenes",
+        "las 10 tablas: usuarios y roles, citas, opciones propuestas y resúmenes médicos",
     },
   },
   team: {
@@ -121,34 +121,26 @@ export const clinica: SideProjectText = {
     "El flujo de citas me mostró hasta dónde llega una primera versión: planeé una validación de choques de horario de los doctores y transiciones de estado más estrictas, pero no las terminé, y los reportes PDF quedaron como plan.",
   ],
   gallery: [
+    { label: "Doctores", caption: "la lista de doctores del administrador" },
     {
-      label: "Inicio de sesión",
-      caption: "una sola entrada para los tres roles",
+      label: "Registrar un paciente",
+      caption: "un formulario crea la cuenta y el perfil del paciente",
     },
     {
-      label: "Solicitar una cita",
-      caption: "el formulario de solicitud del paciente",
+      label: "Agenda del doctor",
+      caption: "citas programadas, listas para atender",
     },
-    {
-      label: "Citas solicitadas",
-      caption: "la cola del administrador por estado",
-    },
-    {
-      label: "Proponer opciones",
-      caption: "doctor y fechas para una solicitud",
-    },
-    {
-      label: "Aprobar una opción",
-      caption: "el paciente elige una de las propuestas",
-    },
-    { label: "Citas pendientes", caption: "la lista del doctor" },
     {
       label: "Resumen médico",
-      caption: "cerrar una consulta con diagnóstico y tratamiento",
+      caption: "diagnóstico, tratamiento y observaciones de una consulta",
     },
     {
-      label: "Historial del paciente",
-      caption: "resúmenes guardados por paciente",
+      label: "Mis citas",
+      caption: "el paciente sigue cada solicitud según su estado",
+    },
+    {
+      label: "Resúmenes médicos",
+      caption: "el historial del paciente, consulta por consulta",
     },
   ],
   links: {},
