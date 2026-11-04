@@ -53,6 +53,26 @@
   @apply mt-auto inline-flex items-center gap-2.5 self-start rounded-[14px] bg-accent px-[22px] py-3.5 font-bold text-white no-underline;
 }
 
+/* The button covers the whole card; the zoomable image stays on top. */
+.featured-cta::after {
+  @apply absolute inset-0 rounded-[10px] content-[''];
+}
+
+.featured .zoomable {
+  @apply relative z-1;
+}
+
+.featured:hover .featured-cta,
 .featured-cta:hover {
   @apply bg-accent-strong text-white;
+}
+
+/* Same press feedback as the project cards, on the whole card. */
+.featured a.featured-cta:active {
+  scale: none;
+}
+
+.featured:has(.featured-cta:active) {
+  scale: 0.99;
+  transition: scale 120ms ease-out;
 }

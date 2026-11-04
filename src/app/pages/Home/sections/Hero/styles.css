@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .hero {
-  @apply flex flex-wrap items-center gap-x-16 gap-y-12 pt-12 pb-24;
+  @apply flex flex-wrap items-start gap-x-16 gap-y-12 pt-12 pb-section;
 }
 
 .hero-copy {
@@ -41,7 +41,7 @@
 }
 
 .hero-photos {
-  @apply relative min-w-[280px] flex-[0_1_440px] pt-4 pb-6;
+  @apply relative min-w-[280px] flex-[0_1_440px];
 }
 
 .hero-photo-team {

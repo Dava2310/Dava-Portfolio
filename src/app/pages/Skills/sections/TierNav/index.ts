@@ -1,1 +1,0 @@
-export { TierNav } from "./TierNav";

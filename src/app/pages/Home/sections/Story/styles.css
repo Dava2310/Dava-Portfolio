@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .story {
-  @apply flex flex-col gap-11 pb-[104px];
+  @apply flex flex-col gap-11 pb-section;
 }
 
 .story-timeline {

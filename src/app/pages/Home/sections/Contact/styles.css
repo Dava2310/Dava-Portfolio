@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .contact {
-  @apply flex flex-wrap items-start gap-x-16 gap-y-12 pb-24;
+  @apply flex flex-wrap items-start gap-x-16 gap-y-12 pb-section;
 }
 
 .contact-copy {

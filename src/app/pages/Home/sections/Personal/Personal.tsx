@@ -20,7 +20,6 @@ export function Personal() {
         id="personal-title"
         title={t("_pages:home.personal.title")}
         note={t("_pages:home.personal.note")}
-        noteTone="muted"
       />
       <div className="personal-grid">
         {PHOTOS.map(({ id, rotate }) => (

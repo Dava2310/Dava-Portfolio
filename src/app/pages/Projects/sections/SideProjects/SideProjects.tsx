@@ -1,6 +1,5 @@
 import { useLang, useTranslation } from "@/features/i18n";
 import { pageUrl } from "@/shared/config/pages";
-import { Icon } from "@/shared/ui/atoms/Icon";
 import type { TapeProps } from "@/shared/ui/atoms/Tape";
 import { SIDE_PROJECT_IDS, SIDE_PROJECTS } from "@/app/pages/SideProject";
 import { ZoomableImage } from "@/shared/ui/molecules/ZoomableImage";
@@ -34,7 +33,6 @@ export function SideProjects() {
         {SIDE_PROJECT_IDS.map((id, index) => {
           const text = t(`_pages:${id}`, { returnObjects: true });
           const data = SIDE_PROJECTS[id];
-          const repo = data.repos.find((r) => r.url && !r.private);
           return (
             <ProjectCard
               key={id}
@@ -67,28 +65,6 @@ export function SideProjects() {
                 label: t("_pages:projects.side.story"),
               }}
               {...tapeProps(index)}
-              actions={
-                <>
-                  {repo?.url ? (
-                    <a
-                      className="side-projects-action"
-                      href={repo.url}
-                      aria-label={t("_pages:projects.side.code")}
-                    >
-                      <Icon name="github" strokeWidth={1.8} />
-                    </a>
-                  ) : null}
-                  {data.live ? (
-                    <a
-                      className="side-projects-action"
-                      href={data.live.url}
-                      aria-label={t("_pages:projects.side.demo")}
-                    >
-                      <Icon name="external" strokeWidth={1.8} />
-                    </a>
-                  ) : null}
-                </>
-              }
             />
           );
         })}

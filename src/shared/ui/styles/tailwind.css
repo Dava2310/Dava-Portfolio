@@ -2,6 +2,8 @@
 
 /* Design tokens from the portfolio design: cream paper, ink text, one blue accent. */
 @theme {
+  /* Space after every content section, the same on all pages. */
+  --spacing-section: clamp(64px, 9vw, 104px);
   --color-*: initial;
   --color-white: #ffffff;
   --color-paper: #f3ece0;

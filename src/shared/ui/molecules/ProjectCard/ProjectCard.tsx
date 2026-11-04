@@ -16,9 +16,9 @@ type ProjectCardProps = {
   link: { href: string; label: string };
   /** Position and tilt of the tape strip. */
   tape?: TapeProps;
-  /** Extra controls (icon links) shown at the right of the link row. */
-  actions?: ReactNode;
 };
+
+/** Project card: the whole card opens the project page; a zoomable image inside keeps its own click. */
 
 export function ProjectCard({
   media,
@@ -29,7 +29,6 @@ export function ProjectCard({
   tagsLabel,
   link,
   tape,
-  actions,
 }: ProjectCardProps) {
   return (
     <article className="project-card">
@@ -40,18 +39,9 @@ export function ProjectCard({
         <h3>{title}</h3>
         <p>{description}</p>
         <TagList label={tagsLabel} tags={tags} />
-        {actions ? (
-          <div className="project-card-footer">
-            <a className="project-card-link" href={link.href}>
-              {link.label}
-            </a>
-            <div className="project-card-actions">{actions}</div>
-          </div>
-        ) : (
-          <a className="project-card-link" href={link.href}>
-            {link.label}
-          </a>
-        )}
+        <a className="project-card-link" href={link.href}>
+          {link.label}
+        </a>
       </div>
     </article>
   );

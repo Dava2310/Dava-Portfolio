@@ -24,18 +24,27 @@
   @apply mt-auto self-start pt-2.5 font-bold text-ink underline decoration-accent decoration-2 underline-offset-[6px];
 }
 
-.project-card-link:hover {
+/* The link covers the whole card, so a click on the title, text or tags opens the project. */
+.project-card-link::after {
+  @apply absolute inset-0 rounded-lg content-[''];
+}
+
+.project-card:hover .project-card-link,
+.project-card-link:focus-visible {
   @apply text-accent;
 }
 
-.project-card-footer {
-  @apply mt-auto flex items-center justify-between gap-3 pt-1.5;
-
-  .project-card-link {
-    @apply mt-0 pb-2.5;
-  }
+/* A zoomable image stays above the covering link and keeps opening the zoom. */
+.project-card .zoomable {
+  @apply relative z-1;
 }
 
-.project-card-actions {
-  @apply flex gap-1.5;
+/* Press feedback on the whole card: scaling the link itself would shrink the covering area and lose the click. */
+.project-card a.project-card-link:active {
+  scale: none;
+}
+
+.project-card:has(.project-card-link:active) {
+  scale: 0.98;
+  transition: scale 120ms ease-out;
 }

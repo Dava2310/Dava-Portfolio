@@ -1,0 +1,9 @@
+@reference "../../styles/tailwind.css";
+
+.zoom-hint {
+  @apply m-0 cursor-zoom-in border-0 bg-transparent p-0 text-left;
+}
+
+.zoom-hint:hover {
+  @apply underline underline-offset-4;
+}

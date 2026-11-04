@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .personal {
-  @apply flex flex-col gap-10 pb-[112px];
+  @apply flex flex-col gap-10 pb-section;
 }
 
 .personal-grid {
