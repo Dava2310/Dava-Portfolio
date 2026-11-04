@@ -7,3 +7,5 @@ test-results
 pnpm-lock.yaml
 sito-portfolio
 .claude
+.agents
+skills-lock.json
