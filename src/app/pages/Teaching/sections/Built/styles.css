@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .built {
-  @apply flex flex-col gap-10 pb-[104px];
+  @apply flex flex-col gap-10 pb-section;
 }
 
 .built-head {
@@ -12,7 +12,7 @@
   }
 
   span {
-    @apply font-hand text-[28px] text-muted;
+    @apply font-hand text-[28px] text-accent;
   }
 }
 

@@ -27,7 +27,7 @@ export const home: Dict["_pages"]["home"] = {
   },
   projects: {
     title: "Lo que he construido",
-    note: "cada uno tiene su propia página",
+    note: "proyectos reales y académicos",
     link: "Todos los proyectos",
     readStory: "Leer la historia",
     mandioca: {
@@ -40,6 +40,7 @@ export const home: Dict["_pages"]["home"] = {
   },
   moments: {
     title: "Lejos de la pantalla",
+    note: "competencias, eventos y docencia",
     link: "Todas las actividades",
     petrobowlPhoto: "Foto · Petrobowl",
     petrobowlCaption: "Final nacional de Petrobowl: ¡2.º lugar!",

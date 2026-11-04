@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .glance {
-  @apply m-0 grid gap-6 pb-24;
+  @apply m-0 grid gap-6 pb-section;
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
 
   > div {

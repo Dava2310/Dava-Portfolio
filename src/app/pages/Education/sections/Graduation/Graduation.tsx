@@ -21,7 +21,6 @@ export function Graduation() {
         id="graduation-title"
         title={t("_pages:education.graduation.title")}
         note={t("_pages:education.graduation.note")}
-        noteTone="muted"
       />
       <div className="graduation-grid">
         {PHOTOS.map(({ id, rotate }) => (

@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .graduation {
-  @apply flex flex-col gap-9 pt-[104px];
+  @apply flex flex-col gap-9 pt-section;
 }
 
 .graduation-grid {

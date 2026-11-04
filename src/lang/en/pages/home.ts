@@ -23,7 +23,7 @@ export const home = {
   },
   projects: {
     title: "Things I've built",
-    note: "each one has its own page",
+    note: "real and academic projects",
     link: "All projects",
     readStory: "Read the story",
     mandioca: {
@@ -36,6 +36,7 @@ export const home = {
   },
   moments: {
     title: "Off the screen",
+    note: "competitions, events and teaching",
     link: "All activities",
     petrobowlPhoto: "Photo · Petrobowl",
     petrobowlCaption: "Petrobowl nationals — 2nd place!",

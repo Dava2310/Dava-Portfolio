@@ -21,7 +21,5 @@ export const projects = {
     title: "Side projects",
     note: "(built for fun, and to learn)",
     story: "Read the story",
-    code: "Code on GitHub",
-    demo: "Live demo",
   },
 };

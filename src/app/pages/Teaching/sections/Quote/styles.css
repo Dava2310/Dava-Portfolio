@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .teaching-quote {
-  @apply pb-24;
+  @apply pb-section;
 
   figure {
     @apply relative mx-auto my-0 flex max-w-[820px] flex-col gap-[18px] rounded-md bg-card p-[clamp(28px,4vw,48px)] shadow-card-lg;

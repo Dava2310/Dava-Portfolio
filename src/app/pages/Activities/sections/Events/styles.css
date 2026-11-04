@@ -13,7 +13,7 @@
 }
 
 .events {
-  @apply pb-24;
+  @apply pb-section;
 }
 
 .events-grid {

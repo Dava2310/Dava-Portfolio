@@ -9,7 +9,7 @@ export const _common = {
     teaching: "Teaching",
     activities: "Activities",
     skills: "Skills",
-    cta: "Say hola",
+    cta: "Contact me",
   },
   lang: {
     label: "Language",
