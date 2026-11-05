@@ -104,14 +104,19 @@ export const spira: SideProjectText = {
       "La aplicación web: React 19, Vite y Tailwind",
     ],
     theirs: [
-      "Diseño de la interfaz: Elena Paoli y Ecem Gonul",
-      "La parte de negocio: tres compañeros (segmentación de mercado, definición de la idea)",
+      "Diseño de producto: Ecem Gonul (líder) y Elena Elizabeth Paoli",
+      "El negocio: Iker Arnábar (CEO), Anavin Sakusalcha (responsable comercial) y Alejandro Lamelas (ciencia de datos)",
     ],
     people: [
       { name: "Daniel Vetencourt", role: "API y aplicación web", me: true },
-      { name: "Elena Paoli", role: "Diseño de la interfaz" },
-      { name: "Ecem Gonul", role: "Diseño de la interfaz" },
-      { name: "Tres compañeros", role: "Parte de negocio" },
+      { name: "Iker Arnábar", role: "CEO · líder del proyecto" },
+      { name: "Ecem Gonul", role: "Diseñadora de producto principal" },
+      { name: "Elena Elizabeth Paoli", role: "Diseñadora de producto" },
+      {
+        name: "Anavin Sakusalcha",
+        role: "Responsable comercial",
+      },
+      { name: "Alejandro Lamelas", role: "Científico de datos principal" },
     ],
   },
   lessons: [

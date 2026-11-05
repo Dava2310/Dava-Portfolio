@@ -21,6 +21,6 @@
   grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
 }
 
-.side-projects-shot img {
-  @apply aspect-[16/10] object-cover object-left-top;
+.side-projects-shot {
+  @apply block aspect-[16/10] h-auto w-full object-cover object-left-top;
 }

@@ -173,6 +173,7 @@ export function Icon({ name, size = 18, strokeWidth = 2 }: IconProps) {
   return (
     <svg
       className="icon"
+      data-icon={name}
       width={size}
       height={size}
       viewBox="0 0 24 24"

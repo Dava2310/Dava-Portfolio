@@ -34,11 +34,6 @@
   @apply text-accent;
 }
 
-/* A zoomable image stays above the covering link and keeps opening the zoom. */
-.project-card .zoomable {
-  @apply relative z-1;
-}
-
 /* Press feedback on the whole card: scaling the link itself would shrink the covering area and lose the click. */
 .project-card a.project-card-link:active {
   scale: none;
@@ -47,4 +42,52 @@
 .project-card:has(.project-card-link:active) {
   scale: 0.98;
   transition: scale 120ms ease-out;
+}
+
+/* The preview sits in a frame with rounded corners. */
+.project-card-media {
+  @apply overflow-hidden rounded;
+}
+
+/* Paper lift: on hover or keyboard focus the card rises off the page like a scrapbook cutout and
+   its tape peels up. Only whole-pixel movement: tilting or zooming the card would make the preview
+   image blur while it animates. `translate` still composes with the press `scale` above. */
+.project-card {
+  transition:
+    translate 300ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 300ms ease-out;
+
+  .tape {
+    transition: rotate 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+.project-card:has(.project-card-link:focus-visible) {
+  @apply shadow-photo-lg;
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    @apply shadow-photo-lg;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card:has(.project-card-link:focus-visible) {
+    translate: 0 -6px;
+
+    .tape {
+      rotate: calc(var(--tape-rotate, -4deg) * 1.8);
+    }
+  }
+
+  @media (hover: hover) {
+    .project-card:hover {
+      translate: 0 -6px;
+
+      .tape {
+        rotate: calc(var(--tape-rotate, -4deg) * 1.8);
+      }
+    }
+  }
 }

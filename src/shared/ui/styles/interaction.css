@@ -9,3 +9,52 @@ button:not(:disabled):active,
 summary:active {
   scale: 0.96;
 }
+
+/* Arrow nudge: a link or button with a directional icon moves it the way it points on hover or
+   keyboard focus, as a hint of where it leads. Off for people who prefer reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  :where(a[href], button)
+    .icon:is(
+      [data-icon="arrow"],
+      [data-icon="arrowLeft"],
+      [data-icon="arrowUp"],
+      [data-icon="external"]
+    ) {
+    transition: translate 200ms ease-out;
+  }
+
+  :where(a[href], button):focus-visible .icon[data-icon="arrow"],
+  .featured:hover .featured-cta .icon[data-icon="arrow"] {
+    translate: 4px 0;
+  }
+
+  :where(a[href], button):focus-visible .icon[data-icon="arrowLeft"] {
+    translate: -4px 0;
+  }
+
+  :where(a[href], button):focus-visible .icon[data-icon="arrowUp"] {
+    translate: 0 -3px;
+  }
+
+  :where(a[href], button):focus-visible .icon[data-icon="external"] {
+    translate: 2px -2px;
+  }
+
+  @media (hover: hover) {
+    :where(a[href], button):hover .icon[data-icon="arrow"] {
+      translate: 4px 0;
+    }
+
+    :where(a[href], button):hover .icon[data-icon="arrowLeft"] {
+      translate: -4px 0;
+    }
+
+    :where(a[href], button):hover .icon[data-icon="arrowUp"] {
+      translate: 0 -3px;
+    }
+
+    :where(a[href], button):hover .icon[data-icon="external"] {
+      translate: 2px -2px;
+    }
+  }
+}

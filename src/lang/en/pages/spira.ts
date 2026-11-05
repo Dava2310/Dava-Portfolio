@@ -103,14 +103,16 @@ export const spira: SideProjectText = {
       "The web app: React 19, Vite and Tailwind",
     ],
     theirs: [
-      "UI design: Elena Paoli and Ecem Gonul",
-      "The business side: three teammates (market segmentation, shaping the idea)",
+      "Product design: Ecem Gonul (lead) and Elena Elizabeth Paoli",
+      "The business: Iker Arnábar (CEO), Anavin Sakusalcha (commercial lead) and Alejandro Lamelas (data science)",
     ],
     people: [
       { name: "Daniel Vetencourt", role: "API and web app", me: true },
-      { name: "Elena Paoli", role: "UI design" },
-      { name: "Ecem Gonul", role: "UI design" },
-      { name: "Three teammates", role: "Business side" },
+      { name: "Iker Arnábar", role: "CEO · project lead" },
+      { name: "Ecem Gonul", role: "Lead Product Designer" },
+      { name: "Elena Elizabeth Paoli", role: "Product Designer" },
+      { name: "Anavin Sakusalcha", role: "Commercial lead" },
+      { name: "Alejandro Lamelas", role: "Lead Data Scientist" },
     ],
   },
   lessons: [
