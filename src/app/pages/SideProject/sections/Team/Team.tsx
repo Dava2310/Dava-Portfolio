@@ -1,5 +1,9 @@
 import { useTranslation } from "@/features/i18n";
+import type { ReactNode } from "react";
+
 import { Icon } from "@/shared/ui/atoms/Icon";
+
+import { MEMBERS } from "../../projects/people";
 
 import type { SectionProps } from "../props";
 
@@ -13,6 +17,36 @@ const initials = (name: string) =>
     .slice(0, 2)
     .map((word) => word.charAt(0))
     .join("");
+
+/** A teammate's name, linked to their public profile when they have one. */
+function MemberName({ name }: { name: string }) {
+  const url = MEMBERS[name]?.url;
+  return url ? (
+    <a
+      className="side-member-link"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {name}
+      <Icon name="external" size={14} strokeWidth={2} />
+    </a>
+  ) : (
+    <>{name}</>
+  );
+}
+
+/** Links every teammate with a profile wherever their name appears in a sentence. */
+function withMemberLinks(sentence: string): ReactNode[] {
+  const linked = Object.keys(MEMBERS).filter((name) => MEMBERS[name]?.url);
+  if (linked.length === 0) return [sentence];
+  const pattern = new RegExp(`(${linked.join("|")})`, "g");
+  return sentence
+    .split(pattern)
+    .map((part, index) =>
+      linked.includes(part) ? <MemberName key={index} name={part} /> : part,
+    );
+}
 
 export function Team({ text, data }: SectionProps) {
   const { t } = useTranslation();
@@ -44,7 +78,7 @@ export function Team({ text, data }: SectionProps) {
               {(team.theirs ?? []).map((item) => (
                 <li key={item}>
                   <span aria-hidden="true" />
-                  <span>{item}</span>
+                  <span>{withMemberLinks(item)}</span>
                 </li>
               ))}
             </ul>
@@ -56,17 +90,35 @@ export function Team({ text, data }: SectionProps) {
           className="side-credits"
           aria-label={t("_pages:sideProject.credits")}
         >
-          {team.people.map((person) => (
-            <li key={person.name}>
-              <span aria-hidden="true" data-me={person.me ? "true" : undefined}>
-                {initials(person.name)}
-              </span>
-              <span>
-                <strong>{person.name}</strong>
-                <span>{person.role}</span>
-              </span>
-            </li>
-          ))}
+          {team.people.map((person) => {
+            const photo = MEMBERS[person.name]?.photo;
+            return (
+              <li key={person.name}>
+                <span
+                  aria-hidden="true"
+                  data-me={person.me ? "true" : undefined}
+                >
+                  {photo ? (
+                    <img
+                      src={photo}
+                      alt=""
+                      width={256}
+                      height={256}
+                      loading="lazy"
+                    />
+                  ) : (
+                    initials(person.name)
+                  )}
+                </span>
+                <span>
+                  <strong>
+                    <MemberName name={person.name} />
+                  </strong>
+                  <span>{person.role}</span>
+                </span>
+              </li>
+            );
+          })}
         </ul>
       )}
     </section>

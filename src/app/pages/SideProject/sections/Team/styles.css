@@ -73,7 +73,11 @@
   }
 
   li > span:first-child {
-    @apply inline-flex size-11 flex-[0_0_44px] items-center justify-center rounded-full bg-accent-tint font-display text-base font-extrabold text-accent;
+    @apply inline-flex size-11 flex-[0_0_44px] items-center justify-center overflow-hidden rounded-full bg-accent-tint font-display text-base font-extrabold text-accent;
+  }
+
+  li > span:first-child img {
+    @apply block size-full object-cover;
   }
 
   li > span[data-me="true"] {
@@ -90,5 +94,15 @@
 
   li > span:last-child > span {
     @apply text-sm leading-[1.4] text-muted;
+  }
+}
+
+/* A teammate's name that opens their profile (GitHub, portfolio) in a new tab. */
+.side-member-link {
+  @apply inline-flex items-center gap-1 text-inherit underline decoration-accent/40 decoration-2 underline-offset-4;
+
+  &:hover,
+  &:focus-visible {
+    @apply text-accent decoration-accent;
   }
 }
