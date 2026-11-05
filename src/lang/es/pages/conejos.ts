@@ -3,7 +3,7 @@ import type { SideProjectText } from "../../sideProject";
 export const conejos: SideProjectText = {
   kind: "Proyecto académico · 2023",
   kicker: "de los registros en papel a una base de datos compartida",
-  name: "Sistema Conejos",
+  name: "Conejera",
   oneLiner:
     "Sistema en PHP y MySQL con roles para una granja real de conejos: parentesco, cruces, alimentación, ventas y reportes PDF.",
   facts: {
@@ -15,8 +15,8 @@ export const conejos: SideProjectText = {
     status: "Terminado · desplegado solo como demostración",
   },
   hero: {
-    label: "Captura · Sistema Conejos",
-    caption: "Sistema Conejos, la pantalla de registro de conejos",
+    label: "Captura · inicio de sesión",
+    caption: "el inicio de sesión, con el logo de la granja",
   },
   numbers: [
     { label: "roles de usuario" },
@@ -39,7 +39,8 @@ export const conejos: SideProjectText = {
       ],
       shot: {
         label: "Captura · registro de conejos",
-        caption: "los conejos y sus padres",
+        caption:
+          "la búsqueda, la lista de conejos con sus padres y el formulario de edición",
       },
     },
     {
@@ -51,8 +52,8 @@ export const conejos: SideProjectText = {
         "Una lista de razas preferidas, según el consejo del dueño de la granja",
       ],
       shot: {
-        label: "Captura · pantalla de cruces",
-        caption: "elegir los padres de un cruce",
+        label: "Captura · cruces",
+        caption: "la lista de cruces y los dos padres de una camada",
       },
     },
     {
@@ -63,6 +64,11 @@ export const conejos: SideProjectText = {
         "Cuatro roles, cada uno con su menú sobre pantallas compartidas",
         "Gestión de usuarios: crear y editar usuarios con su rol",
       ],
+      shot: {
+        label: "Captura · ventas",
+        caption:
+          "la lista de ventas, con el botón que genera el reporte en PDF",
+      },
     },
   ],
   highlights: [
@@ -127,24 +133,16 @@ export const conejos: SideProjectText = {
   ],
   gallery: [
     {
-      label: "Registro de conejos",
-      caption: "la lista, con búsqueda por nombre o ID",
+      label: "Gestaciones",
+      caption: "cada gestación con su fecha de inicio y de parto prevista",
     },
-    { label: "Pantalla de cruces", caption: "elegir un macho y una hembra" },
-    { label: "Detalle de padres", caption: "raza y datos de ambos padres" },
-    { label: "Historial médico", caption: "los tratamientos de cada conejo" },
     {
-      label: "Planes de alimentación",
-      caption: "tipo de alimento y cantidad",
-    },
-    { label: "Datos de ventas", caption: "kilos y fecha de cada venta" },
-    {
-      label: "Menú por rol",
-      caption: "las mismas pantallas, un menú distinto",
+      label: "Gestión de usuarios",
+      caption: "los usuarios con su rol y el formulario de edición",
     },
     {
       label: "Reporte de producción (PDF)",
-      caption: "el reporte que imprime el dueño",
+      caption: "el reporte que imprime el dueño, una fila por venta",
     },
   ],
 };

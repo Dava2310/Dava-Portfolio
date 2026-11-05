@@ -1,6 +1,6 @@
 ---
 name: run-side-project
-description: Run one of the portfolio's side projects end to end on this machine (Spira, IT Assets Tracker, Clinica, Escuela, Sistema Conejos, Proyecto STII). Clones the repos, pins dependencies, sets up the database in Docker, fills it with realistic themed data, builds the app and starts it in production mode, then hands over URLs and one login per user role. Use when the user asks to run, start, set up locally or populate a side project, usually to take screenshots for its portfolio page.
+description: Run one of the portfolio's side projects end to end on this machine (Spira, IT Assets Tracker, Clinica, Escuela, Conejera / Sistema Conejos, Proyecto STII). Clones the repos, pins dependencies, sets up the database in Docker, fills it with realistic themed data, builds the app and starts it in production mode, then hands over URLs and one login per user role. Use when the user asks to run, start, set up locally or populate a side project, usually to take screenshots for its portfolio page.
 ---
 
 # Run a side project
@@ -95,7 +95,7 @@ Short and in the user's language. Include:
 | `spira` | SpiraAPI, Spira-Portal | NestJS 12 + TypeORM + PostgreSQL 16, React 19 + Vite | `spira.md` | Roles: ADMIN, RETAILER, RECIPIENT (NGO). Seed two retailers with branches and pinned coordinates, two NGOs, lots in varied categories (one use-by past its date), one donation per status. Tenant isolation: use two orgs per side. |
 | `it-assets-tracker` | API-HS-2026, NextJS-HS, VueJS-HS | NestJS 11 + TypeORM + PostgreSQL, Next.js 16, Vue 3 | `hs-inventory.md` | No auth, no roles. Migrations seed some data: extend it. Run both frontends against the one API. |
 | `clinica` | Clinica-Backend, Clinica-Frontend | Express + Prisma 5 + MySQL, React 18 + Vite | `clinica.md` | Roles: paciente, doctor, administrador (register accepts `tipoUsuario`). `npm test` runs `prisma migrate reset` and wipes the DB: never run it against the demo database. Appointment states: Solicitada, Opciones, Programada, Finalizada, Cancelada. |
-| `conejos` | SistemaConejos (private) | Native PHP + MySQL, FPDF | `conejos.md` | Roles: Administrador, Gerente, Jornalero, Veterinario. Import `baseDatos.sql`; DB credentials are hardcoded in `controllers/conexion.php` (adjust locally). Run PHP in a container. |
+| `conejos` | SistemaConejos (private original; public cleaned copy: Conejera) | Native PHP + MySQL, FPDF | `conejos.md` | Roles: Administrador, Gerente, Jornalero, Veterinario. Import `baseDatos.sql`; DB credentials are hardcoded in `controllers/conexion.php` (adjust locally). Run PHP in a container. |
 | `stii` | Proyecto-STII | Java 8 Swing (NetBeans/Ant) + MySQL, iText | `stii.md` | Build with Ant to a jar; DB script `TABLA SQL PROVEEDOR.sql`; connection and login are hardcoded in `src/logica/conectate.java` and `src/clases/InicioUsuario.java` (adjust locally). Seed suppliers, tickets, transactions, rates and advances for several weeks. |
 
 ## Notes

@@ -20,6 +20,11 @@
         "regex": "^/(?P<lang>en|es)/about/?$",
         "destination": "/:lang/",
         "type": 301
+      },
+      {
+        "regex": "^/(?P<lang>en|es)/projects/sistema-conejos/?$",
+        "destination": "/:lang/projects/conejera/",
+        "type": 301
       }
     ]
   }

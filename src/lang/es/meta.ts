@@ -59,7 +59,7 @@ export const meta: Dict["meta"] = {
         "Plataforma de gestión de academia con portales de administrador, profesor y estudiante. Next.js, Express y Prisma.",
     },
     conejos: {
-      title: "Sistema Conejos — Daniel Vetencourt",
+      title: "Conejera — Daniel Vetencourt",
       description:
         "Sistema de gestión de una granja de conejos en PHP nativo y MySQL, con parentesco, cruces y reportes PDF.",
     },
