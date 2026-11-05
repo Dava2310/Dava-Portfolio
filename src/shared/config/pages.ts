@@ -7,7 +7,7 @@ export const PAGES = [
   { id: "itassets", path: "projects/it-assets-tracker", parent: "projects" },
   { id: "clinica", path: "projects/clinica", parent: "projects" },
   { id: "escuela", path: "projects/escuela", parent: "projects" },
-  { id: "conejos", path: "projects/sistema-conejos", parent: "projects" },
+  { id: "conejos", path: "projects/conejera", parent: "projects" },
   { id: "stii", path: "projects/proyecto-stii", parent: "projects" },
   { id: "experience", path: "experience" },
   { id: "education", path: "education" },
