@@ -84,6 +84,11 @@
     @apply bg-accent text-white;
   }
 
+  /* My own photo keeps the accent as a ring, so "me" still stands out among the teammates. */
+  li > span[data-me="true"]:has(img) {
+    @apply ring-2 ring-accent ring-offset-2 ring-offset-card;
+  }
+
   li > span:last-child {
     @apply flex min-w-0 flex-col;
   }
