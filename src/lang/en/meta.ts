@@ -57,7 +57,7 @@ export const meta = {
         "Academy management platform with admin, teacher and student portals. Next.js, Express and Prisma.",
     },
     conejos: {
-      title: "Sistema Conejos — Daniel Vetencourt",
+      title: "Conejera — Daniel Vetencourt",
       description:
         "Rabbit farm management system in native PHP and MySQL, with parentage, crossings and PDF reports.",
     },

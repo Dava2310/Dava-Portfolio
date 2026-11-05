@@ -3,7 +3,7 @@ import type { SideProjectText } from "../../sideProject";
 export const conejos: SideProjectText = {
   kind: "Academic project · 2023",
   kicker: "from paper records to one shared database",
-  name: "Sistema Conejos",
+  name: "Conejera",
   oneLiner:
     "A role-based PHP and MySQL system for a real rabbit farm: parentage, crossings, feeding, sales and PDF production reports.",
   facts: {
@@ -15,8 +15,8 @@ export const conejos: SideProjectText = {
     status: "Finished · deployed for demo only",
   },
   hero: {
-    label: "Screenshot · Sistema Conejos",
-    caption: "Sistema Conejos, the rabbit records screen",
+    label: "Screenshot · login",
+    caption: "the login, with the farm’s logo",
   },
   numbers: [
     { label: "user roles" },
@@ -39,7 +39,7 @@ export const conejos: SideProjectText = {
       ],
       shot: {
         label: "Screenshot · rabbit records",
-        caption: "rabbits and their parents",
+        caption: "search, the rabbit list with parents, and the edit form",
       },
     },
     {
@@ -51,8 +51,8 @@ export const conejos: SideProjectText = {
         "A list of preferred breeds, from the farm owner’s advice",
       ],
       shot: {
-        label: "Screenshot · crossing screen",
-        caption: "choosing the parents of a crossing",
+        label: "Screenshot · crossings",
+        caption: "the crossing list and both parents of a litter",
       },
     },
     {
@@ -63,6 +63,11 @@ export const conejos: SideProjectText = {
         "Four roles, each with its own menu over shared screens",
         "User management: create and edit users with their role",
       ],
+      shot: {
+        label: "Screenshot · sales",
+        caption:
+          "the sales list, with the button that generates the PDF report",
+      },
     },
   ],
   highlights: [
@@ -127,18 +132,16 @@ export const conejos: SideProjectText = {
   ],
   gallery: [
     {
-      label: "Rabbit records",
-      caption: "the list, with search by name or ID",
+      label: "Pregnancies",
+      caption: "each pregnancy with its start and expected birth date",
     },
-    { label: "Crossing screen", caption: "pick a male and a female" },
-    { label: "Parents detail", caption: "breed and data of both parents" },
-    { label: "Medical records", caption: "treatments for each rabbit" },
-    { label: "Feeding plans", caption: "feed type and quantity" },
-    { label: "Sales data", caption: "kilos and date for each sale" },
-    { label: "Menu per role", caption: "the same screens, a different menu" },
+    {
+      label: "User management",
+      caption: "users with their role, and the edit form",
+    },
     {
       label: "Production report (PDF)",
-      caption: "the report the owner prints",
+      caption: "the report the owner prints, one row per sale",
     },
   ],
 };
