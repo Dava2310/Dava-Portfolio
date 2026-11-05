@@ -18,7 +18,7 @@ type ProjectCardProps = {
   tape?: TapeProps;
 };
 
-/** Project card: the whole card opens the project page; a zoomable image inside keeps its own click. */
+/** Project card: the whole card, image included, opens the project page. */
 
 export function ProjectCard({
   media,
@@ -33,7 +33,7 @@ export function ProjectCard({
   return (
     <article className="project-card">
       <Tape {...tape} />
-      {media}
+      <div className="project-card-media">{media}</div>
       <div className="project-card-body">
         <span className="project-card-kind">{kind}</span>
         <h3>{title}</h3>
