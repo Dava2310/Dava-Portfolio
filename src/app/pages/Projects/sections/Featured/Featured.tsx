@@ -3,7 +3,6 @@ import { useLang, useTranslation } from "@/features/i18n";
 import { pageUrl } from "@/shared/config/pages";
 import { Icon } from "@/shared/ui/atoms/Icon";
 import { Tape } from "@/shared/ui/atoms/Tape";
-import { ZoomableImage } from "@/shared/ui/molecules/ZoomableImage";
 import { TagList } from "@/shared/ui/molecules/TagList";
 
 import "./styles.css";
@@ -33,14 +32,7 @@ export function Featured() {
     <article className="featured">
       <Tape top="-14px" left="48px" rotate={-3} width={110} height={30} />
       <div className="featured-media">
-        <ZoomableImage
-          src={landing}
-          alt={alt}
-          width={1920}
-          height={1080}
-          zoomLabel={`${t("_common:aria.zoomIn")}: ${alt}`}
-          closeLabel={t("_common:aria.close")}
-        />
+        <img src={landing} alt={alt} width={1920} height={1080} />
       </div>
       <div className="featured-body">
         <span className="featured-badge">

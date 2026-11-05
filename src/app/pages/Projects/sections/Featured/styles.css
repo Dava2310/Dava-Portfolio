@@ -8,12 +8,8 @@
   @apply flex min-h-[320px] min-w-0 flex-[3_1_520px];
 
   /* Fills the card height; the top-left corner (sidebar and title) stays in view when cropped. */
-  .zoomable {
-    @apply h-full min-h-[320px];
-  }
-
-  .zoomable img {
-    @apply h-full min-h-[320px] rounded-md object-cover object-left-top;
+  img {
+    @apply block h-full min-h-[320px] w-full rounded-md object-cover object-left-top;
   }
 }
 
@@ -53,13 +49,9 @@
   @apply mt-auto inline-flex items-center gap-2.5 self-start rounded-[14px] bg-accent px-[22px] py-3.5 font-bold text-white no-underline;
 }
 
-/* The button covers the whole card; the zoomable image stays on top. */
+/* The button covers the whole card, image included: any click opens the case study. */
 .featured-cta::after {
   @apply absolute inset-0 rounded-[10px] content-[''];
-}
-
-.featured .zoomable {
-  @apply relative z-1;
 }
 
 .featured:hover .featured-cta,
@@ -75,4 +67,46 @@
 .featured:has(.featured-cta:active) {
   scale: 0.99;
   transition: scale 120ms ease-out;
+}
+
+/* Paper lift, as on the project cards: the card rises and its tape peels up (whole pixels only,
+   so the image never blurs). */
+.featured {
+  transition:
+    translate 300ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 300ms ease-out;
+
+  .tape {
+    transition: rotate 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+.featured:has(.featured-cta:focus-visible) {
+  @apply shadow-photo-lg;
+}
+
+@media (hover: hover) {
+  .featured:hover {
+    @apply shadow-photo-lg;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .featured:has(.featured-cta:focus-visible) {
+    translate: 0 -6px;
+
+    .tape {
+      rotate: calc(var(--tape-rotate, -4deg) * 1.8);
+    }
+  }
+
+  @media (hover: hover) {
+    .featured:hover {
+      translate: 0 -6px;
+
+      .tape {
+        rotate: calc(var(--tape-rotate, -4deg) * 1.8);
+      }
+    }
+  }
 }

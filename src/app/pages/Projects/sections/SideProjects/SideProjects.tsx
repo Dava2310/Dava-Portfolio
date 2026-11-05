@@ -2,7 +2,6 @@ import { useLang, useTranslation } from "@/features/i18n";
 import { pageUrl } from "@/shared/config/pages";
 import type { TapeProps } from "@/shared/ui/atoms/Tape";
 import { SIDE_PROJECT_IDS, SIDE_PROJECTS } from "@/app/pages/SideProject";
-import { ZoomableImage } from "@/shared/ui/molecules/ZoomableImage";
 import { ImagePlaceholder } from "@/shared/ui/molecules/ImagePlaceholder";
 import { ProjectCard } from "@/shared/ui/molecules/ProjectCard";
 
@@ -38,14 +37,13 @@ export function SideProjects() {
               key={id}
               media={
                 data.hero ? (
-                  <ZoomableImage
+                  <img
                     className="side-projects-shot"
                     src={data.hero.src}
                     alt={text.hero.caption}
                     width={data.hero.width}
                     height={data.hero.height}
-                    zoomLabel={`${t("_common:aria.zoomIn")}: ${text.hero.caption}`}
-                    closeLabel={t("_common:aria.close")}
+                    loading="lazy"
                   />
                 ) : (
                   <ImagePlaceholder
