@@ -16,8 +16,8 @@ export const stii: SideProjectText = {
     outcome: "Calificación máxima en la tesis",
   },
   hero: {
-    label: "Captura · pantalla principal de SARP",
-    caption: "La pantalla principal de SARP",
+    label: "Captura · ventana principal de SARP",
+    caption: "la ventana principal de SARP, con el menú de reportes abierto",
   },
   numbers: [{ label: "pantallas" }, { label: "tablas de base de datos" }],
   problem: [
@@ -35,7 +35,7 @@ export const stii: SideProjectText = {
       ],
       shot: {
         label: "Captura · tabla de proveedores",
-        caption: "la tabla de proveedores",
+        caption: "un proveedor con su cuenta bancaria y sus tarifas de pago",
       },
     },
     {
@@ -46,8 +46,9 @@ export const stii: SideProjectText = {
         "Buscar y corregir boletos y transacciones existentes",
       ],
       shot: {
-        label: "Captura · nuevo boleto de pesaje",
-        caption: "un nuevo boleto de pesaje",
+        label: "Captura · transacciones",
+        caption:
+          "un boleto de pesaje repartido entre el productor y la empresa de transporte",
       },
     },
     {
@@ -58,6 +59,11 @@ export const stii: SideProjectText = {
         "Generar todas las órdenes de pago de la semana",
         "Exportar las órdenes de pago y otros 7 reportes en PDF",
       ],
+      shot: {
+        label: "Captura · anticipos",
+        caption:
+          "un anticipo en bolívares y dólares, que se descuenta de la orden de pago de la semana",
+      },
     },
   ],
   highlights: [
@@ -123,23 +129,14 @@ export const stii: SideProjectText = {
     "La próxima vez agregaría pruebas automáticas de los cálculos de pago, envolvería la generación de cada semana en una transacción de base de datos y usaría tipos decimales para el dinero.",
   ],
   gallery: [
-    {
-      label: "Pantalla principal",
-      caption: "la ventana principal y sus menús",
-    },
     { label: "Inicio de sesión", caption: "la puerta de entrada" },
     {
-      label: "Tabla de proveedores",
-      caption: "todos los proveedores en un solo lugar",
-    },
-    { label: "Nuevo boleto de pesaje", caption: "registrando una entrega" },
-    {
-      label: "Órdenes de pago semanales",
-      caption: "las órdenes de la semana, por proveedor",
+      label: "Boletos de pesaje",
+      caption: "kilos brutos y netos, materia seca e impurezas de cada entrega",
     },
     {
-      label: "Orden de pago en PDF",
-      caption: "lista para imprimir y archivar",
+      label: "Tabla de precios",
+      caption: "el precio por kilo según el porcentaje de materia seca",
     },
   ],
 };

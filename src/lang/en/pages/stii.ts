@@ -16,8 +16,8 @@ export const stii: SideProjectText = {
     outcome: "Perfect score on the thesis",
   },
   hero: {
-    label: "Screenshot · SARP main screen",
-    caption: "SARP’s main screen",
+    label: "Screenshot · SARP main window",
+    caption: "SARP’s main window, with the reports menu open",
   },
   numbers: [{ label: "screens" }, { label: "database tables" }],
   problem: [
@@ -35,7 +35,7 @@ export const stii: SideProjectText = {
       ],
       shot: {
         label: "Screenshot · supplier table",
-        caption: "the supplier table",
+        caption: "a supplier with its bank account and payment rates",
       },
     },
     {
@@ -46,8 +46,9 @@ export const stii: SideProjectText = {
         "Search and correct existing tickets and transactions",
       ],
       shot: {
-        label: "Screenshot · new weigh ticket",
-        caption: "a new weigh ticket",
+        label: "Screenshot · transactions",
+        caption:
+          "one weigh ticket split between the grower and the transport company",
       },
     },
     {
@@ -58,6 +59,11 @@ export const stii: SideProjectText = {
         "Generate every payment order for the week",
         "Export payment orders and 7 other reports as PDF",
       ],
+      shot: {
+        label: "Screenshot · advances",
+        caption:
+          "an advance in bolivars and dollars, discounted from the week’s payment order",
+      },
     },
   ],
   highlights: [
@@ -120,14 +126,15 @@ export const stii: SideProjectText = {
     "Next time I would add automated tests for the payment calculations, wrap each week’s generation in a database transaction, and use decimal types for money.",
   ],
   gallery: [
-    { label: "Main screen", caption: "the main window and its menus" },
     { label: "Login", caption: "the way in" },
-    { label: "Supplier table", caption: "every supplier in one place" },
-    { label: "New weigh ticket", caption: "recording a delivery" },
     {
-      label: "Weekly payment orders",
-      caption: "the week’s orders, per supplier",
+      label: "Weigh tickets",
+      caption:
+        "gross and net kilos, dry matter and impurities of every delivery",
     },
-    { label: "PDF payment order", caption: "ready to print and file" },
+    {
+      label: "Price table",
+      caption: "the price per kilo by dry-matter percentage",
+    },
   ],
 };
