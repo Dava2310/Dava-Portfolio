@@ -19,3 +19,24 @@
 .skills-intro-lead {
   @apply m-0 max-w-[640px] text-[19px] leading-[1.65] text-ink-soft;
 }
+
+/* Key for the tool tiles below: same marks as the tiles' corner dots and dashed border. */
+.skills-legend {
+  @apply m-0 flex list-none flex-col gap-2.5 rounded-lg bg-card px-5 py-4 text-[15px] font-semibold shadow-card;
+
+  li {
+    @apply flex items-center gap-3;
+  }
+
+  span {
+    @apply size-3 rounded-full border-[2.5px] border-accent;
+  }
+
+  span[data-tier="daily"] {
+    @apply bg-accent;
+  }
+
+  span[data-tier="learning"] {
+    @apply h-4 w-[22px] rounded-[5px] border-[1.5px] border-dashed border-[#8e8370];
+  }
+}

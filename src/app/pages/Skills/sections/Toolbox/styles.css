@@ -1,0 +1,67 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.toolbox {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(min(480px,100%),1fr))] items-start gap-x-6 gap-y-7 pb-section;
+}
+
+.toolbox-card {
+  @apply relative flex flex-col gap-4 rounded-lg bg-card p-[22px] shadow-card;
+
+  ul {
+    @apply m-0 grid list-none grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2.5 p-0;
+  }
+
+  /* One tile per tool; its look says how often I use it (see the legend in the intro). */
+  li {
+    @apply relative flex flex-col items-center gap-2 rounded-xl border border-[#efe7d9] px-1.5 pt-3.5 pb-3;
+  }
+
+  li[data-tier="daily"] {
+    @apply border-transparent bg-[#edf1f9];
+  }
+
+  li[data-tier="learning"] {
+    @apply border-[1.5px] border-dashed border-[#b9ac93];
+  }
+}
+
+.toolbox-card-header {
+  @apply flex items-baseline justify-between gap-3;
+
+  h2 {
+    @apply m-0 font-display text-[22px] leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+
+  span {
+    @apply font-hand text-[22px] leading-none text-muted;
+  }
+}
+
+/* Filled dot: every day. Ring: comfortable. No dot (dashed tile): learning now. */
+.toolbox-dot {
+  @apply absolute top-2 right-2 size-2.5 rounded-full border-[2.5px] border-accent;
+
+  [data-tier="daily"] > & {
+    @apply bg-accent;
+  }
+
+  [data-tier="learning"] > & {
+    @apply hidden;
+  }
+}
+
+.toolbox-icon {
+  @apply flex size-[52px] items-center justify-center rounded-[14px] border-[1.5px] border-[#e3d7c2] bg-white shadow-[0_2px_6px_rgb(60_45_20/0.06)];
+
+  img {
+    @apply size-7;
+  }
+}
+
+.toolbox-name {
+  @apply text-center text-sm leading-tight font-semibold;
+}
+
+.toolbox-tier {
+  @apply sr-only;
+}
