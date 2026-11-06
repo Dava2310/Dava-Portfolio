@@ -1,7 +1,7 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
 .activities-intro {
-  @apply flex max-w-[780px] flex-col gap-5 pt-14 pb-10;
+  @apply flex max-w-[780px] flex-col gap-5 pt-14 pb-12;
 
   h1 {
     @apply m-0 font-display text-[clamp(46px,6vw,78px)] leading-[0.98] font-extrabold tracking-[-0.045em];

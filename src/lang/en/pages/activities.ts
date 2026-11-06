@@ -4,8 +4,7 @@ export const activities = {
     title: "Activities & events",
     lead: "Competitions, representing my university, and the ferias where I showed new students what we had built. Every event has its own page with the photos and the story behind it.",
   },
-  filters: {
-    all: "All",
+  kinds: {
     competition: "Competitions",
     university: "Representing my university",
     feria: "Ferias",

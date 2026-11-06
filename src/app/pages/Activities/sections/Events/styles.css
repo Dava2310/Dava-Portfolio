@@ -1,17 +1,5 @@
 @reference "../../../../../shared/ui/styles/tailwind.css";
 
-.events-filters {
-  @apply flex flex-wrap items-center gap-2 pb-12;
-
-  button {
-    @apply cursor-pointer rounded-full border-[1.5px] border-line bg-card px-[18px] py-[11px] font-[inherit] text-sm font-semibold text-ink;
-  }
-
-  button[aria-pressed="true"] {
-    @apply border-accent bg-accent text-white;
-  }
-}
-
 .events {
   @apply pb-section;
 }
