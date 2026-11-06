@@ -10,12 +10,13 @@ export function Links({ data }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       id="links"
       className="side-links"
       aria-labelledby="side-links-title"
     >
       <h2 id="side-links-title">{t("_pages:sideProject.links")}</h2>
-      <div className="side-links-grid">
+      <div className="side-links-grid" data-reveal-group>
         <div className="side-links-card">
           <h3>{t("_pages:sideProject.repos")}</h3>
           {data.repos.map((repo) =>

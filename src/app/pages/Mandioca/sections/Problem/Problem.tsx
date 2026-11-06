@@ -9,6 +9,7 @@ export function Problem() {
 
   return (
     <section
+      data-reveal-section
       className="mandioca-problem"
       id="problem"
       aria-labelledby="problem-title"

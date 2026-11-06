@@ -17,14 +17,14 @@ export function Intro() {
         {t("_pages:mandioca.back")}
       </a>
       <section className="mandioca-intro">
-        <div className="mandioca-intro-copy">
+        <div className="mandioca-intro-copy" data-intro-group>
           <span className="mandioca-intro-kind">
             {t("_pages:mandioca.kind")}
           </span>
           <h1>{t("_pages:mandioca.title")}</h1>
           <p>{t("_pages:mandioca.lead")}</p>
         </div>
-        <dl className="mandioca-facts">
+        <dl className="mandioca-facts" data-intro>
           {FACTS.map((fact) => (
             <div key={fact}>
               <dt>{t(`_pages:mandioca.facts.${fact}.label`)}</dt>

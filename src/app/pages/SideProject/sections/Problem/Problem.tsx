@@ -9,6 +9,7 @@ export function Problem({ text }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       id="problem"
       className="side-problem"
       aria-labelledby="side-problem-title"

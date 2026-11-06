@@ -16,6 +16,7 @@ export function Pager({ id }: SectionProps) {
 
   return (
     <nav
+      data-reveal-section
       className="side-pager"
       aria-label={t("_pages:sideProject.pager.label")}
     >

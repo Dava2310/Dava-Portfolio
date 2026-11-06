@@ -8,6 +8,7 @@ export function Comparison({ text }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       id="comparison"
       className="side-comparison"
       aria-labelledby="side-comparison-title"

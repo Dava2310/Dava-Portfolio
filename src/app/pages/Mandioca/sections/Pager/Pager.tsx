@@ -13,6 +13,7 @@ export function Pager() {
 
   return (
     <nav
+      data-reveal-section
       className="mandioca-pager"
       aria-label={t("_pages:mandioca.pager.label")}
     >

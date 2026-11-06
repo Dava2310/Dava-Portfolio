@@ -6,7 +6,7 @@ export function Intro() {
   const { t } = useTranslation();
 
   return (
-    <section className="activities-intro">
+    <section className="activities-intro" data-intro-group>
       <p className="activities-intro-kicker">
         {t("_pages:activities.intro.kicker")}
       </p>

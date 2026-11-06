@@ -9,7 +9,7 @@ export function Intro() {
 
   return (
     <section className="experience-intro">
-      <div className="experience-intro-copy">
+      <div className="experience-intro-copy" data-intro-group>
         <p className="experience-intro-kicker">
           {t("_pages:experience.intro.kicker")}
         </p>
@@ -20,6 +20,7 @@ export function Intro() {
       </div>
       <a
         className="experience-intro-resume"
+        data-intro
         href={SOCIALS.resume}
         target="_blank"
         rel="noopener noreferrer"

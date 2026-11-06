@@ -16,9 +16,13 @@ export function Honors() {
   const lang = useLang();
 
   return (
-    <section className="honors" aria-labelledby="honors-title">
+    <section
+      className="honors"
+      data-reveal-section
+      aria-labelledby="honors-title"
+    >
       <h2 id="honors-title">{t("_pages:education.honors.title")}</h2>
-      <ul>
+      <ul data-reveal-group>
         {HONORS.map(({ id, icon }) => (
           <li key={id}>
             <span className="honor-icon" aria-hidden="true">

@@ -13,9 +13,13 @@ export function Degrees() {
   const { t } = useTranslation();
 
   return (
-    <section className="degrees" aria-labelledby="degrees-title">
+    <section
+      className="degrees"
+      data-reveal-section
+      aria-labelledby="degrees-title"
+    >
       <h2 id="degrees-title">{t("_pages:education.degrees.title")}</h2>
-      <ol>
+      <ol data-reveal-section>
         {DEGREES.map(({ id, badge }) => (
           <li key={id}>
             <div className="degree-when">

@@ -10,10 +10,11 @@ export function Numbers({ text, data }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       className="side-numbers"
       aria-label={t("_pages:sideProject.keyNumbers")}
     >
-      <dl>
+      <dl data-reveal-group>
         {text.numbers.map(({ label }, index) => (
           <div key={label}>
             <dt>{label}</dt>

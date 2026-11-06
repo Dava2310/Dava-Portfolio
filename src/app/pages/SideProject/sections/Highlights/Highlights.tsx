@@ -15,6 +15,7 @@ export function Highlights({ text }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       id="highlights"
       className="side-highlights"
       aria-labelledby="side-highlights-title"
@@ -23,7 +24,7 @@ export function Highlights({ text }: SectionProps) {
         <h2 id="side-highlights-title">{t("_pages:sideProject.highlights")}</h2>
         <span>({t("_pages:sideProject.highlightsNote")})</span>
       </div>
-      <ol className="side-highlights-top">
+      <ol className="side-highlights-top" data-reveal-group>
         {top.map((item, index) => (
           <li key={item.title}>
             <Tape top="-12px" left="26px" rotate={-3} />
@@ -41,7 +42,7 @@ export function Highlights({ text }: SectionProps) {
         ))}
       </ol>
       {rest.length > 0 ? (
-        <ol className="side-highlights-rest">
+        <ol className="side-highlights-rest" data-reveal-group>
           {rest.map((item, index) => (
             <li key={item.title}>
               <span className="side-rank">{rank(index + TOP)}</span>

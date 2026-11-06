@@ -8,6 +8,7 @@ export function Learned() {
 
   return (
     <section
+      data-reveal-section
       className="mandioca-learned"
       id="learned"
       aria-labelledby="learned-title"

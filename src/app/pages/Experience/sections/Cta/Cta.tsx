@@ -9,7 +9,11 @@ export function Cta() {
   const lang = useLang();
 
   return (
-    <section className="experience-cta" aria-labelledby="experience-cta-title">
+    <section
+      className="experience-cta"
+      data-reveal
+      aria-labelledby="experience-cta-title"
+    >
       <div>
         <p className="experience-cta-kicker">
           {t("_pages:experience.cta.kicker")}

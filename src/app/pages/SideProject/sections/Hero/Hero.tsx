@@ -8,7 +8,7 @@ import "./styles.css";
 export function Hero({ text, data }: SectionProps) {
   return (
     <section className="side-hero" aria-label={text.hero.caption}>
-      <figure>
+      <figure data-intro>
         <Tape top="-14px" left="60px" rotate={-3} width={120} height={30} />
         <Tape
           top="-14px"

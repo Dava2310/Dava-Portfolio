@@ -16,13 +16,17 @@ export function Graduation() {
   const { t } = useTranslation();
 
   return (
-    <section className="graduation" aria-labelledby="graduation-title">
+    <section
+      className="graduation"
+      data-reveal-section
+      aria-labelledby="graduation-title"
+    >
       <SectionHeader
         id="graduation-title"
         title={t("_pages:education.graduation.title")}
         note={t("_pages:education.graduation.note")}
       />
-      <div className="graduation-grid">
+      <div className="graduation-grid" data-reveal-group>
         {PHOTOS.map(({ id, rotate }) => (
           <Polaroid
             key={id}

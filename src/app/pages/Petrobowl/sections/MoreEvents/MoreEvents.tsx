@@ -10,7 +10,11 @@ export function MoreEvents() {
   const href = pageUrl(lang, "activities");
 
   return (
-    <nav className="more-events" aria-label={t("_pages:petrobowl.more.label")}>
+    <nav
+      className="more-events"
+      data-reveal-section
+      aria-label={t("_pages:petrobowl.more.label")}
+    >
       <a href={href} data-direction="prev">
         <span>
           <Icon name="arrowLeft" size={16} />

@@ -9,12 +9,16 @@ export function Built() {
   const { t } = useTranslation();
 
   return (
-    <section className="built" aria-labelledby="built-title">
+    <section
+      className="built"
+      data-reveal-section
+      aria-labelledby="built-title"
+    >
       <div className="built-head">
         <h2 id="built-title">{t("_pages:teaching.built.title")}</h2>
         <span>{t("_pages:teaching.built.note")}</span>
       </div>
-      <div className="built-grid">
+      <div className="built-grid" data-reveal-group>
         {PROJECTS.map((key) => (
           <figure key={key}>
             <ImagePlaceholder

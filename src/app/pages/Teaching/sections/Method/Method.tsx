@@ -8,9 +8,13 @@ export function Method() {
   const { t } = useTranslation();
 
   return (
-    <section className="method" aria-labelledby="method-title">
+    <section
+      className="method"
+      data-reveal-section
+      aria-labelledby="method-title"
+    >
       <h2 id="method-title">{t("_pages:teaching.method.title")}</h2>
-      <ol>
+      <ol data-reveal-group>
         {STEPS.map((key, index) => (
           <li key={key}>
             <span className="method-dot" aria-hidden="true" />
