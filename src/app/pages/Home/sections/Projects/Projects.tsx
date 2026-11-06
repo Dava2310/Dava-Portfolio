@@ -24,14 +24,18 @@ export function Projects() {
   const readStory = t("_pages:home.projects.readStory");
 
   return (
-    <section className="home-projects" aria-labelledby="projects-title">
+    <section
+      className="home-projects"
+      aria-labelledby="projects-title"
+      data-reveal-section
+    >
       <SectionHeader
         id="projects-title"
         title={t("_pages:home.projects.title")}
         note={t("_pages:home.projects.note")}
         link={{ href: projectsUrl, label: t("_pages:home.projects.link") }}
       />
-      <div className="home-projects-grid">
+      <div className="home-projects-grid" data-reveal-group>
         <ProjectCard
           media={
             <img

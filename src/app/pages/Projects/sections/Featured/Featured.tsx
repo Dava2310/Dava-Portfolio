@@ -29,7 +29,7 @@ export function Featured() {
   const alt = t("_pages:projects.featured.alt");
 
   return (
-    <article className="featured">
+    <article className="featured" data-intro>
       <Tape top="-14px" left="48px" rotate={-3} width={110} height={30} />
       <div className="featured-media">
         <img src={landing} alt={alt} width={1920} height={1080} />

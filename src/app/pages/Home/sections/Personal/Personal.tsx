@@ -15,13 +15,17 @@ export function Personal() {
   const { t } = useTranslation();
 
   return (
-    <section className="personal" aria-labelledby="personal-title">
+    <section
+      className="personal"
+      aria-labelledby="personal-title"
+      data-reveal-section
+    >
       <SectionHeader
         id="personal-title"
         title={t("_pages:home.personal.title")}
         note={t("_pages:home.personal.note")}
       />
-      <div className="personal-grid">
+      <div className="personal-grid" data-reveal-group>
         {PHOTOS.map(({ id, rotate }) => (
           <Polaroid
             key={id}

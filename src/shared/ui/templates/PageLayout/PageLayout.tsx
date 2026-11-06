@@ -10,6 +10,8 @@ import { ToTop } from "@/shared/ui/molecules/ToTop";
 import { Footer } from "@/shared/ui/templates/Footer";
 import { Header } from "@/shared/ui/templates/Header";
 
+import { useRevealOnLoad } from "./useRevealOnLoad";
+
 import "./styles.css";
 
 type PageLayoutProps = {
@@ -22,6 +24,7 @@ type PageLayoutProps = {
 /** Shared frame: skip link, header, centered 1200px column, footer. Page content goes in `children`. */
 export function PageLayout({ page, sections, children }: PageLayoutProps) {
   const { t } = useTranslation();
+  useRevealOnLoad();
 
   return (
     <div className="page" id="top">

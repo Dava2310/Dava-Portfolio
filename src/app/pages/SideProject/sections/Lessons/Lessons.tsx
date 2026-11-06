@@ -10,6 +10,7 @@ export function Lessons({ text }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       id="lessons"
       className="side-lessons"
       aria-labelledby="side-lessons-title"

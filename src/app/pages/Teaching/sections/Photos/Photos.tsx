@@ -11,6 +11,7 @@ export function Photos() {
   return (
     <section
       className="teaching-photos"
+      data-intro
       aria-label={t("_pages:teaching.photos.label")}
     >
       <Polaroid

@@ -15,6 +15,7 @@ export function Gallery({ text, data }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       id="gallery"
       className="side-gallery"
       aria-labelledby="side-gallery-title"
@@ -31,7 +32,11 @@ export function Gallery({ text, data }: SectionProps) {
           {t("_pages:sideProject.galleryEmpty")}
         </p>
       ) : null}
-      <div className="side-gallery-grid" data-pending={pending}>
+      <div
+        className="side-gallery-grid"
+        data-reveal-group
+        data-pending={pending}
+      >
         {text.gallery.map((tile, index) => (
           <figure
             key={tile.label}

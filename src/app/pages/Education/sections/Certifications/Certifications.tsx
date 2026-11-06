@@ -9,9 +9,13 @@ export function Certifications() {
   const { t } = useTranslation();
 
   return (
-    <section className="certs" aria-labelledby="certs-title">
+    <section
+      className="certs"
+      data-reveal-section
+      aria-labelledby="certs-title"
+    >
       <h2 id="certs-title">{t("_pages:education.certifications.title")}</h2>
-      <ul>
+      <ul data-reveal-group>
         {CERTS.map((id) => (
           <li key={id}>
             <div>

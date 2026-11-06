@@ -1,0 +1,122 @@
+/* Page motion: content rises into place instead of appearing all at once.
+   Opt in with attributes (no JavaScript):
+   - data-intro-group  : on page load, its children rise in one after another.
+   - data-intro        : on page load, the element rises in after the intro group.
+   - data-reveal-section: while scrolling, its direct children rise in as they enter the screen
+                          (a data-reveal-group or nested data-reveal-section child is skipped: its own
+                          children animate instead).
+   - data-reveal-group : while scrolling, its children rise in one after another.
+   - data-reveal       : while scrolling, the element itself rises in as one piece (for a section
+                          that is a card: its background moves with its content).
+   - data-reveal-on-load (set by PageLayout, not by hand): a scroll-revealed element that is already
+                          on screen when the page opens rises in on a timer after the intro, in
+                          reading order (0 to 5), so it does not show before the title.
+   Scroll reveals follow the scrollbar, so they play backwards when scrolling up. Browsers without
+   scroll-driven animations, and people who prefer reduced motion, see everything in place.
+   Animations use `transform`, so they never fight the `translate`/`rotate`/`scale` that cards,
+   polaroids and tape use for their tilt, hover lift and press feedback. */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+
+/* Same motion under another name: an element switching from its scroll reveal to the timed one
+   needs a new animation, because Chrome keeps a reused one stuck on its first frame. */
+@keyframes rise-in-on-load {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* ---- on load */
+  [data-intro-group] > *,
+  [data-intro] {
+    animation: rise-in 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  [data-intro-group] > :nth-child(2) {
+    animation-delay: 90ms;
+  }
+
+  [data-intro-group] > :nth-child(3) {
+    animation-delay: 180ms;
+  }
+
+  [data-intro-group] > :nth-child(4) {
+    animation-delay: 270ms;
+  }
+
+  [data-intro-group] > :nth-child(n + 5) {
+    animation-delay: 360ms;
+  }
+
+  [data-intro] {
+    animation-duration: 900ms;
+    animation-delay: 300ms;
+  }
+
+  /* ---- on scroll
+     Distances are in pixels of scrolling, not a share of the element's height, so tall blocks
+     (a long timeline entry on a phone) arrive as quickly as short ones: an element is fully in
+     place once it is 180px into the screen. */
+  @supports (animation-timeline: view()) {
+    [data-reveal-section] > :not([data-reveal-group], [data-reveal-section]),
+    [data-reveal-group] > *,
+    [data-reveal] {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: cover 0px cover 180px;
+    }
+
+    /* Items of a group start a little later each, so a row arrives one after another. */
+    [data-reveal-group] > :nth-child(2) {
+      animation-range: cover 40px cover 220px;
+    }
+
+    [data-reveal-group] > :nth-child(3) {
+      animation-range: cover 80px cover 260px;
+    }
+
+    [data-reveal-group] > :nth-child(n + 4) {
+      animation-range: cover 120px cover 300px;
+    }
+  }
+
+  /* ---- already on screen when the page opens: timed, right after the intro. Comes after the
+     scroll rules so it replaces them (same specificity). */
+  :is([data-reveal-section], [data-reveal-group]) > [data-reveal-on-load],
+  [data-reveal][data-reveal-on-load] {
+    animation: rise-in-on-load 700ms cubic-bezier(0.2, 0.7, 0.2, 1) 350ms both;
+    animation-timeline: auto;
+  }
+
+  :is([data-reveal-section], [data-reveal-group]) > [data-reveal-on-load="1"],
+  [data-reveal][data-reveal-on-load="1"] {
+    animation-delay: 450ms;
+  }
+
+  :is([data-reveal-section], [data-reveal-group]) > [data-reveal-on-load="2"],
+  [data-reveal][data-reveal-on-load="2"] {
+    animation-delay: 550ms;
+  }
+
+  :is([data-reveal-section], [data-reveal-group]) > [data-reveal-on-load="3"],
+  [data-reveal][data-reveal-on-load="3"] {
+    animation-delay: 650ms;
+  }
+
+  :is([data-reveal-section], [data-reveal-group]) > [data-reveal-on-load="4"],
+  [data-reveal][data-reveal-on-load="4"] {
+    animation-delay: 750ms;
+  }
+
+  :is([data-reveal-section], [data-reveal-group]) > [data-reveal-on-load="5"],
+  [data-reveal][data-reveal-on-load="5"] {
+    animation-delay: 850ms;
+  }
+}

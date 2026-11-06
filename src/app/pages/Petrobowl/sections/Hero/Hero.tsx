@@ -17,7 +17,7 @@ export function Hero() {
         {t("_pages:petrobowl.back")}
       </a>
       <section className="event-hero">
-        <div className="event-hero-copy">
+        <div className="event-hero-copy" data-intro-group>
           <span className="event-hero-meta">
             {t("_pages:petrobowl.hero.meta")}
           </span>
@@ -29,6 +29,7 @@ export function Hero() {
         </div>
         <Polaroid
           className="event-hero-photo"
+          intro
           size="lg"
           taped
           rotate={2}

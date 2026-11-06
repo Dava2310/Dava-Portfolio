@@ -22,7 +22,11 @@ export function Moments() {
   const lang = useLang();
 
   return (
-    <section className="moments" aria-labelledby="moments-title">
+    <section
+      className="moments"
+      aria-labelledby="moments-title"
+      data-reveal-section
+    >
       <SectionHeader
         id="moments-title"
         title={t("_pages:home.moments.title")}
@@ -32,7 +36,7 @@ export function Moments() {
           label: t("_pages:home.moments.link"),
         }}
       />
-      <div className="moments-grid">
+      <div className="moments-grid" data-reveal-group>
         {MOMENTS.map(({ key, page, rotate }) => (
           <Polaroid
             key={key}

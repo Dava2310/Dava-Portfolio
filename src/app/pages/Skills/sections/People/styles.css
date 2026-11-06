@@ -5,22 +5,26 @@
 }
 
 .people-card {
-  @apply relative flex flex-wrap gap-x-14 gap-y-8 rounded-lg bg-card p-[clamp(24px,4vw,44px)] shadow-card-lg;
+  @apply relative flex flex-wrap gap-x-14 gap-y-8 rounded-lg bg-card p-[clamp(24px,4vw,40px)] shadow-card-lg;
+
+  h2 {
+    @apply m-0 font-display text-[30px] leading-[1.05] font-extrabold tracking-[-0.03em];
+  }
 }
 
 .people-languages {
-  @apply flex min-w-0 flex-[1_1_320px] flex-col gap-[18px];
+  @apply flex min-w-0 flex-[1_1_300px] flex-col gap-3.5;
 
   dl {
     @apply m-0 flex flex-col gap-3.5;
   }
 
   dl > div {
-    @apply flex items-baseline justify-between gap-4 border-b-[1.5px] border-[#e3d7c2] pb-3;
+    @apply flex items-baseline justify-between gap-4 border-b-[1.5px] border-[#e3d7c2] pb-2.5;
   }
 
   dt {
-    @apply text-xl font-bold;
+    @apply text-[19px] font-bold;
   }
 
   dd {
@@ -33,29 +37,13 @@
 }
 
 .people-skills {
-  @apply flex min-w-0 flex-[1.4_1_420px] flex-col gap-[18px];
+  @apply flex min-w-0 flex-[1.4_1_420px] flex-col gap-3.5;
 
   ul {
-    @apply m-0 flex list-none flex-col gap-3 p-0 text-base text-ink-soft;
+    @apply m-0 flex list-none flex-wrap gap-2 p-0;
   }
 
   li {
-    @apply flex gap-3;
+    @apply rounded-full border-[1.5px] border-line px-3.5 py-1.5 text-[15px] font-semibold;
   }
-
-  li > svg {
-    @apply mt-[3px] flex-[0_0_20px] text-accent;
-  }
-
-  strong {
-    @apply text-ink;
-  }
-
-  a {
-    @apply font-bold;
-  }
-}
-
-.people-card h2 {
-  @apply m-0 font-display text-[clamp(28px,3vw,36px)] leading-[1.05] font-extrabold tracking-[-0.03em];
 }

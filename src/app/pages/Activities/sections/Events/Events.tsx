@@ -34,7 +34,7 @@ export function Events() {
 
   return (
     <>
-      <div className="events-filters">
+      <div className="events-filters" data-intro>
         {FILTERS.map((key) => (
           <button
             key={key}
@@ -50,7 +50,7 @@ export function Events() {
         className="events"
         aria-label={t("_pages:activities.eventsLabel")}
       >
-        <div className="events-grid">
+        <div className="events-grid" data-reveal-group>
           {visible.map(({ id, kind, badge }) => (
             <a
               key={id}

@@ -8,7 +8,11 @@ export function Glance() {
   const { t } = useTranslation();
 
   return (
-    <dl className="glance" aria-label={t("_pages:petrobowl.glance.label")}>
+    <dl
+      className="glance"
+      data-reveal-group
+      aria-label={t("_pages:petrobowl.glance.label")}
+    >
       {FACTS.map((key) => (
         <div key={key} data-featured={key === "result"}>
           <dt>{t(`_pages:petrobowl.glance.${key}.term`)}</dt>

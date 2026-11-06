@@ -15,7 +15,7 @@ export function Showcase() {
 
   return (
     <>
-      <figure className="mandioca-hero">
+      <figure className="mandioca-hero" data-intro>
         <Tape top="-14px" left="60px" rotate={-3} width={120} height={30} />
         <Tape
           top="-14px"
@@ -35,6 +35,7 @@ export function Showcase() {
       </figure>
       <section
         className="mandioca-results"
+        data-reveal-group
         aria-label={t("_pages:mandioca.results.label")}
       >
         {RESULTS.map(({ id, value }) => (

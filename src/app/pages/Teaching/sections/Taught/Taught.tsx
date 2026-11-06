@@ -16,9 +16,13 @@ export function Taught() {
   const { t } = useTranslation();
 
   return (
-    <section className="taught" aria-labelledby="taught-title">
+    <section
+      className="taught"
+      data-reveal-section
+      aria-labelledby="taught-title"
+    >
       <h2 id="taught-title">{t("_pages:teaching.taught.title")}</h2>
-      <div className="taught-grid">
+      <div className="taught-grid" data-reveal-group>
         {SUBJECTS.map(({ key, icon }) => (
           <article key={key}>
             <span className="taught-icon">

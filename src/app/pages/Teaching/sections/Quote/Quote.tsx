@@ -7,7 +7,7 @@ export function Quote() {
   const { t } = useTranslation();
 
   return (
-    <section className="teaching-quote">
+    <section className="teaching-quote" data-reveal-section>
       <figure>
         <Tape top="-14px" left="50%" rotate={-2} width={120} height={30} />
         <blockquote>{t("_pages:teaching.quote.text")}</blockquote>

@@ -53,9 +53,14 @@ export function Team({ text, data }: SectionProps) {
   const { team } = text;
 
   return (
-    <section id="team" className="side-team" aria-labelledby="side-team-title">
+    <section
+      id="team"
+      className="side-team"
+      data-reveal-section
+      aria-labelledby="side-team-title"
+    >
       <h2 id="side-team-title">{t("_pages:sideProject.roleTeam")}</h2>
-      <div className="side-team-columns">
+      <div className="side-team-columns" data-reveal-group>
         <div className="side-team-mine">
           <h3>{t("_pages:sideProject.iOwned")}</h3>
           <ul>

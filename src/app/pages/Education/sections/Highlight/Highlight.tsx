@@ -8,7 +8,11 @@ export function Highlight() {
   const { t } = useTranslation();
 
   return (
-    <section className="highlight" aria-labelledby="highlight-title">
+    <section
+      className="highlight"
+      data-reveal
+      aria-labelledby="highlight-title"
+    >
       <Polaroid
         className="highlight-photo"
         caption={t("_pages:education.highlight.caption")}

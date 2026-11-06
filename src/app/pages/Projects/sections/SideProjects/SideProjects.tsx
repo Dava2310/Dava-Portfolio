@@ -23,12 +23,16 @@ export function SideProjects() {
   const lang = useLang();
 
   return (
-    <section className="side-projects" aria-labelledby="side-projects-title">
+    <section
+      className="side-projects"
+      data-reveal-section
+      aria-labelledby="side-projects-title"
+    >
       <div className="side-projects-header">
         <h2 id="side-projects-title">{t("_pages:projects.side.title")}</h2>
         <span>{t("_pages:projects.side.note")}</span>
       </div>
-      <div className="side-projects-grid">
+      <div className="side-projects-grid" data-reveal-group>
         {SIDE_PROJECT_IDS.map((id, index) => {
           const text = t(`_pages:${id}`, { returnObjects: true });
           const data = SIDE_PROJECTS[id];

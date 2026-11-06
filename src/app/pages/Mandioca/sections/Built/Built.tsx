@@ -41,6 +41,7 @@ export function Built() {
 
   return (
     <section
+      data-reveal-section
       className="mandioca-built"
       id="built"
       aria-labelledby="built-title"
@@ -50,7 +51,7 @@ export function Built() {
         number="02"
         title={t("_pages:mandioca.built.title")}
       />
-      <div className="mandioca-built-grid">
+      <div className="mandioca-built-grid" data-reveal-group>
         {ITEMS.map(({ id, image, size, tags }) => (
           <article key={id}>
             <div className="mandioca-built-media">

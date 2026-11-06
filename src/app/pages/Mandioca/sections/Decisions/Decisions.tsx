@@ -11,6 +11,7 @@ export function Decisions() {
 
   return (
     <section
+      data-reveal-section
       className="mandioca-decisions"
       id="decisions"
       aria-labelledby="decisions-title"
@@ -20,7 +21,7 @@ export function Decisions() {
         number="04"
         title={t("_pages:mandioca.decisions.title")}
       />
-      <div className="mandioca-decisions-grid">
+      <div className="mandioca-decisions-grid" data-reveal-group>
         {DECISIONS.map((id) => (
           <article key={id}>
             <h3>{t(`_pages:mandioca.decisions.${id}.title`)}</h3>

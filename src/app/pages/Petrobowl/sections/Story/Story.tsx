@@ -8,11 +8,15 @@ export function Story() {
   const { t } = useTranslation();
 
   return (
-    <section className="event-story" aria-labelledby="event-story-title">
+    <section
+      className="event-story"
+      data-reveal-section
+      aria-labelledby="event-story-title"
+    >
       <div className="event-story-title">
         <h2 id="event-story-title">{t("_pages:petrobowl.story.title")}</h2>
       </div>
-      <div className="event-story-body">
+      <div className="event-story-body" data-reveal-section>
         {CHAPTERS.map((key) => (
           <div key={key}>
             <h3>{t(`_pages:petrobowl.story.${key}.title`)}</h3>

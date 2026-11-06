@@ -13,6 +13,7 @@ export function Built({ text, data }: SectionProps) {
 
   return (
     <section
+      data-reveal-section
       id="built"
       className="side-built"
       aria-labelledby="side-built-title"
@@ -33,7 +34,7 @@ export function Built({ text, data }: SectionProps) {
           </ul>
         </article>
       ) : (
-        <div className="side-built-grid">
+        <div className="side-built-grid" data-reveal-group>
           {text.features.map((group, index) => (
             <article key={group.title}>
               {group.shot ? (

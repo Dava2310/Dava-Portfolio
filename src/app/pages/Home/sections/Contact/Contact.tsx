@@ -39,7 +39,12 @@ export function Contact() {
   };
 
   return (
-    <section className="contact" id="contact" aria-labelledby="contact-title">
+    <section
+      className="contact"
+      id="contact"
+      aria-labelledby="contact-title"
+      data-reveal-section
+    >
       <div className="contact-copy">
         <p className="contact-kicker">{t("_pages:home.contact.kicker")}</p>
         <h2 id="contact-title">{t("_pages:home.contact.title")}</h2>

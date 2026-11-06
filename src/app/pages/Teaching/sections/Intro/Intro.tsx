@@ -7,14 +7,14 @@ export function Intro() {
 
   return (
     <section className="teaching-intro">
-      <div className="teaching-intro-copy">
+      <div className="teaching-intro-copy" data-intro-group>
         <p className="teaching-intro-kicker">
           {t("_pages:teaching.intro.kicker")}
         </p>
         <h1>{t("_pages:teaching.intro.title")}</h1>
         <p className="teaching-intro-lead">{t("_pages:teaching.intro.lead")}</p>
       </div>
-      <dl className="teaching-intro-facts">
+      <dl className="teaching-intro-facts" data-intro>
         <div>
           <dt>{t("_pages:teaching.intro.whereTerm")}</dt>
           <dd>{t("_pages:teaching.intro.whereValue")}</dd>

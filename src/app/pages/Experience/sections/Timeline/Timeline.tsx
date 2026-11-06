@@ -72,7 +72,7 @@ export function Timeline() {
   const lang = useLang();
 
   return (
-    <ol className="timeline">
+    <ol className="timeline" data-reveal-section>
       {JOBS.map(({ id, current, bullets, tags, photos, link }) => (
         <li key={id}>
           <div className="timeline-when">

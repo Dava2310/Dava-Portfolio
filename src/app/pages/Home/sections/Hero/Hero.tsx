@@ -14,7 +14,7 @@ export function Hero() {
 
   return (
     <section className="hero">
-      <div className="hero-copy">
+      <div className="hero-copy" data-intro-group>
         <p className="hero-kicker">{t("_pages:home.hero.kicker")}</p>
         <h1>
           {t("_pages:home.hero.titleStart")}
@@ -54,7 +54,7 @@ export function Hero() {
           />
         </div>
       </div>
-      <div className="hero-photos">
+      <div className="hero-photos" data-intro>
         <Polaroid
           className="hero-photo-team"
           caption={t("_pages:home.hero.teamCaption")}

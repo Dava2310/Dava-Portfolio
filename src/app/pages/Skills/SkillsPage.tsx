@@ -1,17 +1,14 @@
 import { PageLayout } from "@/shared/ui/templates/PageLayout";
 
 import { Intro } from "./sections/Intro";
-import { Learning } from "./sections/Learning";
 import { People } from "./sections/People";
-import { SkillTier } from "./sections/SkillTier";
+import { Toolbox } from "./sections/Toolbox";
 
 export function SkillsPage() {
   return (
     <PageLayout page="skills">
       <Intro />
-      <SkillTier tier="daily" />
-      <SkillTier tier="comfortable" />
-      <Learning />
+      <Toolbox />
       <People />
     </PageLayout>
   );

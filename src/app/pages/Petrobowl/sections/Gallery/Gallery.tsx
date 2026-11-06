@@ -14,7 +14,11 @@ export function Gallery() {
   const current = PHOTOS[index] ?? PHOTOS[0];
 
   return (
-    <section className="gallery" aria-labelledby="gallery-title">
+    <section
+      className="gallery"
+      data-reveal-section
+      aria-labelledby="gallery-title"
+    >
       <div className="gallery-head">
         <h2 id="gallery-title">{t("_pages:petrobowl.gallery.title")}</h2>
         <span>

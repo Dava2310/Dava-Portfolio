@@ -46,6 +46,7 @@ export function Architecture() {
 
   return (
     <section
+      data-reveal-section
       className="mandioca-architecture"
       id="architecture"
       aria-labelledby="architecture-title"
@@ -57,7 +58,7 @@ export function Architecture() {
           title={t("_pages:mandioca.architecture.title")}
         />
       </div>
-      <div className="mandioca-diagrams">
+      <div className="mandioca-diagrams" data-reveal-group>
         <figure className="mandioca-diagram-main">
           {diagram("deployment")}
           <figcaption>

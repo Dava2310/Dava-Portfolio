@@ -9,7 +9,11 @@ export function TeachingCta() {
   const lang = useLang();
 
   return (
-    <section className="teaching-cta" aria-labelledby="teaching-cta-title">
+    <section
+      className="teaching-cta"
+      data-reveal-section
+      aria-labelledby="teaching-cta-title"
+    >
       <div className="teaching-cta-box">
         <div className="teaching-cta-copy">
           <p>{t("_pages:activities.teachingCta.kicker")}</p>

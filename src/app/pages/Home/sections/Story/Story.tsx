@@ -9,13 +9,17 @@ export function Story() {
   const { t } = useTranslation();
 
   return (
-    <section className="story" aria-labelledby="story-title">
+    <section
+      className="story"
+      aria-labelledby="story-title"
+      data-reveal-section
+    >
       <SectionHeader
         id="story-title"
         title={t("_pages:home.story.title")}
         note={t("_pages:home.story.note")}
       />
-      <ol className="story-timeline">
+      <ol className="story-timeline" data-reveal-group>
         {YEARS.map((key) => (
           <li key={key}>
             <span className="story-dot" aria-hidden="true" />
