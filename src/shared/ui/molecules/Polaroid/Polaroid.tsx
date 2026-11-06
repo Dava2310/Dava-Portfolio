@@ -17,6 +17,8 @@ type PolaroidProps = {
   href?: string;
   className?: string;
   style?: CSSProperties;
+  /** Rises in on page load (see `motion.css`). */
+  intro?: boolean;
 };
 
 /** Photo card: white border, handwritten caption, slight tilt. */
@@ -29,10 +31,12 @@ export function Polaroid({
   href,
   className,
   style,
+  intro = false,
 }: PolaroidProps) {
   const shared = {
     className: ["polaroid", className].filter(Boolean).join(" "),
     "data-size": size,
+    "data-intro": intro || undefined,
     style: { "--polaroid-rotate": `${rotate}deg`, ...style } as CSSProperties,
   };
   const inner = (
