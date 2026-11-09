@@ -26,7 +26,7 @@ export const _common: Dict["_common"] = {
     github: "GitHub",
     linkedin: "LinkedIn",
     email: "Correo",
-    resume: "Descargar currículum",
+    resume: "Descargar CV",
   },
   aria: {
     builtWith: "Hecho con",

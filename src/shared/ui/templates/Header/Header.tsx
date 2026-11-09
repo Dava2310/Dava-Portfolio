@@ -1,6 +1,8 @@
 import { useLang, useTranslation } from "@/features/i18n";
-import { pageUrl, parentOf, type PageId } from "@/shared/config/pages";
 import { LANGS } from "@/lang";
+import { pageUrl, parentOf, type PageId } from "@/shared/config/pages";
+import { SOCIALS } from "@/shared/config/socials";
+import { Icon } from "@/shared/ui/atoms/Icon";
 import { LangSwitch } from "@/shared/ui/molecules/LangSwitch";
 
 import "./styles.css";
@@ -28,6 +30,22 @@ const NAV: readonly {
   { id: "skills", key: "skills" },
 ];
 
+/** Downloads the CV in a new tab. Shown on every page, in the nav on desktop and beside the logo on phones. */
+function CvLink({ className }: { className: string }) {
+  const { t } = useTranslation();
+  return (
+    <a
+      className={`site-cv ${className}`}
+      href={SOCIALS.resume}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="download" />
+      {t("_common:social.resume")}
+    </a>
+  );
+}
+
 export function Header({ current }: HeaderProps) {
   const { t } = useTranslation();
   const lang = useLang();
@@ -49,6 +67,8 @@ export function Header({ current }: HeaderProps) {
       >
         daniel<span>.</span>v
       </a>
+      {/* Phones: the CV button sits beside the logo, because the nav row scrolls sideways. */}
+      <CvLink className="site-cv-top" />
       <nav className="site-nav" aria-label={t("_common:nav.label")}>
         {NAV.map(({ id, key }) => (
           <a
@@ -71,6 +91,7 @@ export function Header({ current }: HeaderProps) {
           hrefs={hrefs}
           names={names}
         />
+        <CvLink className="site-cv-nav" />
         <a className="site-cta" href={`${pageUrl(lang, "home")}#contact`}>
           {t("_common:nav.cta")}
         </a>

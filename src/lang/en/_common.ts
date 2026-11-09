@@ -24,7 +24,7 @@ export const _common = {
     github: "GitHub",
     linkedin: "LinkedIn",
     email: "Email",
-    resume: "Download résumé",
+    resume: "Download CV",
   },
   aria: {
     builtWith: "Built with",

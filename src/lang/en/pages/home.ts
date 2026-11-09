@@ -4,7 +4,7 @@ export const home = {
     titleStart: "Developer, ",
     titleHighlight: "teacher",
     titleEnd: " & competitor.",
-    lead: "Software engineer from Maturín, Venezuela, now in Barcelona, Spain. I build backend systems and developer tooling for AI agents at Toloka AI — and I've spent a year teaching Python and robotics, and captained a national-podium Petrobowl team.",
+    lead: "Software engineer from Maturín, Venezuela, now in Barcelona, Spain. I build backend systems and developer tooling for AI agents at Toloka AI. I've also spent a year teaching Python and robotics, and captained a national-podium Petrobowl team.",
     cta: "See my projects",
     photoAlt: "Daniel Vetencourt smiling in a dark blazer and blue shirt",
     photoCaption: "hi, that's me!",
