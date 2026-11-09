@@ -44,12 +44,11 @@ export function Hero() {
             <Icon name="arrow" />
           </a>
           <SocialLinks
-            items={["github", "linkedin", "email", "resume"]}
+            items={["github", "linkedin", "email"]}
             labels={{
               github: t("_common:social.github"),
               linkedin: t("_common:social.linkedin"),
               email: t("_common:social.email"),
-              resume: t("_common:social.resume"),
             }}
           />
         </div>

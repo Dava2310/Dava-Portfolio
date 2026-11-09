@@ -6,8 +6,8 @@ import "./styles.css";
 type SocialLinksProps = {
   /** Which links to show, in order. */
   items: readonly (keyof typeof SOCIALS)[];
-  /** Accessible names, one per social id. */
-  labels: Record<keyof typeof SOCIALS, string>;
+  /** Accessible names for the shown ids. */
+  labels: Partial<Record<keyof typeof SOCIALS, string>>;
 };
 
 const ICONS: Record<keyof typeof SOCIALS, IconName> = {

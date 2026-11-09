@@ -43,17 +43,34 @@
     flex: 1 0 100%;
   }
 
-  > a:not(.site-cta) {
+  > a:not(.site-cta, .site-cv) {
     @apply py-3 text-ink no-underline;
   }
 
-  > a:not(.site-cta):hover {
+  > a:not(.site-cta, .site-cv):hover {
     @apply text-accent;
   }
 
   > a[aria-current] {
     @apply underline decoration-accent decoration-2 underline-offset-8;
   }
+}
+
+/* Outlined button: downloads the CV, shown on every page next to the contact button. */
+.site-cv {
+  @apply ml-1.5 inline-flex items-center gap-2 rounded-xl border-[1.5px] border-ink px-[16px] py-[10px] text-ink no-underline;
+}
+
+.site-cv:hover {
+  @apply border-accent text-accent;
+}
+
+.site-cv-nav {
+  @apply max-md:hidden;
+}
+
+.site-cv-top {
+  @apply ml-auto inline-flex md:hidden;
 }
 
 .site-cta {
