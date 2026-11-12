@@ -4,46 +4,42 @@
   @apply pb-section;
 }
 
-.people-card {
-  @apply relative flex flex-wrap gap-x-14 gap-y-8 rounded-lg bg-card p-[clamp(24px,4vw,40px)] shadow-card-lg;
-
-  h2 {
-    @apply m-0 font-display text-[30px] leading-[1.05] font-extrabold tracking-[-0.03em];
-  }
+.people-grid {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(min(380px,100%),1fr))] gap-5;
 }
 
-.people-languages {
-  @apply flex min-w-0 flex-[1_1_300px] flex-col gap-3.5;
+.people-card {
+  @apply flex flex-col gap-3 rounded-lg bg-card p-6 shadow-card;
+
+  h2 {
+    @apply m-0 font-display text-2xl leading-[1.1] font-extrabold tracking-[-0.02em];
+  }
 
   dl {
-    @apply m-0 flex flex-col gap-3.5;
+    @apply m-0 flex flex-col gap-3;
   }
 
   dl > div {
-    @apply flex items-baseline justify-between gap-4 border-b-[1.5px] border-[#e3d7c2] pb-2.5;
+    @apply flex items-baseline justify-between gap-3 border-b-[1.5px] border-[#e3d7c2] pb-2;
   }
 
   dt {
-    @apply text-[19px] font-bold;
+    @apply font-bold;
   }
 
   dd {
-    @apply m-0 text-base font-bold text-accent;
+    @apply m-0 text-[15px] font-bold text-accent;
   }
 
   dd[data-style="hand"] {
-    @apply font-hand text-[26px] leading-none font-normal;
+    @apply font-hand text-2xl leading-none font-normal;
   }
-}
-
-.people-skills {
-  @apply flex min-w-0 flex-[1.4_1_420px] flex-col gap-3.5;
 
   ul {
-    @apply m-0 flex list-none flex-wrap gap-2 p-0;
+    @apply m-0 flex list-none flex-wrap gap-1.5 p-0;
   }
 
   li {
-    @apply rounded-full border-[1.5px] border-line px-3.5 py-1.5 text-[15px] font-semibold;
+    @apply rounded-full border-[1.5px] border-line px-3 py-1 text-sm font-semibold;
   }
 }

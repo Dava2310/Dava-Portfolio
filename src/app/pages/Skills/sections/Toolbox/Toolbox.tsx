@@ -1,62 +1,41 @@
 import { useTranslation } from "@/features/i18n";
-import { Tape } from "@/shared/ui/atoms/Tape";
 
-import { TOOLBOX, type Category, type Tool } from "./tools";
+import { TOOLBOX, useToolName, type ToolboxCategory } from "../../tools";
 
 import "./styles.css";
 
-/** Tape positions cycle so the cards don't look stamped out. */
-const TAPES = [
-  { left: "28px", rotate: -3 },
-  { left: "auto", right: "32px", rotate: 3 },
-  { left: "45%", rotate: -2 },
-] as const;
-
-/** Tools grouped by what they're for: one card per group, one tile per tool. */
+/** Everything outside the main stack, one row per group. */
 export function Toolbox() {
   const { t } = useTranslation();
-  const toolName = (tool: Tool) =>
-    "name" in tool ? tool.name : t(`_pages:skills.tools.${tool.nameKey}`);
+  const toolName = useToolName();
 
   return (
-    <div className="toolbox" data-reveal-group>
-      {(Object.keys(TOOLBOX) as Category[]).map((category, index) => {
-        const tools = TOOLBOX[category];
-        return (
-          <section
-            key={category}
-            className="toolbox-card"
-            aria-labelledby={`toolbox-${category}`}
-          >
-            <Tape
-              top="-12px"
-              width={84}
-              height={26}
-              {...TAPES[index % TAPES.length]}
-            />
-            <div className="toolbox-card-header">
-              <h2 id={`toolbox-${category}`}>
-                {t(`_pages:skills.categories.${category}`)}
-              </h2>
-              <span>({tools.length})</span>
-            </div>
+    <section
+      className="toolbox"
+      data-reveal-section
+      aria-labelledby="toolbox-title"
+    >
+      <div className="toolbox-header">
+        <h2 id="toolbox-title">{t("_pages:skills.toolbox.title")}</h2>
+        <span>{t("_pages:skills.toolbox.note")}</span>
+      </div>
+      <div className="toolbox-panel" data-reveal>
+        {(Object.keys(TOOLBOX) as ToolboxCategory[]).map((category) => (
+          <div key={category} className="toolbox-row">
+            <h3>{t(`_pages:skills.categories.${category}`)}</h3>
             <ul>
-              {tools.map((tool) => (
-                <li key={toolName(tool)} data-tier={tool.tier}>
-                  <span className="toolbox-dot" aria-hidden="true" />
+              {TOOLBOX[category].map((tool) => (
+                <li key={toolName(tool)}>
                   <span className="toolbox-icon" aria-hidden="true">
-                    <img src={tool.icon} alt="" width={28} height={28} />
+                    <img src={tool.icon} alt="" width={22} height={22} />
                   </span>
-                  <span className="toolbox-name">{toolName(tool)}</span>
-                  <span className="toolbox-tier">
-                    ({t(`_pages:skills.tiers.${tool.tier}`)})
-                  </span>
+                  <span>{toolName(tool)}</span>
                 </li>
               ))}
             </ul>
-          </section>
-        );
-      })}
-    </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

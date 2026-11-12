@@ -2,15 +2,33 @@ import type { Dict } from "../../types";
 
 export const skills: Dict["_pages"]["skills"] = {
   intro: {
-    kicker: "mi caja de herramientas",
+    kicker: "mi día a día",
     title: "Habilidades y herramientas",
-    lead: "Las tecnologías con las que trabajo, agrupadas por su uso y marcadas según la frecuencia con la que recurro a ellas.",
-    legend: "Leyenda",
+    lead: "Mi stack principal va primero: las herramientas con las que más trabajo. Lo demás de mi caja de herramientas está abajo, agrupado según para qué sirve.",
   },
-  tiers: {
-    daily: "A diario",
-    comfortable: "Domino",
-    learning: "Aprendiendo ahora",
+  main: {
+    title: "Mi stack principal",
+    note: "(con lo que empiezo siempre)",
+    items: {
+      python:
+        "Herramientas de CI, validadores y de pruebas para proyectos de agentes de IA.",
+      typescript:
+        "APIs tipadas y aplicaciones web, desde la base de datos hasta la pantalla.",
+      nestjs: "APIs REST con roles, guards y un contrato OpenAPI.",
+      react: "Aplicaciones web con React 19, construidas con Vite y Tailwind.",
+      nextjs:
+        "Una plataforma web en producción para una empresa agroindustrial.",
+      postgresql:
+        "Un esquema de 16 tablas con transacciones bloqueadas y seguras ante condiciones de carrera.",
+      docker:
+        "Contenedores para los entornos de los agentes de IA y sus herramientas.",
+      githubactions:
+        "CI que solo ejecuta los flujos de trabajo que afecta cada commit.",
+    },
+  },
+  toolbox: {
+    title: "También en mi caja de herramientas",
+    note: "(usadas en trabajo real y proyectos)",
   },
   categories: {
     languages: "Lenguajes",
@@ -19,12 +37,15 @@ export const skills: Dict["_pages"]["skills"] = {
     databases: "Bases de datos",
     infra: "Infraestructura y DevOps",
     ai: "Pruebas y herramientas de IA",
-    data: "Ciencia de datos",
   },
   tools: {
     mcp: "Servidores MCP",
     agents: "Agentes LLM",
-    statistics: "Estadística",
+    statistics: "Estadística y probabilidad",
+  },
+  exploring: {
+    title: "Explorando lo siguiente",
+    note: "durante mi maestría en Harbour.Space",
   },
   languages: {
     title: "Idiomas",
