@@ -1,0 +1,66 @@
+@reference "../../../../../shared/ui/styles/tailwind.css";
+
+.main-stack {
+  @apply flex flex-col gap-8 pb-section;
+}
+
+.main-stack-header {
+  @apply flex flex-wrap items-baseline gap-x-[18px] gap-y-1;
+
+  h2 {
+    @apply m-0 font-display text-[clamp(32px,3.8vw,48px)] leading-none font-extrabold tracking-[-0.035em];
+  }
+
+  span {
+    @apply font-hand text-[26px] text-muted;
+  }
+}
+
+.main-stack-grid {
+  @apply m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(240px,100%),1fr))] gap-x-5 gap-y-8 p-0;
+}
+
+/* Each card sits at a slightly different angle. `rotate` and `translate` are separate from the
+   `transform` the reveal animates, so they don't fight it. */
+.main-card {
+  @apply relative flex flex-col items-start gap-3 rounded-lg bg-card px-[22px] pt-[26px] pb-[22px] shadow-card-lg;
+  transition: translate 200ms ease-out;
+
+  &:nth-child(4n + 1) {
+    rotate: -0.8deg;
+  }
+
+  &:nth-child(4n + 2) {
+    rotate: 0.6deg;
+  }
+
+  &:nth-child(4n + 3) {
+    rotate: -0.4deg;
+  }
+
+  &:nth-child(4n) {
+    rotate: 0.9deg;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      translate: 0 -4px;
+    }
+  }
+
+  h3 {
+    @apply m-0 font-display text-[23px] leading-[1.1] font-extrabold tracking-[-0.02em];
+  }
+
+  p {
+    @apply m-0 text-[15px] leading-normal text-ink-soft;
+  }
+}
+
+.main-card-icon {
+  @apply mb-1 flex size-[72px] items-center justify-center rounded-[18px] border-[1.5px] border-[#e3d7c2] bg-white shadow-[0_4px_10px_rgb(60_45_20/0.08)];
+
+  img {
+    @apply size-10;
+  }
+}
