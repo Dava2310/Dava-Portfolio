@@ -2,14 +2,14 @@ import type { Dict } from "../../types";
 
 export const mandioca: Dict["_pages"]["mandioca"] = {
   back: "Todos los proyectos",
-  kind: "Proyecto para cliente · Oct 2024 – Ene 2026",
+  kind: "Proyecto para cliente · Oct 2023 – Ene 2026",
   title: "Plataforma Mandioca",
   lead: "Del campo a la báscula del camión: una plataforma web, trazabilidad con QR y un bot de Telegram, y una app de escritorio para la báscula de una empresa agroindustrial en Maturín.",
   facts: {
     role: { label: "Rol", value: "Ingeniero de software" },
     where: { label: "Lugar", value: "Maturín, Venezuela" },
     company: { label: "Empresa", value: "Agroindustrial Mandioca C.A." },
-    timeline: { label: "Duración", value: "15 meses" },
+    timeline: { label: "Duración", value: "27 meses" },
   },
   hero: {
     alt: "Panel de control de Mandioca con la pantalla principal",

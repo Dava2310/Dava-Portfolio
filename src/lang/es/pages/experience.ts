@@ -22,7 +22,7 @@ export const experience: Dict["_pages"]["experience"] = {
       },
     },
     mandioca: {
-      range: "Oct 2024 – Ene 2026",
+      range: "Oct 2023 – Ene 2026",
       place: "Maturín, Venezuela",
       company: "Agroindustrial Mandioca C.A.",
       role: "Ingeniero de software",

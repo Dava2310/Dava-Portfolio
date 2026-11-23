@@ -1,13 +1,13 @@
 export const mandioca = {
   back: "All projects",
-  kind: "Client project · Oct 2024 – Jan 2026",
+  kind: "Client project · Oct 2023 – Jan 2026",
   title: "Mandioca Platform",
   lead: "From the farm to the truck scale: a web platform, QR traceability with a Telegram bot, and a desktop weighbridge app for an agro-industrial company in Maturín.",
   facts: {
     role: { label: "Role", value: "Software Engineer" },
     where: { label: "Where", value: "Maturín, Venezuela" },
     company: { label: "Company", value: "Agroindustrial Mandioca C.A." },
-    timeline: { label: "Timeline", value: "15 months" },
+    timeline: { label: "Timeline", value: "27 months" },
   },
   hero: {
     alt: "Mandioca dashboard showing the main overview screen",
