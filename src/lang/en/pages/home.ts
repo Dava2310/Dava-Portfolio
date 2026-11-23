@@ -15,9 +15,9 @@ export const home = {
     title: "The story so far",
     note: "(the short version)",
     y2022: "Associate degree in Informatics — Magna Cum Laude.",
-    y2023: "BEng in Informatics — highest GPA in Venezuelan higher education.",
-    y2024:
-      "First engineering job, started teaching at Academos, and 3rd at Petrobowl as captain.",
+    y2023:
+      "BEng in Informatics — highest GPA in Venezuelan higher education — and my first engineering job.",
+    y2024: "Started teaching at Academos, and 3rd at Petrobowl as captain.",
     y2025: "Petrobowl national runner-up, then joined Toloka AI.",
     y2026: "Moved to Barcelona for an MSc in Data Science at Harbour.Space.",
   },
@@ -27,7 +27,7 @@ export const home = {
     link: "All projects",
     readStory: "Read the story",
     mandioca: {
-      kind: "Client project · 2024–26",
+      kind: "Client project · 2023–26",
       name: "Mandioca Platform",
       description:
         "A web platform, QR traceability, a Telegram bot and a weighbridge app for an agro-industrial company.",

@@ -20,7 +20,7 @@ export const experience = {
       },
     },
     mandioca: {
-      range: "Oct 2024 – Jan 2026",
+      range: "Oct 2023 – Jan 2026",
       place: "Maturín, Venezuela",
       company: "Agroindustrial Mandioca C.A.",
       role: "Software Engineer",

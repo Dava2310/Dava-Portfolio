@@ -18,9 +18,9 @@ export const home: Dict["_pages"]["home"] = {
     note: "(la versión corta)",
     y2022: "TSU en Informática — Magna Cum Laude.",
     y2023:
-      "Ingeniero en Informática — el mejor promedio de la educación superior venezolana.",
+      "Ingeniero en Informática — el mejor promedio de la educación superior venezolana — y mi primer trabajo como ingeniero.",
     y2024:
-      "Primer trabajo como ingeniero, empecé a enseñar en Academos y 3.er lugar en Petrobowl como capitán.",
+      "Empecé a enseñar en Academos y 3.er lugar en Petrobowl como capitán.",
     y2025: "Subcampeón nacional de Petrobowl y, después, me uní a Toloka AI.",
     y2026:
       "Me mudé a Barcelona para un máster en Ciencia de Datos en Harbour.Space.",
@@ -31,7 +31,7 @@ export const home: Dict["_pages"]["home"] = {
     link: "Todos los proyectos",
     readStory: "Leer la historia",
     mandioca: {
-      kind: "Proyecto de cliente · 2024–26",
+      kind: "Proyecto de cliente · 2023–26",
       name: "Plataforma Mandioca",
       description:
         "Una plataforma web, trazabilidad con QR, un bot de Telegram y una app de báscula para una empresa agroindustrial.",
